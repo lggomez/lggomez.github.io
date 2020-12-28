@@ -5,16 +5,26 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 	<title>General</title>
-	<meta name="generator" content="Zim 0.73.2">
+	<meta name="generator" content="Zim 0.73.4">
 	<meta name="viewport" content="width=device-width">
 	<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300&subset=latin,greek,latin-ext' rel='stylesheet' type='text/css'> -->
 	<![if !IE]>
 	<!-- comment out for IE since it spams the user with warnings -->
-	<script type='text/javascript' src='http://code.jquery.com/jquery-1.7.1.js'></script>
+	<script type='text/javascript' src='https://code.jquery.com/jquery-3.5.1.js'></script>
+	
 	<script type='text/javascript'>
-		$(window).load(function(){$("#navigation").height( $("#content").height()+65 );});
+		$(window).on('load', function(){
+			$('pre code').each(function(i) {
+				hljs.highlightBlock(this);
+			});
+			$("#navigation").height( $("#content").height()+65 );});
 	</script>
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+	<!-- <script>hljs.initHighlightingOnLoad();</script> -->
 	<![endif]>
+
 	<style>
 		body, html {
 			height:100%;
@@ -47,6 +57,15 @@
 			position:absolute;
 			max-width:960px;
 			padding:65px;
+		}
+		h1.header {
+			color:#4100b9ce;
+			display:inline-block;
+			padding-right:65px;
+			padding-top:65px;
+			padding-left:25px;
+			position:relative;
+			font-weight: bold;
 		}
 		#navigation ul {
 			margin-top:0;
@@ -146,10 +165,30 @@
 <li><a href="./General/Memory,_a_Forgotten_Topic.html" title="Memory, a Forgotten Topic" class="page">Memory, a Forgotten Topic</a></li>
 </ul>
 </li>
+<li><a href="./Misc.html" title="Misc" class="page">Misc</a></li>
 <li><a href="./NET.html" title="NET" class="page">NET</a></li>
 </ul></li>
 </ul>
  </div>
+
+		            
+		<!-- Header / title -->
+		<div data-role="header" data-position="fixed">
+			<!-- !! Fill in the website title, by default: Notebook -->
+			<!-- <h1>Luis GG - General</h1>  -->
+			<h1 class="header">Luis GG - Tales and notes</h1> 
+
+			<!-- !! Optionally, create button with custom link. To apply uncomment the next line and fill in the link (and optionally change the button and text)) -->
+			<!-- <a href="http://my.website.org" data-icon="home">Main website</a> -->
+		</div>
+
+		<!-- Warning message if java script is disabled -->
+		<noscript>
+			<div style="border: 1px solid purple; padding: 10px">
+				<span style="color:red">This page is best viewed with JavaScript enabled!</span>
+			</div>
+		</noscript>
+
 		<div id="content">
 			<h1>General <a name='Software Development:General'></a></h1>
 
@@ -162,10 +201,14 @@ Created Wednesday 23 December 2020
 			<br>
 			<span class="backlinks">
 			</span>
+ 
+			<script>
+				$( "img" ).wrap( "<div class='imgcenter'></div>" );
+			</script>
 
 			
 		</div>
 	</div>
+
 </body>
 </html>
-

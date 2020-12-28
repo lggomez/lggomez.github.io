@@ -4,7 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<title>Software Development</title>
+	<title>Test</title>
 	<meta name="generator" content="Zim 0.73.4">
 	<meta name="viewport" content="width=device-width">
 	<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300&subset=latin,greek,latin-ext' rel='stylesheet' type='text/css'> -->
@@ -157,12 +157,16 @@
 <body>
 	<div class="wrapper">
 		<div id="navigation"> <ul>
-<li><a href="./About.html" title="About" class="page">About</a></li>
-<li><b>Software Development</b>
+<li><a href="../../About.html" title="About" class="page">About</a></li>
+<li><a href="../../Software_Development.html" title="Software Development" class="page">Software Development</a>
 <ul>
-<li><a href="./Software_Development/General.html" title="General" class="page">General</a></li>
-<li><a href="./Software_Development/Misc.html" title="Misc" class="page">Misc</a></li>
-<li><a href="./Software_Development/NET.html" title="NET" class="page">NET</a></li>
+<li><a href="../General.html" title="General" class="page">General</a></li>
+<li><a href="../Misc.html" title="Misc" class="page">Misc</a>
+<ul>
+<li><b>Test</b></li>
+</ul>
+</li>
+<li><a href="../NET.html" title="NET" class="page">NET</a></li>
 </ul></li>
 </ul>
  </div>
@@ -171,7 +175,7 @@
 		<!-- Header / title -->
 		<div data-role="header" data-position="fixed">
 			<!-- !! Fill in the website title, by default: Notebook -->
-			<!-- <h1>Luis GG - Software Development</h1>  -->
+			<!-- <h1>Luis GG - Test</h1>  -->
 			<h1 class="header">Luis GG - Tales and notes</h1> 
 
 			<!-- !! Optionally, create button with custom link. To apply uncomment the next line and fill in the link (and optionally change the button and text)) -->
@@ -186,12 +190,81 @@
 		</noscript>
 
 		<div id="content">
-			<h1>Software Development <a name='Software Development'></a></h1>
+			<h1>Test <a name='Software Development:Misc:Test'></a></h1>
 
 			<p>
-Created Wednesday 23 December 2020
+Created Sunday 27 December 2020
 </p>
 
+<p>
+Testing some templates for code highlightning
+</p>
+
+<p>
+highlight off (defaults to GTKSource ids as container classes):
+</p>
+
+<div class="zim-object">
+<pre><code class="c-sharp">		public void AddContact(T contact)
+		{
+			Contacts.Add(contact);
+			((Person)(object)contact).Greeting("Hello! You have been added as a contact");
+		}
+</code></pre>
+</div>
+
+<br>
+
+<div class="zim-object">
+<pre><code class="python3">	def get_object_data(self):
+		start, end = self.get_bounds()
+		text = start.get_text(end)
+		text += '\n' # Make sure we always have a trailing \n
+		return self.object_attrib, text
+</code></pre>
+</div>
+
+<br>
+
+<p>
+highlight on (using highlightjs classes):
+</p>
+
+<div class="zim-object">
+<pre><code class="go">func (e *stringEnumValue) validateValueByKey(value string) error {
+	if _, ok := enumIndex[e.key][value]; !ok &amp;&amp; (value != "") {
+		return fmt.Errorf("stringEnumValue: value '%v' is not allowed", value)
+	}
+	return nil
+}
+</code></pre>
+</div>
+
+<br>
+
+<div class="zim-object">
+<pre><code class="c-sharp">    public interface IContactCollection&lt;in T&gt;
+    {
+        void AddContact(T contact);
+    }
+
+    public class ContactCollection&lt;T&gt; : IContactCollection&lt;T&gt; where T : Person
+    {
+        public List&lt;T&gt; contacts { get; set; }
+
+        public ContactCollection()
+        {
+            contacts = new List&lt;T&gt;();
+        }
+
+        public void AddContact(T contact)
+        {
+            contacts.Add(contact);
+            contact.Greeting("Hi! I added you as a contact");
+        }
+    }
+</code></pre>
+</div>
 
 
 			<br>
