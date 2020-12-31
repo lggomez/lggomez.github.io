@@ -4,7 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<title>Test</title>
+	<title>.NET</title>
 	<meta name="generator" content="Zim 0.73.4-da75848">
 	<meta name="viewport" content="width=device-width">
 	<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300&subset=latin,greek,latin-ext' rel='stylesheet' type='text/css'> -->
@@ -247,16 +247,18 @@
 			<!-- Wiki/Site index -->
 			<p class="navbar-title">Site navigation index</p>
 			<ul>
-<li><a href="../../About.html" title="About" class="page">About</a></li>
-<li><a href="../../Software_Development.html" title="Software Development" class="page">Software Development</a>
+<li><a href="../About.html" title="About" class="page">About</a></li>
+<li><a href="../Software_Development.html" title="Software Development" class="page">Software Development</a>
 <ul>
-<li><a href="../dotNET.html" title="dotNET" class="page">dotNET</a></li>
-<li><a href="../General.html" title="General" class="page">General</a></li>
-<li><a href="../Golang.html" title="Golang" class="page">Golang</a></li>
-<li><a href="../Misc.html" title="Misc" class="page">Misc</a>
+<li><b>dotNET</b>
 <ul>
-<li><b>Test</b></li>
-</ul></li>
+<li><a href="./dotNET/Advanced_excepcions_in_.NET.html" title="Advanced excepcions in .NET" class="page">Advanced excepcions in .NET</a></li>
+<li><a href="./dotNET/Advanced_Generics_in_.NET.html" title="Advanced Generics in .NET" class="page">Advanced Generics in .NET</a></li>
+</ul>
+</li>
+<li><a href="./General.html" title="General" class="page">General</a></li>
+<li><a href="./Golang.html" title="Golang" class="page">Golang</a></li>
+<li><a href="./Misc.html" title="Misc" class="page">Misc</a></li>
 </ul></li>
 </ul>
 
@@ -280,81 +282,15 @@
 		</noscript>
 
 		<div id="content" class="content">
-			<h1>Test <a name='Software Development:Misc:Test'></a></h1>
+			<h1>.NET <a name='Software Development:dotNET'></a></h1>
 
 			<p>
-Created Sunday 27 December 2020
+Created Saturday 26 December 2020
 </p>
 
 <p>
-Testing some templates for code highlightning (see <a href="https://github.com/zim-desktop-wiki/zim-desktop-wiki/pull/1349" title="https://github.com/zim-desktop-wiki/zim-desktop-wiki/pull/1349" class="https">https://github.com/zim-desktop-wiki/zim-desktop-wiki/pull/1349</a> for more info)
+Articles regarding .NET development, written during my tenure as a C# developer
 </p>
-
-<p>
-highlight off (defaults to GTKSource ids as container classes):
-</p>
-
-<div class="zim-object">
-<pre><code class="c-sharp">		public void AddContact(T contact)
-		{
-			Contacts.Add(contact);
-			((Person)(object)contact).Greeting("Hello! You have been added as a contact");
-		}
-</code></pre>
-</div>
-
-<br>
-
-<div class="zim-object">
-<pre><code class="python3">	def get_object_data(self):
-		start, end = self.get_bounds()
-		text = start.get_text(end)
-		text += '\n' # Make sure we always have a trailing \n
-		return self.object_attrib, text
-</code></pre>
-</div>
-
-<br>
-
-<p>
-highlight on (using highlightjs classes):
-</p>
-
-<div class="zim-object">
-<pre><code class="go">func (e *stringEnumValue) validateValueByKey(value string) error {
-	if _, ok := enumIndex[e.key][value]; !ok &amp;&amp; (value != "") {
-		return fmt.Errorf("stringEnumValue: value '%v' is not allowed", value)
-	}
-	return nil
-}
-</code></pre>
-</div>
-
-<br>
-
-<div class="zim-object">
-<pre><code class="c-sharp">    public interface IContactCollection&lt;in T&gt;
-    {
-        void AddContact(T contact);
-    }
-
-    public class ContactCollection&lt;T&gt; : IContactCollection&lt;T&gt; where T : Person
-    {
-        public List&lt;T&gt; contacts { get; set; }
-
-        public ContactCollection()
-        {
-            contacts = new List&lt;T&gt;();
-        }
-
-        public void AddContact(T contact)
-        {
-            contacts.Add(contact);
-            contact.Greeting("Hi! I added you as a contact");
-        }
-    }
-</code></pre>
-</div>
 
 
 			<footer id="footer">

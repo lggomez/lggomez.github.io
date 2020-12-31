@@ -5,26 +5,79 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 	<title>Index of Notes</title>
-	<meta name="generator" content="Zim 0.73.4">
+	<meta name="generator" content="Zim 0.73.4-da75848">
 	<meta name="viewport" content="width=device-width">
 	<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300&subset=latin,greek,latin-ext' rel='stylesheet' type='text/css'> -->
 	<![if !IE]>
 	<!-- comment out for IE since it spams the user with warnings -->
 	<script type='text/javascript' src='https://code.jquery.com/jquery-3.5.1.js'></script>
-	
-	<script type='text/javascript'>
-		$(window).on('load', function(){
-			$('pre code').each(function(i) {
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
+
+	<script type="text/javascript">
+		var headingMap = {};
+
+		function jumpToAnchor(anchorId) {
+			// jump to an anchor
+			// from: https://stackoverflow.com/a/52138511/1121352
+			$(document).ready(function() {
+				// JQuery solution
+				$('html, body').animate({
+					'scrollTop':   $('#'+anchorId).offset().top
+				}, 500);
+				// Ensure the anchor is added in the URL so the user can more easily copy the link and share from the browser's address bar directly
+				location.hash = "#" + anchorId;
+			});
+		};
+
+		$(window).on('load', function () {
+			// Initialize highlight.js formatter
+			$('pre code').each(function (i) {
 				hljs.highlightBlock(this);
 			});
-			$("#navigation").height( $("#content").height()+65 );});
-	</script>
-	<link rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-	<!-- <script>hljs.initHighlightingOnLoad();</script> -->
-	<![endif]>
 
+			// Prepare h# elements for tocbot
+			$('h1, h2, h3, h4, h5, h6, h7').each(function(i) {
+				heading = this
+				var id = heading.id ? heading.id : heading.textContent.trim()
+				.toLowerCase().split(' ').join('-').replace(/[!@#$%^&*():]/ig, '').replace(/\//ig, '-');
+				headingMap[id] = !isNaN(headingMap[id]) ? ++headingMap[id] : 0
+				if (headingMap[id]) {
+					heading.id = id + '-' + headingMap[id];
+				} else {
+					heading.id = id;
+				}
+				// Add a self-referential link on the header's anchor, easier to share + jump to this anchor if clicked
+				heading.innerHTML = "<a href=\"#"+id+"\" onclick=\"jumpToAnchor('"+id+"');\";>"+heading.innerHTML+"</a>";
+			});
+			
+			tocbot.init({
+				// Where to render the table of contents.
+				tocSelector: '.js-toc',
+				// Where to grab the headings to build the table of contents.
+				contentSelector: '.content',
+				// Which headings to grab inside of the contentSelector element.
+				headingSelector: 'h1, h2, h3, h4, h5, h6',
+				// For headings inside relative or absolute positioned containers within content.
+				hasInnerContainers: true,
+				// Header levels collapsing by default
+				collapseDepth: 2,
+			});
+			anchor = window.top.location.hash;
+			anchor = anchor.split("#").pop();
+
+			// Autoformat image and navigation height
+			var headerPadding = parseInt($("div .header").css('padding-top').replace('px', '')) + parseInt($("div .header").css('padding-bottom').replace('px', ''));
+			var contentHeight = $("#content").outerHeight();
+			$("#navigation").height(contentHeight + headerPadding);
+			$("img").wrap("<div class='imgcenter'></div>");
+		});
+	</script>
+	<![endif]>
 	<style>
 		body, html {
 			height:100%;
@@ -44,12 +97,15 @@
 			background-color:#F3F3F3;
 			display:inline-block;
 			border-right:1px solid #EAEAEA;
-			padding-right:65px;
-			padding-top:65px;
+			padding-right:30px;
+			padding-top:25px;
 			padding-left:25px;
 			position:relative;
 			float:left;
 			min-height:100%;
+			height: 100%;
+			width: 350px;
+			max-width: 350px;
 		}
 		#content {
 			float:left;
@@ -59,12 +115,12 @@
 			padding:65px;
 		}
 		h1.header {
-			color:#4100b9ce;
-			display:inline-block;
-			padding-right:65px;
-			padding-top:65px;
-			padding-left:25px;
-			position:relative;
+			color: #4100b9ce;
+			display: inline-block;
+			padding-right: 65px;
+			padding-top: 65px;
+			padding-left: 25px;
+			position: relative;
 			font-weight: bold;
 		}
 		#navigation ul {
@@ -86,6 +142,13 @@
 		#navigation a:hover {
 			text-decoration:underline;
 		}
+		.navbar-title {
+			font-weight: bold;
+			margin-top: 25px;
+			background-color: ivory;
+			border-radius: 20px;
+			padding-left: 10px;
+		}
 		#content h1:nth-child(1) {
 			margin-top:0;
 		}
@@ -93,6 +156,14 @@
 			color:#4E9A06;
 			font-weight:300;
 			margin-bottom: 0;
+		}
+		#content h1 a {
+			padding-bottom: 50px;
+   			display: inline-block;
+		}
+		h1 a {
+			text-decoration: none;
+			/* no underline */
 		}
 		p {
 			margin-top: 0;
@@ -150,27 +221,46 @@
 		.migrated-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB+AKHREFA8vJSnkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAC1klEQVRIx+2VT0hUURTGf/e958w4Tc3TYowMw1GyEgwr1MqsFmbZIrIWQZsWJUjbdoHQpl3Qps0swnCRECQFYkR/TC1iKkqmfzAKTo2Vf8hoRsfR995tkRMT87RRWkUHHhy495zvnvvu933wP/75EKkkEAjIYDCIaZpIKRFCZN0kfX9xcTGtra2/irVUEolECIfDlJeXo+s6hmFkDaCqKoZhEAqFSCaTv60pqcSyLAoLC/F4PEtqDmCaJkIIKisrMybX0sdUVRWA5ubmPzdNjjI1cpXkZC/O1fV03PXgdDqRUtpPIITAsqxsDz0Z/3CZQv8uqo4N4C8/Tp2/DdM0MiZQlvk41OTkI/LW1SGtCVb5drD3eCc71wcA+VcAHA5vDd8+3UGakxiJV7i9pdQevU5T1R35pJ3MV5QW1pf+0kWBheJ2SWua8EQXZXsu4fVVYEz1sEKvof5EuxjoPvzpcRvrdp9C2gGMx6cpOHBmbImMesds7BZubwMVDTfXDnQ3vQfK7AC8wLfExMX5whyQc3q2OEnjGm5vE76SQxsfBLr77a7CNf+n0r/l6sSMtsBSnurckiIILCobAtVZhpF4gZF4jubaymj4Ch/fd380LE7bAnjc0NPxk2yqpmEuwGxF0ag+0k5uTpzZeBeaazvj0We8fXojainsb2xh2BZgbe0gSIllzSIUh63wfQ6dZ/O2fbjcKlOj58jJ3cVENESw5yErc9nf2MLQ4jwQAkV1Lqiq37/cZ9WaahJjF9AcmxiPDhLs7ePe23oOnmUwg2hSShQle96tKDjA2HAniusgo9FxnvY9Jxw7RWzGYy92QghM00x5g53qp9sHmtB58/o2umOI2NwGolMnMYUHIb7aAyiKwsjICLqu2/qBEIKUUAohMaSHSLyBSMoPTINQ6CX5+fn2AEVFRZSUlBCPx4nFYhl3L4RESjF/GEgX3pSj+Xw+/H7/b3U/AEOZFnp7O5+5AAAAAElFTkSuQmCC)}
 		ul {list-style-image: none}
 		/* ul rule needed to reset style for sub-bullets */
+		
+		#footer {
+			bottom: 0;
+			padding-top: 25px;
+		}
+		.imgcenter {
+			text-align: center;
+		}
 
-	</style>
+		.toc-link, .toc-list-item, .toc-list-item a {
+			/* Remove underlining for all toc entries */
+			text-decoration: none;
+		}
+		.toc-link:not(.is-active-link) {
+			/* Only leave the active toc entry (currently watched) as bold, else put text in normal weight */
+			font-weight: normal !important;
+		}
+</style>
 </head>
 
 <body>
 	<div class="wrapper">
-		<div id="navigation"> <ul>
+		<div id="navigation"> 
+			<!-- Wiki/Site index -->
+			<p class="navbar-title">Site navigation index</p>
+			<ul>
 <li><a href="./About.html" title="About" class="page">About</a></li>
 <li><a href="./Software_Development.html" title="Software Development" class="page">Software Development</a></li>
 </ul>
- </div>
 
-		            
+
+			<!-- Current document's Table Of Contents placeholder and style, this table of content will be generated from headers in the document -->
+			<p class="navbar-title">Article table of contents</p>
+			<nav class="toc js-toc relative z-1 transition--300 pa4" style="position: relative; max-width:inherit;">
+			</nav>
+		</div>
+
 		<!-- Header / title -->
 		<div data-role="header" data-position="fixed">
-			<!-- !! Fill in the website title, by default: Notebook -->
-			<!-- <h1>Luis GG - Index of Notes</h1>  -->
-			<h1 class="header">Luis GG - Tales and notes</h1> 
-
-			<!-- !! Optionally, create button with custom link. To apply uncomment the next line and fill in the link (and optionally change the button and text)) -->
-			<!-- <a href="http://my.website.org" data-icon="home">Main website</a> -->
+			<h1 class="header"><a href="/">Luis GG - Tales and notes</a></h1>
 		</div>
 
 		<!-- Warning message if java script is disabled -->
@@ -180,39 +270,41 @@
 			</div>
 		</noscript>
 
-		<div id="content">
-			<h1>Index of Notes <a name='index.html'></a></h1>
+		<div id="content" class="content">
+			<h1>Index of Notes <a name='index.htm'></a></h1>
 
 			<ul>
 <li><a href="./About.html" title="About" class="page">About</a></li>
 <li><a href="./Software_Development.html" title="Software Development" class="page">Software Development</a>
 <ul>
+<li><a href="./Software_Development/dotNET.html" title="dotNET" class="page">dotNET</a>
+<ul>
+<li><a href="./Software_Development/dotNET/Advanced_excepcions_in_.NET.html" title="Advanced excepcions in .NET" class="page">Advanced excepcions in .NET</a></li>
+<li><a href="./Software_Development/dotNET/Advanced_Generics_in_.NET.html" title="Advanced Generics in .NET" class="page">Advanced Generics in .NET</a></li>
+</ul>
+</li>
 <li><a href="./Software_Development/General.html" title="General" class="page">General</a>
 <ul>
 <li><a href="./Software_Development/General/Memory,_a_Forgotten_Topic.html" title="Memory, a Forgotten Topic" class="page">Memory, a Forgotten Topic</a></li>
 </ul>
 </li>
+<li><a href="./Software_Development/Golang.html" title="Golang" class="page">Golang</a></li>
 <li><a href="./Software_Development/Misc.html" title="Misc" class="page">Misc</a>
 <ul>
 <li><a href="./Software_Development/Misc/Test.html" title="Test" class="page">Test</a></li>
-</ul>
-</li>
-<li><a href="./Software_Development/NET.html" title="NET" class="page">NET</a>
-<ul>
-<li><a href="./Software_Development/NET/Advanced_excepcions_in_.NET.html" title="Advanced excepcions in .NET" class="page">Advanced excepcions in .NET</a></li>
-<li><a href="./Software_Development/NET/Advanced_Generics_in_.NET.html" title="Advanced Generics in .NET" class="page">Advanced Generics in .NET</a></li>
 </ul></li>
 </ul></li>
 </ul>
 
+
+			<footer id="footer">
+				<p><i>Author: Luis Gabriel Gomez</i></p>
+				<p><i>This site was generated using <a href='https://zim-wiki.org'>Zim 0.73.4-da75848</a> and an author-made <a href='https://github.com/lggomez/zim-templates-gh'>fork of ZeroFiveEight</a></i></p>
+			</footer>
 
 			<br>
 			<span class="backlinks">
 			</span>
- 
-			<script>
-				$( "img" ).wrap( "<div class='imgcenter'></div>" );
-			</script>
 
 			
 		</div>

@@ -5,26 +5,79 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 	<title>About</title>
-	<meta name="generator" content="Zim 0.73.4">
+	<meta name="generator" content="Zim 0.73.4-da75848">
 	<meta name="viewport" content="width=device-width">
 	<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300&subset=latin,greek,latin-ext' rel='stylesheet' type='text/css'> -->
 	<![if !IE]>
 	<!-- comment out for IE since it spams the user with warnings -->
 	<script type='text/javascript' src='https://code.jquery.com/jquery-3.5.1.js'></script>
-	
-	<script type='text/javascript'>
-		$(window).on('load', function(){
-			$('pre code').each(function(i) {
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
+
+	<script type="text/javascript">
+		var headingMap = {};
+
+		function jumpToAnchor(anchorId) {
+			// jump to an anchor
+			// from: https://stackoverflow.com/a/52138511/1121352
+			$(document).ready(function() {
+				// JQuery solution
+				$('html, body').animate({
+					'scrollTop':   $('#'+anchorId).offset().top
+				}, 500);
+				// Ensure the anchor is added in the URL so the user can more easily copy the link and share from the browser's address bar directly
+				location.hash = "#" + anchorId;
+			});
+		};
+
+		$(window).on('load', function () {
+			// Initialize highlight.js formatter
+			$('pre code').each(function (i) {
 				hljs.highlightBlock(this);
 			});
-			$("#navigation").height( $("#content").height()+65 );});
-	</script>
-	<link rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-	<!-- <script>hljs.initHighlightingOnLoad();</script> -->
-	<![endif]>
 
+			// Prepare h# elements for tocbot
+			$('h1, h2, h3, h4, h5, h6, h7').each(function(i) {
+				heading = this
+				var id = heading.id ? heading.id : heading.textContent.trim()
+				.toLowerCase().split(' ').join('-').replace(/[!@#$%^&*():]/ig, '').replace(/\//ig, '-');
+				headingMap[id] = !isNaN(headingMap[id]) ? ++headingMap[id] : 0
+				if (headingMap[id]) {
+					heading.id = id + '-' + headingMap[id];
+				} else {
+					heading.id = id;
+				}
+				// Add a self-referential link on the header's anchor, easier to share + jump to this anchor if clicked
+				heading.innerHTML = "<a href=\"#"+id+"\" onclick=\"jumpToAnchor('"+id+"');\";>"+heading.innerHTML+"</a>";
+			});
+			
+			tocbot.init({
+				// Where to render the table of contents.
+				tocSelector: '.js-toc',
+				// Where to grab the headings to build the table of contents.
+				contentSelector: '.content',
+				// Which headings to grab inside of the contentSelector element.
+				headingSelector: 'h1, h2, h3, h4, h5, h6',
+				// For headings inside relative or absolute positioned containers within content.
+				hasInnerContainers: true,
+				// Header levels collapsing by default
+				collapseDepth: 2,
+			});
+			anchor = window.top.location.hash;
+			anchor = anchor.split("#").pop();
+
+			// Autoformat image and navigation height
+			var headerPadding = parseInt($("div .header").css('padding-top').replace('px', '')) + parseInt($("div .header").css('padding-bottom').replace('px', ''));
+			var contentHeight = $("#content").outerHeight();
+			$("#navigation").height(contentHeight + headerPadding);
+			$("img").wrap("<div class='imgcenter'></div>");
+		});
+	</script>
+	<![endif]>
 	<style>
 		body, html {
 			height:100%;
@@ -44,12 +97,15 @@
 			background-color:#F3F3F3;
 			display:inline-block;
 			border-right:1px solid #EAEAEA;
-			padding-right:65px;
-			padding-top:65px;
+			padding-right:30px;
+			padding-top:25px;
 			padding-left:25px;
 			position:relative;
 			float:left;
 			min-height:100%;
+			height: 100%;
+			width: 350px;
+			max-width: 350px;
 		}
 		#content {
 			float:left;
@@ -59,12 +115,12 @@
 			padding:65px;
 		}
 		h1.header {
-			color:#4100b9ce;
-			display:inline-block;
-			padding-right:65px;
-			padding-top:65px;
-			padding-left:25px;
-			position:relative;
+			color: #4100b9ce;
+			display: inline-block;
+			padding-right: 65px;
+			padding-top: 65px;
+			padding-left: 25px;
+			position: relative;
 			font-weight: bold;
 		}
 		#navigation ul {
@@ -86,6 +142,13 @@
 		#navigation a:hover {
 			text-decoration:underline;
 		}
+		.navbar-title {
+			font-weight: bold;
+			margin-top: 25px;
+			background-color: ivory;
+			border-radius: 20px;
+			padding-left: 10px;
+		}
 		#content h1:nth-child(1) {
 			margin-top:0;
 		}
@@ -93,6 +156,14 @@
 			color:#4E9A06;
 			font-weight:300;
 			margin-bottom: 0;
+		}
+		#content h1 a {
+			padding-bottom: 50px;
+   			display: inline-block;
+		}
+		h1 a {
+			text-decoration: none;
+			/* no underline */
 		}
 		p {
 			margin-top: 0;
@@ -150,27 +221,46 @@
 		.migrated-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB+AKHREFA8vJSnkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAC1klEQVRIx+2VT0hUURTGf/e958w4Tc3TYowMw1GyEgwr1MqsFmbZIrIWQZsWJUjbdoHQpl3Qps0swnCRECQFYkR/TC1iKkqmfzAKTo2Vf8hoRsfR995tkRMT87RRWkUHHhy495zvnvvu933wP/75EKkkEAjIYDCIaZpIKRFCZN0kfX9xcTGtra2/irVUEolECIfDlJeXo+s6hmFkDaCqKoZhEAqFSCaTv60pqcSyLAoLC/F4PEtqDmCaJkIIKisrMybX0sdUVRWA5ubmPzdNjjI1cpXkZC/O1fV03PXgdDqRUtpPIITAsqxsDz0Z/3CZQv8uqo4N4C8/Tp2/DdM0MiZQlvk41OTkI/LW1SGtCVb5drD3eCc71wcA+VcAHA5vDd8+3UGakxiJV7i9pdQevU5T1R35pJ3MV5QW1pf+0kWBheJ2SWua8EQXZXsu4fVVYEz1sEKvof5EuxjoPvzpcRvrdp9C2gGMx6cpOHBmbImMesds7BZubwMVDTfXDnQ3vQfK7AC8wLfExMX5whyQc3q2OEnjGm5vE76SQxsfBLr77a7CNf+n0r/l6sSMtsBSnurckiIILCobAtVZhpF4gZF4jubaymj4Ch/fd380LE7bAnjc0NPxk2yqpmEuwGxF0ag+0k5uTpzZeBeaazvj0We8fXojainsb2xh2BZgbe0gSIllzSIUh63wfQ6dZ/O2fbjcKlOj58jJ3cVENESw5yErc9nf2MLQ4jwQAkV1Lqiq37/cZ9WaahJjF9AcmxiPDhLs7ePe23oOnmUwg2hSShQle96tKDjA2HAniusgo9FxnvY9Jxw7RWzGYy92QghM00x5g53qp9sHmtB58/o2umOI2NwGolMnMYUHIb7aAyiKwsjICLqu2/qBEIKUUAohMaSHSLyBSMoPTINQ6CX5+fn2AEVFRZSUlBCPx4nFYhl3L4RESjF/GEgX3pSj+Xw+/H7/b3U/AEOZFnp7O5+5AAAAAElFTkSuQmCC)}
 		ul {list-style-image: none}
 		/* ul rule needed to reset style for sub-bullets */
+		
+		#footer {
+			bottom: 0;
+			padding-top: 25px;
+		}
+		.imgcenter {
+			text-align: center;
+		}
 
-	</style>
+		.toc-link, .toc-list-item, .toc-list-item a {
+			/* Remove underlining for all toc entries */
+			text-decoration: none;
+		}
+		.toc-link:not(.is-active-link) {
+			/* Only leave the active toc entry (currently watched) as bold, else put text in normal weight */
+			font-weight: normal !important;
+		}
+</style>
 </head>
 
 <body>
 	<div class="wrapper">
-		<div id="navigation"> <ul>
+		<div id="navigation"> 
+			<!-- Wiki/Site index -->
+			<p class="navbar-title">Site navigation index</p>
+			<ul>
 <li><b>About</b></li>
 <li><a href="./Software_Development.html" title="Software Development" class="page">Software Development</a></li>
 </ul>
- </div>
 
-		            
+
+			<!-- Current document's Table Of Contents placeholder and style, this table of content will be generated from headers in the document -->
+			<p class="navbar-title">Article table of contents</p>
+			<nav class="toc js-toc relative z-1 transition--300 pa4" style="position: relative; max-width:inherit;">
+			</nav>
+		</div>
+
 		<!-- Header / title -->
 		<div data-role="header" data-position="fixed">
-			<!-- !! Fill in the website title, by default: Notebook -->
-			<!-- <h1>Luis GG - About</h1>  -->
-			<h1 class="header">Luis GG - Tales and notes</h1> 
-
-			<!-- !! Optionally, create button with custom link. To apply uncomment the next line and fill in the link (and optionally change the button and text)) -->
-			<!-- <a href="http://my.website.org" data-icon="home">Main website</a> -->
+			<h1 class="header"><a href="/">Luis GG - Tales and notes</a></h1>
 		</div>
 
 		<!-- Warning message if java script is disabled -->
@@ -180,21 +270,70 @@
 			</div>
 		</noscript>
 
-		<div id="content">
+		<div id="content" class="content">
 			<h1>About <a name='About'></a></h1>
 
 			<p>
-I'm a software devloper
+My name is Luis Gabriel Gomez
 </p>
 
+<p>
+<img src="./_resources/about-me/1.jpeg">
+</p>
+
+<p>
+I'm a software devloper, occasional architect, and jack and some trades based in Buenos Aires, Argentina. I can say that my job and hobby is software development and technology in general. I've worked in sofware factories, an e-commerce giant and currently a bank. I am a student of electronics engineering (formerly software engineering, but after getting that career on board, I guess I want to study something more fulfilling and in my list of TODOs)
+</p>
+
+<p>
+I started as a full stack developer (anyone remembers simple MVVM frameworks and JQuery?) but my main domain today lies in wrangling with backend systems and trying to keep them resilient and distributed, among other things.
+</p>
+
+<p>
+For my work experience instead of this page you may want to check this instead: <a href="./_resources/about-me/resume/Luis Gomez.pdf" title="resume" class="file">resume</a> (<a href="./_resources/about-me/resume/Luis Gomez.pdf" title="checksum" class="file">checksum</a>)
+</p>
+
+<p>
+My main tool of trade is golang as of today and I may rant about a lot of technologies and languages, but I certainly don't marry with any technology in particular. I still believe that certain tools are better suited for some scenarios than others
+</p>
+
+<p>
+I also like doing my job the best way I can. While it is true that it rarely is a best (obvious) path to a a complex scenario it also true that the plethora of terrible solutions are also obvious, and I (and my team mates, luckly) do care for the execution of this trade-off as best as possible. 
+</p>
+
+<p>
+I know there may look like there is some vanity in this endeavor, like trying to take the best selfie on an impending snowstorm:
+</p>
+
+<p>
+<img src="./_resources/about-me/2.jpeg">
+</p>
+
+<p>
+But in the <i>end</i> of the day (<i>*end*</i> may vary due to debugging circumstances) it is nice to see something durable that can whithstand anything (<i>*anything*</i> may also vary due to QA circumstances) and last for long, long time
+</p>
+
+<p>
+<img src="./_resources/about-me/3.jpeg">
+</p>
+
+<p>
+PS: I also like doing photography, but since this is something I do exclusive on vacations I consider this a no-op
+</p>
+
+<p>
+<img src="./_resources/about-me/4.jpeg">
+</p>
+
+
+			<footer id="footer">
+				<p><i>Author: Luis Gabriel Gomez</i></p>
+				<p><i>This site was generated using <a href='https://zim-wiki.org'>Zim 0.73.4-da75848</a> and an author-made <a href='https://github.com/lggomez/zim-templates-gh'>fork of ZeroFiveEight</a></i></p>
+			</footer>
 
 			<br>
 			<span class="backlinks">
 			</span>
- 
-			<script>
-				$( "img" ).wrap( "<div class='imgcenter'></div>" );
-			</script>
 
 			
 		</div>
