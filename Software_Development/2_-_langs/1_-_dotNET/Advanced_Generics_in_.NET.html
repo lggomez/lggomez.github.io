@@ -1,290 +1,103 @@
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<title>Advanced Generics in .NET</title>
-	<meta name="generator" content="Zim 0.73.4-da75848">
-	<meta name="viewport" content="width=device-width">
-	<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300&subset=latin,greek,latin-ext' rel='stylesheet' type='text/css'> -->
-	<![if !IE]>
-	<!-- comment out for IE since it spams the user with warnings -->
-	<script type='text/javascript' src='https://code.jquery.com/jquery-3.5.1.js'></script>
+	<!-- favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <title>Advanced Generics in .NET</title>
+    <meta name="generator" content="Zim 0.73.4-da75848">
+    <meta name="viewport" content="width=device-width">
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
+    <link rel="stylesheet" href="../../../_resources/style.css" type="text/css"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
+    <script src="../../../_resources/jquery-toc-0.4.0.js" type="text/javascript"></script>
 
-	<script type="text/javascript">
-		var headingMap = {};
-
-		function jumpToAnchor(anchorId) {
-			// jump to an anchor
-			// from: https://stackoverflow.com/a/52138511/1121352
-			$(document).ready(function() {
-				// JQuery solution
-				$('html, body').animate({
-					'scrollTop':   $('#'+anchorId).offset().top
-				}, 500);
-				// Ensure the anchor is added in the URL so the user can more easily copy the link and share from the browser's address bar directly
-				location.hash = "#" + anchorId;
-			});
-		};
-
+    <script type="text/javascript">
 		$(window).on('load', function () {
 			// Initialize highlight.js formatter
 			$('pre code').each(function (i) {
 				hljs.highlightBlock(this);
-			});
-
-			// Prepare h# elements for tocbot
-			$('h1, h2, h3, h4, h5, h6, h7').each(function(i) {
-				heading = this
-				var id = heading.id ? heading.id : heading.textContent.trim()
-				.toLowerCase().split(' ').join('-').replace(/[!@#$%^&*():]/ig, '').replace(/\//ig, '-');
-				headingMap[id] = !isNaN(headingMap[id]) ? ++headingMap[id] : 0
-				if (headingMap[id]) {
-					heading.id = id + '-' + headingMap[id];
-				} else {
-					heading.id = id;
-				}
-				// Add a self-referential link on the header's anchor, easier to share + jump to this anchor if clicked
-				heading.innerHTML = "<a href=\"#"+id+"\" onclick=\"jumpToAnchor('"+id+"');\";>"+heading.innerHTML+"</a>";
-			});
-			
-			tocbot.init({
-				// Where to render the table of contents.
-				tocSelector: '.js-toc',
-				// Where to grab the headings to build the table of contents.
-				contentSelector: '.content',
-				// Which headings to grab inside of the contentSelector element.
-				headingSelector: 'h1, h2, h3, h4, h5, h6',
-				// For headings inside relative or absolute positioned containers within content.
-				hasInnerContainers: true,
-				// Header levels collapsing by default
-				collapseDepth: 2,
-			});
-			anchor = window.top.location.hash;
-			anchor = anchor.split("#").pop();
-
-			// Autoformat image and navigation height
-			var headerPadding = parseInt($("div .header").css('padding-top').replace('px', '')) + parseInt($("div .header").css('padding-bottom').replace('px', ''));
-			var contentHeight = $("#content").outerHeight();
-			$("#navigation").height(contentHeight + headerPadding);
-			$("img").wrap("<div class='imgcenter'></div>");
-		});
+            });
+            
+            if ($("h2").length != 0)
+            $("#tocdata").toc({content: "#content", headings: "h2,h3,h4"});
+            else
+                $("#toc").hide();
+            $("#navigation").children("ul").prepend("<li class='index-item'><a href='../../../index.html'>Index</a></li>");
+            $(".toggle").click(function(){
+                $("#navigation").children("ul").toggle();
+            });
+        });
 	</script>
-	<![endif]>
-	<style>
-		body, html {
-			height:100%;
-			font-family:'Open Sans', sans-serif;
-			line-height:1.5em;
-			font-weight:300;
-			background-color:#FAFAFA;
-			text-rendering:geometricPrecision;
-			margin:0;
-			padding:0;
-		}
-		.wrapper {
-			height:100%;
-			position:relative;
-		}
-		#navigation {
-			background-color:#F3F3F3;
-			display:inline-block;
-			border-right:1px solid #EAEAEA;
-			padding-right:30px;
-			padding-top:25px;
-			padding-left:25px;
-			position:relative;
-			float:left;
-			min-height:100%;
-			height: 100%;
-			width: 350px;
-			max-width: 350px;
-		}
-		#content {
-			float:left;
-			display:inline-block;
-			position:absolute;
-			max-width:960px;
-			padding:65px;
-		}
-		h1.header {
-			color: #4100b9ce;
-			display: inline-block;
-			padding-right: 65px;
-			padding-top: 65px;
-			padding-left: 25px;
-			position: relative;
-			font-weight: bold;
-		}
-		#navigation ul {
-			margin-top:0;
-			margin-bottom:0;
-			padding-left:40px;
-		}
-		#navigation li {
-			list-style-type:none;
-		}
-		#navigation a {
-			text-decoration:none;
-			color:gray;
-		}
-		#navigation strong {
-			color:#4E9A06;
-			font-weight:400;
-		}
-		#navigation a:hover {
-			text-decoration:underline;
-		}
-		.navbar-title {
-			font-weight: bold;
-			margin-top: 25px;
-			background-color: ivory;
-			border-radius: 20px;
-			padding-left: 10px;
-		}
-		#content h1:nth-child(1) {
-			margin-top:0;
-		}
-		h1,h2,h3,h4,h5,h6 {
-			color:#4E9A06;
-			font-weight:300;
-			margin-bottom: 0;
-		}
-		#content h1 a {
-			padding-bottom: 50px;
-   			display: inline-block;
-		}
-		h1 a {
-			text-decoration: none;
-			/* no underline */
-		}
-		p {
-			margin-top: 0;
-		}
-		#content a {
-			color:#CE5C00;
-		}
-		#content a {
-			text-decoration: none;
-		}
-		#content a:hover {
-			text-decoration: underline;
-		}
-		#content a:active {
-			text-decoration: underline;
-		}
-		#content strike {
-			color: grey;
-		}
-		#content u {
-			text-decoration: none;
-			background-color: yellow;
-		}
-		#content tt {
-			color: #2e3436;
-		}
-		#content pre {
-			color: #2e3436;
-			margin-left: 20px;
-		}
-		.backlinks {
-			color:gray;
-		}
-		hr.footnotes {
-			width: 20%;
-			margin-left: 0;
-		}
-		@media print{
-			#navigation{
-				background-color:#FFF;
-			}
-		}
-
-		span.zim-tag {
-			color: #ce5c00;
-		}
-		div.zim-object {
-			border-style:solid;
-			border-width:1px;
-		}
-
-		.checked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8sMEGsKGkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEBUlEQVRIx62V22tdRRTGf7Nn73P2ybntnNOe3NqkPTGgLTVUUZF6QatSLOKTPgqCIqLgQ0H/A1sQQbBYCBb1QfAxiC8tSO1FqHkwJVKtjdTGNraUmObsc9nXmfGh7cGYpM1D5nHWzPetteZb3wg2eB2YqYm4zSadsMtoboiNBH/3TE0awx6j+MRoxoTg/IYRvP19TQrJS0bzhdHGSyKFkLTtjSKwMjyiEz43ynhtP6bdjBCWyFobAf7eT7VhNF/q1FRbjYjmUohlCVPwnB+6FUxMTJipqSmUUhhjEGKd3bMT4ks/Y6oLBK2Yth8hHYtCJXOix7Nf7xLMzc0xOzvLzp078TyPNE3viW3QJPXzhNWbxFFKHCmMhoLn/FHodd48vGfhapdAacXQlkFK5dL6wIUm6fuTZPuvqDQhaMUYYyiVyuQr6rXDexYuAdi3tSv1ZJNs/R/CaszzT+1na88uXFnCEnJVgivBNN8uTJKmHQI/ptOOcXNZzMz9mOqFs90OHpipWcYwlo5P4ebnuOkrvr5wgrH+h3im7y36MzuwRXYZeKha/OhP0EkadFoxQSdGSotedR/+XwMc2XvKdNUFOFqZx6LKZWIiwjgkikNmLp/hm8sH+K1zjFTHXfBYdTi+eJArzXM0GxFxoBDCopLvo/fqEwi1XPkWkGqjFo2TgB1jOYZUKZTS/D1/ncmLh7jon0IbRWoiTi59ymzzJEEQE3cStNZsGxqlfPE57MBbOR8fP3hDGalOO9fq2DlBvmZw8xa2IxACGn6TydlD/O6f5OzSV/zif0cYhLQaEXGkKBbz7Ov/AOlXV1cxgBJRI3fuSTrpTawt18kWIZN1CFuaONI0w0WOXfsI43YIggh/KUSlhqxrMz74AkOZcWBm9QkH+Gw8NDLuITi+m0yzhluSyJzBLcpblUhFxywSRAEtPwQjsKVN30CNh0uvYuOubSHLtN3J0TO1j0pmBNuFbFWRK0gyPRZpktL2I5JQkclKakNlnh54g6ocvevUr/Ai2a7wineEkcJupA3S1Wg0nVZM2E6wbEF5U5G9Q++wI7sfR7h3N8HVNstykBfzH+KJEZwiWD0aIwxCgJ0R1Mu7GXOeJSuK93bZtQIle4D9pUNU5DC5jEsu55AvZakM5NicGyEj8uuz8bUCQgj67QfY671P3vEoeC69gy695U1U7NG7XV0pUwBjDJa1/JJlWWxzHuflzQe5FJ/GsgUVuZ2t8lEkTvfc0aNHb72flBhjVicQQqCUuvM3/M+WDVguWBrMVdDXEGZlBVEUrVCU9d9s5+fnaTQa2PZyPxEIhJaI1EEoZwX4ncynp6fXrmB4eJjR0VFarRbNZnP9P9rt9gohqNVq1Ov1ZbF/AZGev3hLJ2/zAAAAAElFTkSuQmCC)}
-		.xchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8bDYnDxEwAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEK0lEQVRIx9WVS2hTWRjHf/eR3CY1nbxMH2YiZRQS6qO13YlMVxY3SnVcuNIBFezGpSADLoQqLu1sHJCqdCFSXFpw4YOCSH3BtFqttTNamabX3DS5bfO6uffMoglja3RGcDMHzuac7/z/53++//cd+L8P6VuCPQYZ8ADNgBd4J31DcDcQs+GnHByRocEDv0kfBSjAOlYCs11Q+gpwDegS8LMJ+3QIK0ATzEhV8Odnz5bzw8P4dJ25aJQ/WlvJ1df/K7hSLtOcTNI+Pk69rpMTgqIQhCDvh1/VSpw79+gRrRMTmLZNezLJJsPg+a5dmOEwQlFqg1sWG16/Jv7sGWXDwBACFQjC9HcwIMONKkGp4PGAJGEDS0IQmZlhnWnye3c3eiyGo6qr3WHbrJ+dJf7gAXI6zSIr72T7/fgzmT4FHnTBsgrQBfYvTU0km5vxz86iADnAm0rRPTWFt7cXZccOJJcLAGHb2K9ekT93jmwmwwdAAFpjI6Ntbfxw5879ag7l6o1sr5eHHR3IsRgeQK/M4sQE+YEB7JcvEY6zAj45SWFgAPPxYwzHoQxIkQjTPT0kIxE+Noj8sexFn4/xnh58iQTeSpHkHAdrbIzi0BCOrmNPTpK/eJHM3bt8sCyKQCiR4NWePWSiUZw1+ZLXJm4pFKLhzBlCsRh2RUXacVgeGaF47RrL58+zcP8+RrmMkCQinZ1EL1zAjERqmkH+tLYl1G3bCJw4QUjT0IA0MJfLMX/5MqmHD0nZNiUgtGULG/r7ccXjINWuWbnmqsuFu7sb/4EDNLlcBIEioNs2KUAFGmMxmk6dQm1tRZI+3xBqEkiShBQOox05Ql1nJ26gvuIUAWiKQnj/ftStW5Fk+YuF+NldsbBA4cYN9KdPmaso8Fc62ZJtk7l1C2t0FGdxESHE1xE4hkHh6lX0oSHSpRIewC/LrPf7CSgKNpCamkI/fZr8pUuIZBIcpyaBunahPp1mub+fDyMjGKUSChCsq6Nh717q9u2jbnSU0uAgRrFIwTThyhUCqRS+hgZKLS1fJvDm87SNjZGcnsYUAjcQ8vsJ9/Xh7u1FDgRQN20iks3iDA+zZFmYhQLqzZtsj8WY3L0baY2Sf55ICCKpFHUzM2SEQAJCHg+hY8fQDh5EDgRWDoRC1J88SePRo2geD0XAcBy8b98Sv3ePYDZbbf2rFQjLIphMsmDbaEBQVQkePox26BCSz7e6i4bDrDt+nGYhmBscpFAskheC4Js3bPR4qHphFYEnlcI7P4/jdqNpGu8TCe4oCsXr1z//F2ga3+/cSfTJE0qmSVYIsKzaOZDcbjKyzFIiwfvt21kMBLA07YsetzWNd+3tLLW0sH5igvT8PH9Go/z44kX+E4LGjg7GDYOcy4XlOEgLC//5P/5LCFzxOPLmzWyIx+m6fduu7v0NVGqyTSycKksAAAAASUVORK5CYII=)}
-		.unchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8qAt8h3m8AAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAA60lEQVRIx+2VsQqDMBRF70sCLg5OLoKgjk7+lJ/hh+STXBwcnRz8ArMEkrxOFktbaC3tULzTg5e8k5vADXDq70VbobXmvu/hvQczg4heHrJfXxQFuq67blZbMc8zpmlCXddIkgTOuZcBUko45zCOI6y1Nz2xFSEEZFmGOI7fGg4A3nsQEZqmuXOu9jallACAtm3fvmutNaIoAjM/dkBECCF89KCbk4eAb+kEnIAT8EsAM0OIz3hSyrssUvss8t5fg+uIrLXPs0gIgWVZYIyBUurQyYdheO4gz3NUVQVjDNZ1PfSjpWmKsixvehfB9GBZ3NndrgAAAABJRU5ErkJggg==)}
-		.migrated-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB+AKHREFA8vJSnkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAC1klEQVRIx+2VT0hUURTGf/e958w4Tc3TYowMw1GyEgwr1MqsFmbZIrIWQZsWJUjbdoHQpl3Qps0swnCRECQFYkR/TC1iKkqmfzAKTo2Vf8hoRsfR995tkRMT87RRWkUHHhy495zvnvvu933wP/75EKkkEAjIYDCIaZpIKRFCZN0kfX9xcTGtra2/irVUEolECIfDlJeXo+s6hmFkDaCqKoZhEAqFSCaTv60pqcSyLAoLC/F4PEtqDmCaJkIIKisrMybX0sdUVRWA5ubmPzdNjjI1cpXkZC/O1fV03PXgdDqRUtpPIITAsqxsDz0Z/3CZQv8uqo4N4C8/Tp2/DdM0MiZQlvk41OTkI/LW1SGtCVb5drD3eCc71wcA+VcAHA5vDd8+3UGakxiJV7i9pdQevU5T1R35pJ3MV5QW1pf+0kWBheJ2SWua8EQXZXsu4fVVYEz1sEKvof5EuxjoPvzpcRvrdp9C2gGMx6cpOHBmbImMesds7BZubwMVDTfXDnQ3vQfK7AC8wLfExMX5whyQc3q2OEnjGm5vE76SQxsfBLr77a7CNf+n0r/l6sSMtsBSnurckiIILCobAtVZhpF4gZF4jubaymj4Ch/fd380LE7bAnjc0NPxk2yqpmEuwGxF0ag+0k5uTpzZeBeaazvj0We8fXojainsb2xh2BZgbe0gSIllzSIUh63wfQ6dZ/O2fbjcKlOj58jJ3cVENESw5yErc9nf2MLQ4jwQAkV1Lqiq37/cZ9WaahJjF9AcmxiPDhLs7ePe23oOnmUwg2hSShQle96tKDjA2HAniusgo9FxnvY9Jxw7RWzGYy92QghM00x5g53qp9sHmtB58/o2umOI2NwGolMnMYUHIb7aAyiKwsjICLqu2/qBEIKUUAohMaSHSLyBSMoPTINQ6CX5+fn2AEVFRZSUlBCPx4nFYhl3L4RESjF/GEgX3pSj+Xw+/H7/b3U/AEOZFnp7O5+5AAAAAElFTkSuQmCC)}
-		ul {list-style-image: none}
-		/* ul rule needed to reset style for sub-bullets */
-		
-		#footer {
-			bottom: 0;
-			padding-top: 25px;
-		}
-		.imgcenter {
-			text-align: center;
-		}
-
-		.toc-link, .toc-list-item, .toc-list-item a {
-			/* Remove underlining for all toc entries */
-			text-decoration: none;
-		}
-		.toc-link:not(.is-active-link) {
-			/* Only leave the active toc entry (currently watched) as bold, else put text in normal weight */
-			font-weight: normal !important;
-		}
-</style>
 </head>
-
 <body>
-	<div class="wrapper">
-		<div id="navigation"> 
-			<!-- Wiki/Site index -->
-			<p class="navbar-title">Site navigation index</p>
-			<ul>
-<li><a href="../../About.html" title="About" class="page">About</a></li>
-<li><a href="../../Software_Development.html" title="Software Development" class="page">Software Development</a>
+    <noscript>
+        <div style="border: 1px solid purple; padding: 10px">
+            <span style="color:red">This page is best viewed with JavaScript enabled!</span>
+        </div>
+    </noscript>
+    
+    <div class="wrapper">
+        <table id="wrapper-grid">
+            <tr>
+                <td id="navigation" rowspan="2">
+                    <svg class="toggle">
+                        <line x1="10" y1="10" x2="40" y2="10" />
+                        <line x1="10" y1="20" x2="40" y2="20" />
+                        <line x1="10" y1="30" x2="40" y2="30" />
+                    </svg> 
+                    <ul>
+<li><a href="../../../About_Me.html" title="About Me" class="page">About Me</a></li>
+<li><a href="../../../Misc.html" title="Misc" class="page">Misc</a></li>
+<li><a href="../../../Software_Development.html" title="Software Development" class="page">Software Development</a>
 <ul>
-<li><a href="../dotNET.html" title="dotNET" class="page">dotNET</a>
+<li><a href="../../1_-_Talks_and_Presentations.html" title="1 - Talks and Presentations" class="page">1 - Talks and Presentations</a></li>
+<li><a href="../../2_-_langs.html" title="2 - langs" class="page">2 - langs</a>
+<ul>
+<li><a href="../1_-_dotNET.html" title="1 - dotNET" class="page">1 - dotNET</a>
 <ul>
 <li><a href="./Advanced_excepcions_in_.NET.html" title="Advanced excepcions in .NET" class="page">Advanced excepcions in .NET</a></li>
 <li><b>Advanced Generics in .NET</b></li>
 </ul>
 </li>
-<li><a href="../General.html" title="General" class="page">General</a></li>
-<li><a href="../Golang.html" title="Golang" class="page">Golang</a></li>
-<li><a href="../Misc.html" title="Misc" class="page">Misc</a></li>
+<li><a href="../2_-_golang.html" title="2 - golang" class="page">2 - golang</a></li>
+</ul>
+</li>
+<li><a href="../../3_-_Articles.html" title="3 - Articles" class="page">3 - Articles</a></li>
+<li><a href="../../4_-_Notes.html" title="4 - Notes" class="page">4 - Notes</a></li>
 </ul></li>
 </ul>
 
+                </td>
 
-			<!-- Current document's Table Of Contents placeholder and style, this table of content will be generated from headers in the document -->
-			<p class="navbar-title">Article table of contents</p>
-			<nav class="toc js-toc relative z-1 transition--300 pa4" style="position: relative; max-width:inherit;">
-			</nav>
-		</div>
-
-		<!-- Header / title -->
-		<div data-role="header" data-position="fixed">
-			<h1 class="header"><a href="/">Luis GG - Tales and notes</a></h1>
-		</div>
-
-		<!-- Warning message if java script is disabled -->
-		<noscript>
-			<div style="border: 1px solid purple; padding: 10px">
-				<span style="color:red">This page is best viewed with JavaScript enabled!</span>
-			</div>
-		</noscript>
-
-		<div id="content" class="content">
-			<h1>Advanced Generics in .NET <a name='Software Development:dotNET:Advanced Generics in .NET'></a></h1>
-
-			<p>
+                <td id="header">
+                    <h1><a href="/">Luis GG - Tales and notes</a></h1>
+                </td>
+            </tr>
+    
+            <tr>
+                <td id="content">
+    
+    
+                        <h1>Advanced Generics in .NET <a name='Software Development:2 - langs:1 - dotNET:Advanced Generics in .NET'></a></h1>
+                        <div id="toc">			
+                            <div class="toctitle">Contents</div>				
+                            <ul id="tocdata"></ul>
+                        </div>		
+    
+                    <p>
 Created Tuesday 20 December 2016
 </p>
 
@@ -297,7 +110,7 @@ The aim of this article is to give a brief and concise overview of the most adva
 </p>
 
 <p>
-<img src="../../_resources/soft-gen/dotnet/1-1.jpeg">
+<img src="../../../_assets/soft-gen/dotnet/2-1.jpeg">
 </p>
 
 <p>
@@ -305,8 +118,6 @@ This shall be useful for beginner developers and a practical review for the more
 </p>
 
 <h2>Glossary</h2>
-
-<br>
 
 <p>
 <ul>
@@ -330,8 +141,6 @@ Before we dive deep into this, it is worth doing a brief review of generics (tho
 </p>
 
 <h2>Generics revisited</h2>
-
-<br>
 
 <p>
 What are generics? The short and simple answer is that it is a characteristic of typed programming languages that allows us to use types as parameters of other types. Or for the purists, better known as parametric polymorphism.
@@ -375,15 +184,11 @@ In this example we can see it in action:
 </code></pre>
 </div>
 
-<br>
-
 <p>
 For this generic class we can define an instance of MyStack(T) Where T can be any type we want: MyStack(string), MyStack(int), MyStack(object), MyStack(MyClass), MyStack(MyStruct)… The possibilities are infinite, although with the assurance that, under any kind of parameter with which we measure our MyStack (T), it will always behave in the same way we implement it, without the need for multiple overloads that accept parameters of other types
 </p>
 
 <h2>.NET specifics</h2>
-
-<br>
 
 <p>
 It is important to note that in .NET generics are reified, this means that parametric types are known at runtime through metadata — for more information see the <a href="https://en.wikipedia.org/wiki/Reification_(computer_science)#Reification_and_reflective_programming_languages" title="following article" class="https">following article</a>.
@@ -407,8 +212,6 @@ In addition to the presence of accurate metadata for these types, the CLR has th
 </p>
 
 <h2>Generic Constraints</h2>
-
-<br>
 
 <p>
 We can continue with the examples by adding a couple of classes to use as parametric types.<br>
@@ -455,8 +258,6 @@ In this simple case, we want to have a list of contacts and we want to send them
 </code></pre>
 </div>
 
-<br>
-
 <p>
 The first thing we’ll notice is that this code doesn’t compile:
 </p>
@@ -468,9 +269,6 @@ The first thing we’ll notice is that this code doesn’t compile:
 <p>
 We can solve it and make it compile by casting:
 </p>
-
-<br>
-<br>
 
 <p>
 We take the following shortcut: “we elevate” the type of the contact by casting it to object, then we can apply the casting to the derived class Person without errors (since all classes derive from object).
@@ -495,8 +293,6 @@ Let’s change the definition of the class ContactList to the following:
 }
 </code></pre>
 </div>
-
-<br>
 
 <p>
 In this way (with the keyword ‘where’) we are adding a generic constraint on the parameterized type T. The constraints are definitions that basically enforce compliance with certain requirements, in this case that is T being of Person type or a derived subclass. This is one of the many generic constraints that we can apply, and a generic class can have multiple constraints.
@@ -575,8 +371,6 @@ Let’s look at the following example:
 </code></pre>
 </div>
 
-<br>
-
 <p>
 <ul>
 <li>Currently there is no constraint for numeric types, because they don’t have any interface in common and there is no support from the CLR to achieve this. This limitation is historical and is reflected in the APIs of the System.Math and similar ones, which are often plagued by overloaded methods.</li>
@@ -585,8 +379,6 @@ Let’s look at the following example:
 </p>
 
 <h2>Covariance and countervariance</h2>
-
-<br>
 
 <p>
 Following what we’ve seen in the previous section we have a Person class and an Employee class, which inherits from Person. From this simple design, we can take advantage of the power of generics with the versatility of polymorphism … right?
@@ -602,8 +394,6 @@ people = new ContactList&lt;Person&gt;();
 </code></pre>
 </div>
 
-<br>
-
 <p>
 … We’ll get the following error:
 </p>
@@ -613,8 +403,6 @@ Cannot implicitly convert type ‘ConsoleApplication1.ContactList’ to ‘Conso
 </p>
 
 <h2>What went wrong?</h2>
-
-<br>
 
 <p>
 What happens is that generics allows us to use parameterized types in classes, but it doesn’t go as far as taking polymorphism into account. For this reason we can’t assign to a generic instance another with a derived parametric type, as we recently tried
@@ -629,8 +417,6 @@ The answer lies in one of the final concepts of generics: variance, also known i
 </p>
 
 <h2>What is the variance in C#?</h2>
-
-<br>
 
 <p>
 Variance is the interaction between types according to their subtyping relationship (inheritance). In a typing system or programming language that supports generic types such as C#, the concept can be extended to the parameterization of generic types and the relation between their parameterized types.
@@ -692,8 +478,6 @@ Returning to the previous example, we can make our class countervariant in the f
 </code></pre>
 </div>
 
-<br>
-
 <p>
 As you can see, we add a generic countervariant interface, which will implement our ContactList class, and keeping our generic constraint, allowing us to maintain type safety when instantiating and increasing compatibility when making assignments.
 </p>
@@ -707,8 +491,6 @@ The following code is valid now:
 people = new ContactCollection&lt;Person&gt;();
 </code></pre>
 </div>
-
-<br>
 
 <p>
 The benefits of designing classes in this way are instant to the time of consuming them, and for that reason the .NET team took the trouble of making co and countervariant much of the interfaces and delegates base of the BCL / FCL. To know:
@@ -760,8 +542,6 @@ Finally we can use these interfaces as an example:
 </code></pre>
 </div>
 
-<br>
-
 <p>
 For more examples, you can go to the MSDN documentation, which contains a wide variety of use cases:
 </p>
@@ -773,19 +553,21 @@ For more examples, you can go to the MSDN documentation, which contains a wide v
 </ul>
 </p>
 
-
-			<footer id="footer">
-				<p><i>Author: Luis Gabriel Gomez</i></p>
-				<p><i>This site was generated using <a href='https://zim-wiki.org'>Zim 0.73.4-da75848</a> and an author-made <a href='https://github.com/lggomez/zim-templates-gh'>fork of ZeroFiveEight</a></i></p>
-			</footer>
-
-			<br>
-			<span class="backlinks">
-			</span>
-
-			
-		</div>
-	</div>
-
+    
+            
+    
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td id="credits" colspan="2">
+                    <p><i>Author: Luis Gabriel Gomez.</i></p>
+                    <p><i>Disclaimer: I may not own the entirety of the site media (including logos, images), thus being used under a fair use policy. All credits go to their rightful owners.</i></p>
+                    <p><i>This site was generated using <a href='https://zim-wiki.org'>Zim 0.73.4-da75848</a> and an author-made <a href='https://github.com/lggomez/zim-templates-gh'>theme</a> based on <a href="https://github.com/gandrille/zim-simple-web-template">Etienne Gandrille's.</a></i></p>
+                </td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>

@@ -11,18 +11,18 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     
-    <title>Software Development</title>
+    <title>2 - When gophers attack</title>
     <meta name="generator" content="Zim 0.73.4-da75848">
     <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="./_resources/style.css" type="text/css"/>
+    <link rel="stylesheet" href="../../../_resources/style.css" type="text/css"/>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
 
-    <script src="./_resources/jquery-toc-0.4.0.js" type="text/javascript"></script>
+    <script src="../../../_resources/jquery-toc-0.4.0.js" type="text/javascript"></script>
 
     <script type="text/javascript">
 		$(window).on('load', function () {
@@ -35,7 +35,7 @@
             $("#tocdata").toc({content: "#content", headings: "h2,h3,h4"});
             else
                 $("#toc").hide();
-            $("#navigation").children("ul").prepend("<li class='index-item'><a href='./index.html'>Index</a></li>");
+            $("#navigation").children("ul").prepend("<li class='index-item'><a href='../../../index.html'>Index</a></li>");
             $(".toggle").click(function(){
                 $("#navigation").children("ul").toggle();
             });
@@ -59,14 +59,29 @@
                         <line x1="10" y1="30" x2="40" y2="30" />
                     </svg> 
                     <ul>
-<li><a href="./About_Me.html" title="About Me" class="page">About Me</a></li>
-<li><a href="./Misc.html" title="Misc" class="page">Misc</a></li>
-<li><b>Software Development</b>
+<li><a href="../../../About_Me.html" title="About Me" class="page">About Me</a></li>
+<li><a href="../../../Misc.html" title="Misc" class="page">Misc</a></li>
+<li><a href="../../../Software_Development.html" title="Software Development" class="page">Software Development</a>
 <ul>
-<li><a href="./Software_Development/1_-_Talks_and_Presentations.html" title="1 - Talks and Presentations" class="page">1 - Talks and Presentations</a></li>
-<li><a href="./Software_Development/2_-_langs.html" title="2 - langs" class="page">2 - langs</a></li>
-<li><a href="./Software_Development/3_-_Articles.html" title="3 - Articles" class="page">3 - Articles</a></li>
-<li><a href="./Software_Development/4_-_Notes.html" title="4 - Notes" class="page">4 - Notes</a></li>
+<li><a href="../../1_-_Talks_and_Presentations.html" title="1 - Talks and Presentations" class="page">1 - Talks and Presentations</a></li>
+<li><a href="../../2_-_langs.html" title="2 - langs" class="page">2 - langs</a>
+<ul>
+<li><a href="../1_-_dotNET.html" title="1 - dotNET" class="page">1 - dotNET</a></li>
+<li><a href="../2_-_golang.html" title="2 - golang" class="page">2 - golang</a>
+<ul>
+<li><a href="./1_-_Talks_and_Presentations.html" title="1 - Talks and Presentations" class="page">1 - Talks and Presentations</a></li>
+<li><b>2 - When gophers attack</b>
+<ul>
+<li><a href="./2_-_When_gophers_attack/Fixing_jwt-go_without_forking.html" title="Fixing jwt-go without forking" class="page">Fixing jwt-go without forking</a></li>
+<li><a href="./2_-_When_gophers_attack/Forgetting_that_precious_recover.html" title="Forgetting that precious recover" class="page">Forgetting that precious recover</a></li>
+<li><a href="./2_-_When_gophers_attack/Log_everything,_just_not_every_single_thing.html" title="Log everything, just not every single thing" class="page">Log everything, just not every single thing</a></li>
+<li><a href="./2_-_When_gophers_attack/That_one_with_the_go_runtime_bug.html" title="That one with the go runtime bug" class="page">That one with the go runtime bug</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</li>
+<li><a href="../../3_-_Articles.html" title="3 - Articles" class="page">3 - Articles</a></li>
+<li><a href="../../4_-_Notes.html" title="4 - Notes" class="page">4 - Notes</a></li>
 </ul></li>
 </ul>
 
@@ -81,16 +96,19 @@
                 <td id="content">
     
     
-                        <h1>Software Development <a name='Software Development'></a></h1>
+                        <h1>2 - When gophers attack <a name='Software Development:2 - langs:2 - golang:2 - When gophers attack'></a></h1>
                         <div id="toc">			
                             <div class="toctitle">Contents</div>				
                             <ul id="tocdata"></ul>
                         </div>		
     
                     <p>
-Created Thursday 31 December 2020
+Created Saturday 02 January 2021
 </p>
 
+<p>
+This series of articles and notes contains several post-mortem and troubleshooting articles with varying degrees of complexity/trauma/learning value
+</p>
 
     
             
