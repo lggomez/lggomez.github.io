@@ -178,7 +178,9 @@ The So, knowing this, we can implement our custom type, namely a copy of the fix
 </p>
 
 <div class="zim-object">
-<pre><code class="golang">type MyFixedClaims = jwtgoclaims.MapClaims // alias to subpackage containing the fixed claims implementation for clarity and easier replacement later on if the author is alive and decides to merge the pull request
+<pre><code class="golang">type MyFixedClaims = jwtgoclaims.MapClaims // alias to subpackage containing the fixed claims implementation
+// for clarity and easier replacement later on if the author
+// is alive and decides to merge the pull request
 
 type ClaimValue struct {
 	Value string
