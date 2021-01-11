@@ -8,8 +8,9 @@ body, html {
     padding:0;
     text-rendering:geometricPrecision;
     line-height:1.5em;
-
-  }
+    width: 100vw;
+    max-width: 100%;
+  } 
   
   b, strong {
     font-weight: 600;
@@ -29,7 +30,6 @@ body, html {
   #navigation {
     vertical-align: top;
     background-color:#E1DEE9;
-    border-bottom:1px solid #B9C3CF;
     width: 300px;
     max-width: 300px;
     min-width: 300px;
@@ -116,7 +116,11 @@ body, html {
     text-decoration-line: underline;
     text-decoration-style: dotted;
   }
-  
+
+  #credits p {
+      margin: 10px;
+  }
+    
   #content h1:nth-child(1) {
     margin-top:0;
   }
@@ -219,14 +223,9 @@ body, html {
   }
   
   #credits {
-    /* grid-column: span 2;
-    grid-row: row; */
     background-color: #ABA4EA;
-    border-top: 1px solid #B9C3CF;
-    border-bottom: 1px solid #B9C3CF;
     font-size: 0.7em;
     text-align: center;
-    padding: 10px;
     color: #111;
   }
   
@@ -242,8 +241,8 @@ body, html {
     border-width: 1px 1px 1px 0;
     background-color: transparent;
     border-spacing: 0;
-    width: 100vw;
-    max-width: 100vw;
+    width: 100%;
+    max-width: 100%;
   }
   
   thead th {
@@ -259,20 +258,21 @@ body, html {
     padding: 8px;
   }
 
-  #wrapper-grid {
+  #wrapper {
     -moz-border-image: none;
     border-collapse: collapse;
     border-style: none;
     background-color: transparent;
-    width: 100vw;
+    width: 100%;
+    max-width: 100%;
   }
   
-  #wrapper-grid thead th {
+  #wrapper thead th {
     line-height: revert;
     padding: revert;
   }
   
-  #wrapper-grid th, td {
+  #wrapper th, td {
     line-height: revert;
     border-left: none;
     border-top: none;
@@ -314,13 +314,11 @@ body, html {
   
   @media screen and (min-width: 950px) {
     .wrapper {
-      display: grid;
-      grid-template-columns: 400px 1fr;
-      grid-row-gap: 15px;
+      width: 100%;
+      max-width: 100%;
     }
     #navigation {
-      border-radius: 0 0 15px 0;
-      border-right:1px solid #B9C3CF;
+      border-radius: 0 15px 15px 0;
     }
     .toggle {
       display: none;
@@ -329,7 +327,7 @@ body, html {
       display: block;
     }
     #content {
-      padding:65px;
+      padding: 25px 65px 25px 65px;
     }
     #toc {
       float: right;
