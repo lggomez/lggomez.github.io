@@ -152,5 +152,12 @@
       <author>Luis Gabriel Gomez</author>
       <pubDate>Thu, 07 Jan 2021 18:56:44 -0300</pubDate>
     </item>
+    <item>
+      <title>About RSS feed</title>
+      <link>https://luisgg.me/#index/About_RSS_feed.html</link>
+      <description>RSS feed presentation</description>
+      <author>Luis Gabriel Gomez</author>
+      <pubDate>Fri, 15 Jan 2021 20:34:28 -0300</pubDate>
+    </item>
   </channel>
 </rss>

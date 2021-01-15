@@ -58,8 +58,12 @@ body, html {
     text-decoration:underline;
   }
 
-  /* about me item */
+  /* about me and rss items */
   #navigation > ul > li:nth-child(2) {
+    font-weight: bold;
+    font-style: italic;
+  }
+  #navigation > ul > li:nth-child(3) {
     font-weight: bold;
     font-style: italic;
   }
