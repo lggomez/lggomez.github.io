@@ -5,6 +5,10 @@
     <description>Personal notes and posts on software development, technology and miscellaneous</description>
     <managingEditor>luis.gg1990@gmail.com (Luis Gabriel Gomez)</managingEditor>
     <pubDate>Wed, 23 Dec 2020 21:19:19 -0300</pubDate>
+    <image>
+      <url>https://luisgg.me/favicon-16x16.png</url>
+      <link>https://luisgg.me/#index</link>
+    </image>
     <item>
       <title>About Me</title>
       <link>https://luisgg.me/About_Me.html</link>
@@ -159,5 +163,11 @@
       <author>Luis Gabriel Gomez</author>
       <pubDate>Fri, 15 Jan 2021 20:34:28 -0300</pubDate>
     </item>
-  </channel>
+    <item>
+      <title>Scaffolding RSS feeds from zim notebooks</title>
+      <link>https://luisgg.me/#index/Software_Development/2_-_langs/2_-_golang/Scaffolding_RSS_feeds_from_zim_notebooks.html</link>
+      <description>How to generate RSS feeds for zim notebooks</description>
+      <author>Luis Gabriel Gomez</author>
+      <pubDate>Sat, 23 Jan 2021 15:10:22 -0300</pubDate>
+    </item>  </channel>
 </rss>

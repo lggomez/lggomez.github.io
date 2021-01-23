@@ -15,7 +15,7 @@
     <link rel="manifest" href="/site.webmanifest">
     
     <title>Forgetting that precious recover</title>
-    <meta name="generator" content="Zim 0.73.2">
+    <meta name="generator" content="Zim 0.73.4-da75848">
     <meta name="viewport" content="width=device-width">
 
     <link rel="stylesheet" href="../../../../_resources/style.css" type="text/css"/>
@@ -84,7 +84,9 @@
 </li>
 <li><a href="./Log_everything,_just_not_every_single_thing.html" title="Log everything, just not every single thing" class="page">Log everything, just not every single thing</a></li>
 <li><a href="./That_one_with_the_go_runtime_bug.html" title="That one with the go runtime bug" class="page">That one with the go runtime bug</a></li>
-</ul></li>
+</ul>
+</li>
+<li><a href="../Scaffolding_RSS_feeds_from_zim_notebooks.html" title="Scaffolding RSS feeds from zim notebooks" class="page">Scaffolding RSS feeds from zim notebooks</a></li>
 </ul></li>
 </ul>
 </li>
@@ -206,7 +208,7 @@ It is a known issue and a non-negotiable design change for go 1.x (fingers cross
 Compare the following examples, this one has a propagated (unhandled panic):
 </p>
 <div class="zim-object">
-<pre><code class="go">package main
+<pre><code class="golang">package main
 
 import (
 	"fmt"
@@ -239,7 +241,7 @@ func Go(f func()) {
 And this one handles the panic. You may notice that this code is in need of some composability:
 </p>
 <div class="zim-object">
-<pre><code class="go">package main
+<pre><code class="golang">package main
 
 import (
 	"fmt"
@@ -297,7 +299,7 @@ How about adding this lil' gut to the beginning every new goroutine we spawn in 
 </p>
 
 <div class="zim-object">
-<pre><code class="go">defer func() {
+<pre><code class="golang">defer func() {
 	if r := recover(); r != nil {
 		fmt.Printf("RECOVERED - %v\r\n", r)
 	}
@@ -314,7 +316,7 @@ Remember what I said about composability? we can mitigate it with a handler like
 </p>
 
 <div class="zim-object">
-<pre><code class="go">func Wrap(f func()) func() {
+<pre><code class="golang">func Wrap(f func()) func() {
 	return func() {
 			defer func() {
 				if r := recover(); r != nil {
@@ -332,7 +334,7 @@ We'd use it the following way:
 </p>
 
 <div class="zim-object">
-<pre><code class="go">func main() {
+<pre><code class="golang">func main() {
 	go Wrap(test)()
 	time.Sleep(time.Second)
 	fmt.Println("HELLO")
@@ -350,7 +352,7 @@ This way, we centralize the panic handling. And last but not least, in case we w
 </p>
 
 <div class="zim-object">
-<pre><code class="go">package main
+<pre><code class="golang">package main
 
 import (
 	"fmt"
@@ -458,7 +460,7 @@ The behavior is given away by 2 things:<br>
             <td id="credits" colspan="2">
                 <p><i><strong>Author:</strong> Luis Gabriel Gomez</i></p>
                 <p><i><strong>Disclaimer:</strong> I may not own the entirety of the site media (including logos, images), thus being used under a fair use policy. All credits go to their rightful owners.</i></p>
-                <p><i>This site was generated using <a href='https://zim-wiki.org'>Zim 0.73.2</a> and an author-made <a href='https://github.com/lggomez/zim-templates-gh'>theme</a> based on <a href="https://github.com/gandrille/zim-simple-web-template">Etienne Gandrille's.</a></i></p>
+                <p><i>This site was generated using <a href='https://zim-wiki.org'>Zim 0.73.4-da75848</a> and an author-made <a href='https://github.com/lggomez/zim-templates-gh'>theme</a> based on <a href="https://github.com/gandrille/zim-simple-web-template">Etienne Gandrille's.</a></i></p>
             </td>
         </tr>
     </table>
