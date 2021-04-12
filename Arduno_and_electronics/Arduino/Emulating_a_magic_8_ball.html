@@ -115,6 +115,10 @@
 Created Thursday 08 April 2021
 </p>
 
+<p>
+<img src="../../_assets/elec-arduino/arduino/2-8_ball/5_v1_3.gif">
+</p>
+
 <h2>The history</h2>
 
 <p>
@@ -245,8 +249,8 @@ I wanted to add display transitions between messages, and so I found this <a hre
 
 <p>
 <ul>
-<li>Using a single 128x64 buffer page is too memory intensive and slow. During the first implementation, the u8g2 version at that wasn't stable enough to operate in this fashion. Citing the documentation on paged buffers: <i>Always redraw everything. It is not possible to redraw only parts of the content. The advantage is lesser RAM consumption compared to a full frame buffer in RAM</i></li>
-<li>Making individual pixel writes to the device removes the memory limitations, but is is very slow and not feasible on the long run</li>
+<li>We'll be using a single, full display page buffer. The tradeoff comes cited in the <a href="https://github.com/olikraus/u8g2/wiki/u8g2reference#firstpage" title="documentation" class="https">documentation</a> of the library: <i>Always redraw everything. It is not possible to redraw only parts of the content. The advantage is lesser RAM consumption compared to a full frame buffer in RAM.</i> This last part of the sentence is rendered void for us, but for the following reason</li>
+<li>Making individual pixel writes to the device removes the memory limitations, but is is very slow and not feasible on the long run. Page size can also be smaller, but it won't have a noticeable performance effect and it will, in fact, be slower sending 4 pages than performing a single flush of a larger page</li>
 </ul>
 </p>
 
@@ -455,11 +459,6 @@ Cannot reproduce it always but yeah, bugs happen (even on blog posts)
 ...and that's it for now. There may still be things to iron out but I'm pretty happy with how this turned out, all things considered. 
 </p>
 
-<h2>A small demo</h2>
-
-<p>
-<img src="../../_assets/elec-arduino/arduino/2-8_ball/5_v1_3.gif">
-</p>
 
 
         
