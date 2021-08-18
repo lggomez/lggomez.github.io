@@ -1,0 +1,600 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta property="og:image" content="https://luisgg.me/_assets/about-me/og.jpeg" />
+    <meta property="og:title" content="Advanced excepcions in .NET" />
+    <meta property="og:description" content="Luis GG - Tales and notes" />
+
+	<!-- favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <title>Advanced excepcions in .NET</title>
+    <meta name="generator" content="Zim 0.73.4-da75848">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="../../../_resources/style.css" type="text/css"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+
+    <script src="../../../_resources/jquery-toc-0.4.0.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+		$(window).on('load', function () {
+			// Initialize highlight.js formatter
+			$('pre code').each(function (i) {
+				hljs.highlightBlock(this);
+            });
+            
+            if ($("h2").length != 0)
+            $("#tocdata").toc({content: "#content", headings: "h2,h3,h4"});
+            else
+                $("#toc").hide();
+            $("#navigation").children("ul").prepend("<li class='index-item'><a href='../../../index.html'>Index</a></li>");
+            $(".toggle").click(function(){
+                $("#navigation").children("ul").toggle();
+            });
+        });
+	</script>
+</head>
+<body>
+    <noscript>
+        <div style="border: 1px solid purple; padding: 10px">
+            <span style="color:red">This page is best viewed with JavaScript enabled!</span>
+        </div>
+    </noscript>
+
+    <table id="wrapper">
+        <tr>
+            <td id="navigation" rowspan="2">
+                <svg class="toggle">
+                    <line x1="10" y1="10" x2="40" y2="10" />
+                    <line x1="10" y1="20" x2="40" y2="20" />
+                    <line x1="10" y1="30" x2="40" y2="30" />
+                </svg> 
+                <ul>
+<li><a href="../../../About_Me.html" title="About Me" class="page">About Me</a></li>
+<li><a href="../../../Misc.html" title="Misc" class="page">Misc</a></li>
+<li><a href="../../../Software_Development.html" title="Software Development" class="page">Software Development</a>
+<ul>
+<li><a href="../../1_-_Talks_and_Presentations.html" title="1 - Talks and Presentations" class="page">1 - Talks and Presentations</a></li>
+<li><a href="../../2_-_langs.html" title="2 - langs" class="page">2 - langs</a>
+<ul>
+<li><a href="../1_-_dotNET.html" title="1 - dotNET" class="page">1 - dotNET</a>
+<ul>
+<li><b>Advanced excepcions in .NET</b></li>
+<li><a href="./Advanced_Generics_in_.NET.html" title="Advanced Generics in .NET" class="page">Advanced Generics in .NET</a></li>
+</ul>
+</li>
+<li><a href="../2_-_golang.html" title="2 - golang" class="page">2 - golang</a></li>
+</ul>
+</li>
+<li><a href="../../3_-_Articles.html" title="3 - Articles" class="page">3 - Articles</a></li>
+<li><a href="../../4_-_Notes.html" title="4 - Notes" class="page">4 - Notes</a></li>
+</ul></li>
+</ul>
+
+            </td>
+
+            <td id="header">
+                <h1><a href="/">Luis GG - Tales and notes</a></h1>
+            </td>
+        </tr>
+
+        <tr>
+            <td id="content">
+
+
+                    <h1>Advanced excepcions in .NET <a name='Software Development:2 - langs:1 - dotNET:Advanced excepcions in .NET'></a></h1>
+                    <div id="toc">			
+                        <div class="toctitle">Contents</div>				
+                        <ul id="tocdata"></ul>
+                    </div>		
+
+                <p>
+Created Sunday 26 February 2017
+</p>
+
+<p>
+<i><b>Note (December 2020): This is an article I wrote almost 4 years ago for my <a href="https://engineering.hexacta.com/advanced-exceptions-in-net-f68debf990c4" title="employer at that time" class="https">employer at that time</a>, and now migrated to this space with some minor corrections. </b></i>
+</p>
+
+<p>
+The goal of this article is to give you a <b>tour around advanced exceptions in .NET, in order to learn about their pitfalls and best practices</b> when developing applications.
+</p>
+
+<p>
+<img src="../../../_assets/soft-gen/dotnet/1-1.jpeg">
+</p>
+
+<p>
+Exception handling is a vital part of an application, no exceptions (pun intended).
+</p>
+
+<p>
+The efficacy of this handling depends mostly on the language and platform of choice, so it’s important to know in detail their correct usage and behavior in order to spare our users and fellow developers from suffering when diagnosing issues in our code.
+</p>
+
+<p>
+In this article we’re going to take a look at what C# and .NET do in regards of error handling.
+</p>
+
+<h2>Glossary</h2>
+
+<p>
+<ul>
+<li><b>CLR</b>: Acronym for Common Language Runtime, is the .NET runtime, which is in charge of executing applications compiled in all of the .NET languages. Aside from the virtual machine and the Just-In-Time compiler it also has additional responsibilities like memory management, security, and so on.</li>
+<li><b>BCL</b>: Acronym for Base Class Library, is the core library of the .NET framework. Besides operating directly with the CLR it exposes the primitive data types and essential functionality to build and run an application. Also known as mscorlib.</li>
+<li><b>FCL</b>: Acronym for Framework Class Library, is what most of us know as “the framework” in .NET. Using the BCL as building blocks it exposes a great deal of namespaces with various features such as System.IO, System.Security, System.Text, among others.</li>
+<li><b>TPL</b>: Acronym for Task Parallel Library, is the library that contains the functionality provided by the async keywords and API’s. Released with .NET version 4.5, along with C# 5.</li>
+<li><b>SEH</b>: Acronym for Structured Exception Handling, is the native exception subsystem of Windows, it handles software and hardware exceptions on the operating system level</li>
+<li><b>MDA</b>: Acronym for Managed Debugging Assistants. These are special debug extensions that provide information related to the CLR execution state to the Visual Studio debugger, which is exposed by internal helpers and assets. See the <a href="https://msdn.microsoft.com/en-us/library/d21c150d.aspx" title="MSDN" class="https">MSDN</a> page for more details</li>
+</ul>
+</p>
+
+<h2>Exceptions Revisited</h2>
+
+<p>
+<b>In .NET, and particularly in C#, exceptions are handled using try, catch and finally blocks</b>. First of all, the try block will contain the code which is expected to throw an exception, and in second place we will have a catch block, that will specify an exception type and a code block that will be executed in the event that an exception matching the specified type is thrown inside the try block:
+</p>
+
+<div class="zim-object">
+<pre><code class="csharp">Random rnd = new Random();
+
+try {
+	Console.WriteLine(1 / rnd.Next(-100, 101));
+}
+catch (DivideByZeroException ex) {
+	Debug.WriteLine(“A division by zero attempt has occurred”);
+}
+</code></pre>
+</div>
+
+<p>
+It’s worth noting that an Exception type catch will handle all possible exceptions (this is not entirely true but we will stick with this assumption for now):
+</p>
+
+<div class="zim-object">
+<pre><code class="csharp">try {
+	//...
+}
+catch (Exception ex) {
+	//General exception handler
+}
+</code></pre>
+</div>
+
+<p>
+Another way of writing the general exception handler is the following:
+</p>
+
+<div class="zim-object">
+<pre><code class="csharp">catch {
+	//...
+}
+</code></pre>
+</div>
+
+<p>
+A try block can have multiple catch blocks with different exception types associated, and those will be evaluated according to class hierarchy in a descending order:
+</p>
+
+<div class="zim-object">
+<pre><code class="csharp">catch (DivideByZeroException ex) {
+	 //Code that handles division by zero exceptions
+}
+catch (Exception ex) {
+	 //Code that handles any exception that may occur
+}
+</code></pre>
+</div>
+
+<p>
+<b>NOTE</b>: It’s important to <b>keep in mind the evaluation order of exception types</b>, since if our first catch handles an Exception type, all of the exception handlers below will be ignored. This is a common error that might be difficult to detect later in complex applications.
+</p>
+
+<p>
+And finally, we have the finally block (pardon the redundancy), which is going to execute its contained code always, whether an exception has been thrown or not. So, a complete exception handler has the following form:
+</p>
+
+<div class="zim-object">
+<pre><code class="csharp">try {
+    //...
+}
+catch {
+    //...
+}
+finally {
+    //...
+}
+</code></pre>
+</div>
+
+<p>
+It is worth noting that the code inside a finally block isn’t included in the exception handling, so any exception thrown here won’t be caught, and it will bubble up the call stack until it’s managed.
+</p>
+
+<p>
+As a last detail we can add that the <b>throw keyword has a special meaning in the exception handling context</b>, because it can also allow us to specify how to propagate the exception caught. Based on the previous example:
+</p>
+
+<div class="zim-object">
+<pre><code class="csharp">try {
+	Console.WriteLine(1 / rnd.Next(-100, 101));
+}
+</code></pre>
+</div>
+
+<p>
+We can propagate the exception in several ways inside the catch block:
+</p>
+
+<div class="zim-object">
+<pre><code class="csharp">catch (DivideByZeroException ex) {
+	//1 – Continue with the exception while preserving its stack trace, also called rethrow
+	throw;
+
+	//2 – Throw the same type of exception but eliminating its original stack trace
+	throw ex;
+	
+	//3 – Throw a new exception, eliminating the original stack trace
+	throw new InvalidOperationException();
+
+	//4 - Throw a new exception, passing the current one as its InnerException
+	throw new InvalidOperationException(ex);
+}
+</code></pre>
+</div>
+
+<p>
+<b>A known limitation of async in C# is that the await keyword cannot be used inside catch and finally blocks. This was resolved in C# 6</b>, and, since we’re talking about C# 6 we are going to mention a new feature added to the catch blocks, the exception filters. This new syntactic sugar lets us capture or propagate an exception according to the boolean value of an expression:
+</p>
+
+<div class="zim-object">
+<pre><code class="csharp">try
+{…}
+catch (MyException e) when (filter(e))
+{…}
+</code></pre>
+</div>
+
+<p>
+One of the major advantages is that we can manage the exception flow without altering the stack trace. It can be also used as an interceptor, to add side effects like logging:
+</p>
+
+<div class="zim-object">
+<pre><code class="csharp">private static bool Log(Exception e) { 
+  /* Exception logging */; 
+  return false; //This preserves the call stack
+}
+
+try 
+{...} 
+catch (Exception e) when (Log(e)) 
+{...}
+</code></pre>
+</div>
+
+<p>
+We still have to keep in mind the exception order we saw previously, to avoid issues like the following:
+</p>
+
+<div class="zim-object">
+<pre><code class="csharp">catch (MyException ex)
+{
+    // Will catch all instances of MyException
+}
+catch (MyException ex) when (filtro1(ex) &amp;&amp; filtro2(ex))
+{
+    // Unreachable
+}
+catch (MyException ex) when (filtro1(ex))
+{
+    // Unreachable
+}
+</code></pre>
+</div>
+
+<h2>Exceptions in .NET</h2>
+
+<p>
+The table below shows a list with all base exceptions from the BCL (source: MSDN)
+</p>
+
+<p>
+<b>Exception — Base Type: Object</b>
+</p>
+
+<p>
+Base class for all exceptions.
+</p>
+
+<p>
+<b>SystemException — Base Type: Exception</b>
+</p>
+
+<p>
+Base class for all runtime-generated errors.
+</p>
+
+<p>
+<b>IndexOutOfRangeException — Base Type: SystemException</b>
+</p>
+
+<p>
+Thrown by the runtime only when an array is indexed improperly.
+</p>
+
+<p>
+<b>NullReferenceException — Base Type: SystemException</b>
+</p>
+
+<p>
+Thrown by the runtime only when a null object is referenced.
+</p>
+
+<p>
+<b>AccessViolationException — Base Type: SystemException</b>
+</p>
+
+<p>
+Thrown by the runtime only when invalid memory is accessed.
+</p>
+
+<p>
+<b>InvalidOperationException — Base Type: SystemException</b>
+</p>
+
+<p>
+Thrown by methods when in an invalid state.
+</p>
+
+<p>
+<b>ArgumentException — Base Type: SystemException</b>
+</p>
+
+<p>
+Base class for all argument exceptions.
+</p>
+
+<p>
+<b>ArgumentNullException — Base Type: ArgumentException</b>
+</p>
+
+<p>
+Thrown by methods that do not allow an argument to be null.
+</p>
+
+<p>
+<b>ArgumentOutOfRangeException — Base Type: ArgumentException</b>
+</p>
+
+<p>
+Thrown by methods that verify that arguments are in a given range.
+</p>
+
+<p>
+<b>ExternalException — Base Type: SystemException</b>
+</p>
+
+<p>
+Base class for exceptions that occur or are targeted at environments outside the runtime.
+</p>
+
+<p>
+<b>COMException — Base Type: ExternalException</b>
+</p>
+
+<p>
+Exception encapsulating COM HRESULT information.
+</p>
+
+<p>
+<b>SEHException — Base Type: ExternalException</b>
+</p>
+
+<p>
+Exception encapsulating Win32 structured exception handling information.
+</p>
+
+<p>
+We can also include the type <a href="https://msdn.microsoft.com/en-us/library/system.aggregateexception(v=vs.110).aspx" title="AggregateException" class="https">AggregateException</a> that results from the execution of tasks and async code (TPL and Parallel LINQ). It’s a special exception type because it consolidates multiple exceptions in a single object, composing a tree of exceptions. For more information on usage techniques and use common use cases see the <a href="https://msdn.microsoft.com/en-us/library/dd537614(v=vs.110).aspx" title="tasks" class="https">tasks</a> and <a href="https://msdn.microsoft.com/en-us/library/dd460712(v=vs.110).aspx" title="PLINQ" class="https">PLINQ</a> articles on MSDN
+</p>
+
+<p>
+In C# there are several keywords that include exception handling in their generated code:
+</p>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li><b>Using</b>: Generates a try/finally, in which the Dispose method of the containing object is executed.</li>
+<li><b>Async/await</b>: Async code is compiled to a state machine that manages method invocation transitions and delegation, and, among other things, it generates catch blocks that aggregate all exceptions thrown.</li>
+<li><b>Yield</b>: In a similar fashion to async, coroutines (implemented in C# via the yield return statements) also generate a state machine with its respective exception handling code.</li>
+</ul>
+</p>
+
+<h2>Exception dispatch</h2>
+
+<p>
+One of the new features available since .NET 4.5, as part of the TPL release is the exception dispatch, facilitated by the class <a href="https://msdn.microsoft.com/en-us/library/system.runtime.exceptionservices.exceptiondispatchinfo(v=vs.110).aspx" title="ExceptionDispatchInfo" class="https">ExceptionDispatchInfo</a><br>
+ of the namespace System.Runtime.ExceptionServices.
+</p>
+
+<p>
+With this class we can preserve an exception and delegate it to another instance, as long as we stay in the same AppDomain. Later on we can inspect the exception and throw it again (rethrow):
+</p>
+
+<div class="zim-object">
+<pre><code class="csharp">ExceptionDispatchInfo exInfo = null;
+
+try
+{
+ //...
+}
+catch (Exception ex)
+{
+  exInfo = ExceptionDispatchInfo.Capture(ex);
+}
+
+//...
+
+if (exInfo != null)
+{
+  exInfo.Throw();
+}
+</code></pre>
+</div>
+
+<h2>Exceptional exceptions: Part I — CSE</h2>
+
+<p>
+Up until now we had assumed that no matter what happens, all exceptions will be unconditionally caught by their associated catch blocks, and later on the finally block will be executed. Is this still true?
+</p>
+
+<p>
+The answer is no, at least not always. By design, the CLR has some special exceptions types that cannot be captured, or at least they cannot be captured without forcing it via configuration.
+</p>
+
+<p>
+The first kind are the Corrupted State Exceptions (CSE). They consist of a <b>group of 8 native exceptions from Win32/SEH</b> that, due to their nature, undergo the assumption that they’re not manageable since they imply that the program is in an invalid, inconsistent and unrecoverable state.
+</p>
+
+<p>
+<b>The native exceptions, along with their CLR counterparts, are the following:</b>
+</p>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li>EXCEPTION_ACCESS_VIOLATION — System.AccessViolationException</li>
+<li>EXCEPTION_STACK_OVERFLOW — System.StackOverflowException</li>
+<li>EXCEPTION_ILLEGAL_INSTRUCTION — SEHException</li>
+<li>EXCEPTION_IN_PAGE_ERROR — SEHException</li>
+<li>EXCEPTION_INVALID_DISPOSITION — SEHException</li>
+<li>EXCEPTION_NONCONTINUABLE_EXCEPTION — SEHException</li>
+<li>EXCEPTION_PRIV_INSTRUCTION — SEHException</li>
+<li>STATUS_UNWIND_CONSOLIDATE — SEHException</li>
+</ul>
+</p>
+
+<p>
+At this instance, the exceptions are shown as “Unhandled exception” and are not observable from the local debug in Visual Studio. The only way to diagnose these in more detail is to use with its <a href="https://msdn.microsoft.com/en-us/library/bb190764(v=vs.110).aspx" title="SOS" class="https">SOS</a> extension and analyzing crash dumps, among others.
+</p>
+
+<p>
+The reason behind them being ignored by managed code is that <b>they are incoming exceptions from native code, which escape the application’s responsibility or, alternatively, we are dealing with a CLR bug</b>, situation that is very unlikely but not impossible. It can also be a result of bugs in our code if we are using the unsafe feature of C# to write unmanaged code (with direct access to memory).
+</p>
+
+<p>
+If we still wish to handle these exceptions, the CLR gives us the choice to catch some (not all) of them via the attribute HandleProcessCorruptedStateExceptions. This requires the method having an access level of SecurityCritical:
+</p>
+
+<div class="zim-object">
+<pre><code class="csharp">[HandleProcessCorruptedStateExceptions]
+[SecurityCritical]
+public void MyMethod()
+{
+	try
+	{
+		Marshall.StructureToPtr(1000, new IntPtr(1000), true);
+	}
+	catch {…}
+}
+</code></pre>
+</div>
+
+<p>
+This can also be achived on a whole process by specifing the legacyCorruptedStateExceptionPolicy attribute as true, in our application configuration.
+</p>
+
+<p>
+<b>NOTE</b>: Due to compatibility reasons, The CSE’s will be removed in the upcoming versions of .NET Core. These will remain untouched in the desktop version, since it’s the original Windows version.
+</p>
+
+<p>
+There are 2 remaining exceptions types that cannot be handled and indicate a premature and unrecoverable process termination: the StackOverflowExceptions (if originated within the CLR), and the CLR exceptions, which we’ll see next.
+</p>
+
+<h2>Exceptional exceptions: Part II — Exceptions in the CLR</h2>
+
+<p>
+Diving deeper into the origin of exceptions, we stumble upon the CLR. The runtime is mostly build in C++, and has the task of dominating a complex scenario which is the handling of multiple exception types:
+</p>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li><b>Native Windows exceptions (SEH)</b>: The CLR unifies the handling of these exceptions with macros that simulate the VC++ compiler intrinsics (<u>try, </u>catch, etcecera). The SEH model is extremely intricate, making the unwind (we’ll see about that in the next section) a costly process in regards to stack frames and binary compatibility in comparison to linux, for example</li>
+<li><b>C++ exceptions</b>: These exceptions can be thrown by the CLR code itself</li>
+<li><b>CLR exceptions</b>: These are the exceptions delegated and exposed by the virtual machine to the application during execution</li>
+</ul>
+</p>
+
+<p>
+CoreCLR, the multiplatform and open source version of the CLR, has the even harder task of integrating compatibility with multiple platforms and architectures (Linux and Mac x64, among others in progress like x86 and ARM32/ARM64). <b>To achieve the level of decoupling required, it relies on a layer called PAL (Platform Adaptation Layer).</b>
+</p>
+
+<p>
+In the event of a critical error inside the CLR it will throw an ExecutionEngineException (deprecated) and FatalExecutionEngineError (MDA). These errors commonly indicate heap corruptions in managed code.
+</p>
+
+<h2>Performance Implications</h2>
+
+<p>
+To finish the exceptions tour, we’ll move on to a short but obligatory talk about the performance implications they have.
+</p>
+
+<p>
+Exception handling is very expensive compared to the execution of normal code. An exception incurs in the following actions and side effects:
+</p>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li>Cache errors and page faults in memory due to the execution flow (and context, consequently) changes.</li>
+<li>Unwind: this is the process in which the context belonging to the exception causing code in the try block is “cleaned”. This involves traversing all of the previous stack frames and the deallocation/disposing of the affected objects. All of this, additionally, may bring forward the next memory compaction by the garbage collector.</li>
+<li>Additional allocations for the diagnostic objects (StackTrace)</li>
+<li>“Cold” code accesses, which demand additional time for Just In Time compilation (JIT).</li>
+</ul>
+</p>
+
+<p>
+In normal situations there won’t be a noticeable performance impact, but the abuse of exceptions in situations with tight performance or scalability requirements can be troublesome.
+</p>
+
+<p>
+To finish the article we hand out some tips that can be useful when designing and implementing efficient solutions:
+</p>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li>Avoid using exceptions as a control flow in our application. Use error codes or, even better, contemplate the errors and warning as part of your class design.</li>
+<li>Be measured with the exception throwing and catching: in web scenarios, for example, the exception handling can be centralized per request, or, in layered architectures, they can be handled per invocation across layers (dependency injection frameworks offer several tools for that end).</li>
+<li>Avoid having try blocks with excessive amounts of code, especially if the throwing code isn’t immediately related or dependent on it. This is because large code bodies (in both methods and blocks) can preemptively disable all runtime optimizations made by the Just In Time compiler (JIT).</li>
+<li>Currently (as of .NET Core 1.1) methods with try/catch blocks are not inlined (not even with MethodImplOptions.AggressiveInlining). Keep this in mind in order to prevent surprises</li>
+</ul>
+</p>
+
+
+        
+
+                
+            </td>
+        </tr>
+        
+        <tr>
+            <td id="credits" colspan="2">
+                <p><i><strong>Author:</strong> Luis Gabriel Gomez</i></p>
+                <p><i><strong>Disclaimer:</strong> I may not own the entirety of the site media (including logos, images), thus being used under a fair use policy. All credits go to their rightful owners.</i></p>
+                <p><i>This site was generated using <a href='https://zim-wiki.org'>Zim 0.73.4-da75848</a> and an author-made <a href='https://github.com/lggomez/zim-templates-gh'>theme</a> based on <a href="https://github.com/gandrille/zim-simple-web-template">Etienne Gandrille's.</a></i></p>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

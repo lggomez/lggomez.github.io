@@ -1,0 +1,212 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="alternate" type="application/rss+xml" href="https://luisgg.me/rss.xml" title="Luis GG - Tales and notes">
+    
+    <meta property="og:image" content="http://luisgg.me/_assets/about-me/og.jpeg" />
+    <meta property="og:title" content="Making a network canary" />
+    <meta property="og:description" content="Luis GG - Tales and notes" />
+
+	<!-- favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <title>Making a network canary</title>
+    <meta name="generator" content="Zim 0.73.4-da75848">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="../../_resources/style.css" type="text/css"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+
+    <script src="../../_resources/jquery-toc-0.4.0.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+		$(window).on('load', function () {
+			// Initialize highlight.js formatter
+			$('pre code').each(function (i) {
+				hljs.highlightBlock(this);
+            });
+            
+            if ($("h2").length != 0)
+            $("#tocdata").toc({content: "#content", headings: "h2,h3,h4"});
+            else
+                $("#toc").hide();
+            $("#navigation").children("ul").prepend("<li class='index-item'><a href='../../index.html'>Index</a></li>");
+
+            $(".toggle").addClass('toggle-off');
+            $(".toggle").click(function(){
+                $("#navigation").children("ul").toggle();
+                var vwWidth = $(window).width();
+                if ($(".toggle").hasClass('toggle-on')) {
+                    $(".toggle").removeClass('toggle-on');
+                    $(".toggle").addClass('toggle-off');
+                    $(".wrapper").css('max-width', vwWidth + '%');
+                    $(".wrapper").css('width', vwWidth + 'vw');
+                } else if ($(".toggle").hasClass('toggle-off')) {
+                    $(".toggle").removeClass('toggle-off');
+                    $(".toggle").addClass('toggle-on');
+                    $(".wrapper").css('max-width', vwWidth + '%');
+                    $(".wrapper").css('width', vwWidth + 'vw');
+                }
+            });
+            $("img").wrap("<div class='imgcenter'></div>");
+        });
+	</script>
+</head>
+<body>
+    <noscript>
+        <div style="border: 1px solid purple; padding: 10px">
+            <span style="color:red">This page is best viewed with JavaScript enabled!</span>
+        </div>
+    </noscript>
+
+    <table id="wrapper">
+        <tr>
+            <td id="navigation" rowspan="2">
+                <svg class="toggle">
+                    <line x1="10" y1="10" x2="40" y2="10" />
+                    <line x1="10" y1="20" x2="40" y2="20" />
+                    <line x1="10" y1="30" x2="40" y2="30" />
+                </svg> 
+                <ul>
+<li><a href="../../About_Me.html" title="About Me" class="page">About Me</a></li>
+<li><a href="../../About_RSS_feed.html" title="About RSS feed" class="page">About RSS feed</a></li>
+<li><a href="../../Arduno_and_electronics.html" title="Arduno and electronics" class="page">Arduno and electronics</a>
+<ul>
+<li><a href="../Arduino.html" title="Arduino" class="page">Arduino</a>
+<ul>
+<li><a href="./Emulating_a_magic_8_ball.html" title="Emulating a magic 8 ball" class="page">Emulating a magic 8 ball</a></li>
+<li><b>Making a network canary</b></li>
+</ul></li>
+</ul>
+</li>
+<li><a href="../../Misc.html" title="Misc" class="page">Misc</a></li>
+<li><a href="../../Software_Development.html" title="Software Development" class="page">Software Development</a></li>
+</ul>
+
+            </td>
+
+            <td id="header">
+                <h1><a href="/">Luis GG - Tales and notes</a></h1>
+            </td>
+        </tr>
+
+        <tr>
+            <td id="content">
+
+
+                    <h1>Making a network canary <a name='Arduno and electronics:Arduino:Making a network canary'></a></h1>
+                    <div id="toc">			
+                        <div class="toctitle">Contents</div>				
+                        <ul id="tocdata"></ul>
+                    </div>		
+
+                <p>
+Created Thursday 11 March 2021
+</p>
+
+<p>
+For those unfamiliar with the concept of canary, let's quote wikipedia first:
+</p>
+
+<p>
+<i>Canaries were iconically used in coal mines to detect the presence of carbon monoxide. The bird's rapid breathing rate, small size, and high metabolism, compared to the miners, led birds in dangerous mines to succumb before the miners, thereby giving them time to take action.</i> 
+</p>
+
+<p>
+And so, the term canary spread to other fields, including software development. Usually, before screwing things up in distributed systems, the new version is tested in a single node; this modus operandi is called a canary deploy (how to mediate the state changes between the new and old versions is completely out of the scope of this article, sadly).  So, up to this point, the example is clear, a canary, conceptually, tests or measures something in case it goes awry
+</p>
+
+<p>
+What happens with networks? networks are hard. Network configurations are hard. Network proxies are hard, VPNs are <i>hard. </i>Throw them all together in a mixed bag of custom configurations and you're in for a bad time, especially when checking connectivity. Same happens with smart&lt;<i>insert your favorite appliance here</i>&gt;. Their networking stack and applications built on top of them, despite the resource constrains, are just not on the same league as the their PC (or even console, dare I say) counterparts. Why? It's all in the release cycles.
+</p>
+
+<p>
+But whatever, back to the point. I've found myself enough time in the awkward situation of "false positives" in regards of internet connectivity with my smart TV and my work PC, so I wondered, <i>why not a network canary?</i>
+</p>
+
+<h2>TL;DR - I just want the repo</h2>
+
+<p>
+<a href="https://github.com/lggomez/arduino-dns-canary" title="https://github.com/lggomez/arduino-dns-canary" class="https">https://github.com/lggomez/arduino-dns-canary</a>
+</p>
+
+<h2>The design</h2>
+
+<p>
+<img src="../../_assets/elec-arduino/arduino/1-canary/canary_bb.png">
+</p>
+
+<p>
+The idea behind this is simple: having a network device directly connected to the router, with a minimal network stack (in this case, the arduino board and its standard library via a W5500 ethernet controller)
+</p>
+
+<p>
+On the software side, just a loop of TCP connections, cycling trough a list of well-known and always-up domains to test DNS resolution and measure connection time. That's it
+</p>
+
+<p>
+The details themselves on the connections can be found online and in the repo but the diagram is self explainatory (albeit unreadable on the W5500). The busiest part is the W5500 connection which may depend on the specific vendor board you get, but the following reference should follow pretty closely:
+</p>
+
+<p>
+<img src="../../_assets/elec-arduino/arduino/1-canary/w5500.jpeg">
+</p>
+
+<p>
+As for the display (this thing needs an UI after all) I went for a 16x2 char display with an PCF8574T I2C front board, which made the connections a lot easier (and even then, I decided to leave the shield to mount the prototype on its case)
+</p>
+
+<h2>The prototype</h2>
+
+<p>
+(Yeah, I noticed that input holes are not one sided. It's a prototype, sue me)
+</p>
+
+<p>
+<img src="../../_assets/elec-arduino/arduino/1-canary/proto1.jpg"><br>
+<img src="../../_assets/elec-arduino/arduino/1-canary/proto2.jpg">
+</p>
+
+<p>
+Tip: for a poetic finish, nothing fits better than a crappy writting vaguely stating the purpose of the artifact
+</p>
+
+<p>
+<img src="../../_assets/elec-arduino/arduino/1-canary/proto3.jpg">
+</p>
+
+<h2>Code</h2>
+
+<p>
+See the link above at TL;DR
+</p>
+
+
+        
+
+                
+            </td>
+        </tr>
+        
+        <tr>
+            <td id="credits" colspan="2">
+                <p><i><strong>Author:</strong> Luis Gabriel Gomez</i></p>
+                <p><i><strong>Disclaimer:</strong> I may not own the entirety of the site media (including logos, images), thus being used under a fair use policy. All credits go to their rightful owners.</i></p>
+                <p><i>This site was generated using <a href='https://zim-wiki.org'>Zim 0.73.4-da75848</a> and an author-made <a href='https://github.com/lggomez/zim-templates-gh'>theme</a> based on <a href="https://github.com/gandrille/zim-simple-web-template">Etienne Gandrille's.</a></i></p>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

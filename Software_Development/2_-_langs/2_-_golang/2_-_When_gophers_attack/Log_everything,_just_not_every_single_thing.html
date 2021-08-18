@@ -1,0 +1,461 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="alternate" type="application/rss+xml" href="https://luisgg.me/rss.xml" title="Luis GG - Tales and notes">
+    
+    <meta property="og:image" content="http://luisgg.me/_assets/about-me/og.jpeg" />
+    <meta property="og:title" content="Log everything, just not every single thing" />
+    <meta property="og:description" content="Luis GG - Tales and notes" />
+
+	<!-- favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <title>Log everything, just not every single thing</title>
+    <meta name="generator" content="Zim 0.73.4-da75848">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="../../../../_resources/style.css" type="text/css"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+
+    <script src="../../../../_resources/jquery-toc-0.4.0.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+		$(window).on('load', function () {
+			// Initialize highlight.js formatter
+			$('pre code').each(function (i) {
+				hljs.highlightBlock(this);
+            });
+            
+            if ($("h2").length != 0)
+            $("#tocdata").toc({content: "#content", headings: "h2,h3,h4"});
+            else
+                $("#toc").hide();
+            $("#navigation").children("ul").prepend("<li class='index-item'><a href='../../../../index.html'>Index</a></li>");
+
+            $(".toggle").addClass('toggle-off');
+            $(".toggle").click(function(){
+                $("#navigation").children("ul").toggle();
+                var vwWidth = $(window).width();
+                if ($(".toggle").hasClass('toggle-on')) {
+                    $(".toggle").removeClass('toggle-on');
+                    $(".toggle").addClass('toggle-off');
+                    $(".wrapper").css('max-width', vwWidth + '%');
+                    $(".wrapper").css('width', vwWidth + 'vw');
+                } else if ($(".toggle").hasClass('toggle-off')) {
+                    $(".toggle").removeClass('toggle-off');
+                    $(".toggle").addClass('toggle-on');
+                    $(".wrapper").css('max-width', vwWidth + '%');
+                    $(".wrapper").css('width', vwWidth + 'vw');
+                }
+            });
+            $("img").wrap("<div class='imgcenter'></div>");
+        });
+	</script>
+</head>
+<body>
+    <noscript>
+        <div style="border: 1px solid purple; padding: 10px">
+            <span style="color:red">This page is best viewed with JavaScript enabled!</span>
+        </div>
+    </noscript>
+
+    <table id="wrapper">
+        <tr>
+            <td id="navigation" rowspan="2">
+                <svg class="toggle">
+                    <line x1="10" y1="10" x2="40" y2="10" />
+                    <line x1="10" y1="20" x2="40" y2="20" />
+                    <line x1="10" y1="30" x2="40" y2="30" />
+                </svg> 
+                <ul>
+<li><a href="../../../../About_Me.html" title="About Me" class="page">About Me</a></li>
+<li><a href="../../../../About_RSS_feed.html" title="About RSS feed" class="page">About RSS feed</a></li>
+<li><a href="../../../../Arduno_and_electronics.html" title="Arduno and electronics" class="page">Arduno and electronics</a></li>
+<li><a href="../../../../Misc.html" title="Misc" class="page">Misc</a></li>
+<li><a href="../../../../Software_Development.html" title="Software Development" class="page">Software Development</a>
+<ul>
+<li><a href="../../../1_-_Talks_and_Presentations.html" title="1 - Talks and Presentations" class="page">1 - Talks and Presentations</a></li>
+<li><a href="../../../2_-_langs.html" title="2 - langs" class="page">2 - langs</a>
+<ul>
+<li><a href="../../1_-_dotNET.html" title="1 - dotNET" class="page">1 - dotNET</a></li>
+<li><a href="../../2_-_golang.html" title="2 - golang" class="page">2 - golang</a>
+<ul>
+<li><a href="../1_-_Talks_and_Presentations.html" title="1 - Talks and Presentations" class="page">1 - Talks and Presentations</a></li>
+<li><a href="../2_-_When_gophers_attack.html" title="2 - When gophers attack" class="page">2 - When gophers attack</a>
+<ul>
+<li><a href="./Fixing_jwt-go_without_forking.html" title="Fixing jwt-go without forking" class="page">Fixing jwt-go without forking</a></li>
+<li><a href="./Forgetting_that_precious_recover.html" title="Forgetting that precious recover" class="page">Forgetting that precious recover</a></li>
+<li><b>Log everything, just not every single thing</b></li>
+<li><a href="./That_one_with_the_go_runtime_bug.html" title="That one with the go runtime bug" class="page">That one with the go runtime bug</a></li>
+</ul>
+</li>
+<li><a href="../Scaffolding_RSS_feeds_from_zim_notebooks.html" title="Scaffolding RSS feeds from zim notebooks" class="page">Scaffolding RSS feeds from zim notebooks</a></li>
+</ul>
+</li>
+<li><a href="../../The_otherworldly_landscape_of_enums_in_go.html" title="The otherworldly landscape of enums in go" class="page">The otherworldly landscape of enums in go</a></li>
+</ul>
+</li>
+<li><a href="../../../3_-_Articles.html" title="3 - Articles" class="page">3 - Articles</a></li>
+<li><a href="../../../4_-_Notes.html" title="4 - Notes" class="page">4 - Notes</a></li>
+</ul></li>
+</ul>
+
+            </td>
+
+            <td id="header">
+                <h1><a href="/">Luis GG - Tales and notes</a></h1>
+            </td>
+        </tr>
+
+        <tr>
+            <td id="content">
+
+
+                    <h1>Log everything, just not every single thing <a name='Software Development:2 - langs:2 - golang:2 - When gophers attack:Log everything, just not every single thing'></a></h1>
+                    <div id="toc">			
+                        <div class="toctitle">Contents</div>				
+                        <ul id="tocdata"></ul>
+                    </div>		
+
+                <p>
+Created Saturday 02 January 2021
+</p>
+
+<p>
+<i>This is a public post-mortem that was intended to be released on the engineering blog of MercadoLibre, but my departure (and the slowness of the editing) prevented that.</i>
+</p>
+
+<p>
+<i>(This post is the full version of my <a href="https://go-talks.appspot.com/github.com/lggomez/go-talks/2019/12-18-MELI/gophers-attack.slide#1" title="Go meetup Buenos Aires 2019 II" class="https">Go meetup Buenos Aires 2019 II</a> presentation)</i>
+</p>
+
+<h2>Going from apicall to in-memory transaction</h2>
+
+<p>
+As a part of the job I was doing at the time to scale the shipping delivery calculator, one of the next steps involved migrating an API (route coverage) to an in-memory mixed model. In other words, we had to store in memory all the documents we were reading from our ElasticSearch cluster
+</p>
+
+<p>
+What I didn't know is that a benchmarking adventure would await, and that the culprit was something I could've never taken into account until that moment
+</p>
+
+<h2>What happened?</h2>
+
+<p>
+Usually the first steps on for a task of this type consists on developing a proof of concept project with mocked data in the in-memory storage. Once the build passed and some sanity tests were performed, we proceeded to perform the stress test, and that's when things got weird:
+</p>
+
+<p>
+<img src="../../../../_assets/soft-gen/golang/gophers-attack/2/1.png">
+</p>
+
+<p>
+The spikes immediately point out to the GC (garbage collector), and almost confirm it as the culprit if you observe them: the first curve belongs to the in-memory repo initialization, and the next spikes belong to the GC pauses induced by incoming traffic
+</p>
+
+<p>
+There were no suspicious things on the memory side so we had to tread more carefully with the help of pprof, and a gingonic handler which exposes its endpoints with some extra facilities (<a href="https://github.com/DeanThompson/ginpprof" title="https://github.com/DeanThompson/ginpprof" class="https">https://github.com/DeanThompson/ginpprof</a>)
+</p>
+
+<p>
+This one is a particular case: we don't have directly observable heap problems but we do have heavy pauses and/or latency on the request times, the the last time goes on the trace
+</p>
+
+<h2>Trace: that cool but introverted friend</h2>
+
+<p>
+Some parts of the go tooling are both a blessing and a curse. While being very powerful to the developer, the commandline API and its documentation (is there is any at all) leaves a bit to be desired, sometimes being a bit esoteric and hard to follow
+</p>
+
+<p>
+I'd dare to say that this is the case with some of the most specific tools of the profiling toolchain in go like pprof and trace, but fortunately the community comes to the rescue!
+</p>
+
+<p>
+For the case of go case and the execution tracer (graphic frontend for go trace files) there is a fantastic tutorial made by Rhys Hiltner: <a href="https://about.sourcegraph.com/go/an-introduction-to-go-tool-trace-rhys-hiltner" title="https://about.sourcegraph.com/go/an-introduction-to-go-tool-trace-rhys-hiltner" class="https">https://about.sourcegraph.com/go/an-introduction-to-go-tool-trace-rhys-hiltner</a>
+</p>
+
+<h2>Trace crach course</h2>
+
+<h4>Get an application's trace:</h4>
+
+<p>
+<ol type="1" start="1">
+<li>Turn on and expose pprof on said up (as mentioned above with <a href="https://github.com/DeanThompson/ginpprof" title="https://github.com/DeanThompson/ginpprof" class="https">https://github.com/DeanThompson/ginpprof</a>)</li>
+<li>run <i>curl <a href="http://my-app.com/debug/pprof/trace?seconds=60" title="http://my-app.com/debug/pprof/trace?seconds=60" class="http">http://my-app.com/debug/pprof/trace?seconds=60</a> &gt; foo</i></li>
+<li>???</li>
+<li>Profit! once those 60 seconds passed, we'll have the trace file named foo downloaded containing the profile data for our running application</li>
+</ol>
+</p>
+
+<h4>Visualize a trace file:</h4>
+
+<p>
+<ol type="1" start="1">
+<li>run <i>go tool trace foo</i></li>
+<li>???</li>
+<li>Profit? maybe... time to start looking for stuff now</li>
+</ol>
+</p>
+
+<p>
+With these tools we can start investigating
+</p>
+
+<h2>Preliminary results</h2>
+
+<h3>First culprit - Garbage Collector</h3>
+
+<p>
+Upon seeing the trace the first observation is that a STW (stop the world) GC cycle takes a long time (164 milliseconds), and we also see an abnormal increase in the goroutine count (probable expected due to the still incoming flux of requests to the application). This API version does no explicitly create goroutines at no point in any hot path so we suspect there is a contention issue, which would explain the timing increase and also the increase of the blocking GC mark cycles:
+</p>
+
+<p>
+<img src="../../../../_assets/soft-gen/golang/gophers-attack/2/2.png">
+</p>
+
+<p>
+Another crucial information is that the CG trigger on all instances is logrus (the logging package used by our toolkit):
+</p>
+
+<p>
+<img src="../../../../_assets/soft-gen/golang/gophers-attack/2/3.png">
+</p>
+
+<h3>Second culprit - Logger/logrus</h3>
+
+<p>
+To discover the root cause of these contention spikes, I proceeded to check and compare the trace's <i><b>Synchronization blocking profile</b></i> and <i><b>Scheduler latency profile</b></i> sections, which provided valuable information
+</p>
+
+<p>
+The contention in this scenario came from a mix of goroutines taking ownership of a mutex vs the unlock being parked by the runtime scheduler. We can see it by comparing the blocking and synchronization profiles:
+</p>
+
+<p>
+<img src="../../../../_assets/soft-gen/golang/gophers-attack/2/4.png">
+</p>
+
+<p>
+Third culprit - runtime and instance
+</p>
+
+<p>
+Another, more down to earth reason of the application's degradation is that the go runtime is using just 2 OS threads to serve goroutines. This is defined in go 1.x by the environment variable <b>GOMAXPROCS, </b>and in the trace itself is given by the number of procs recorded:
+</p>
+
+<p>
+<img src="../../../../_assets/soft-gen/golang/gophers-attack/2/5.png">
+</p>
+
+<p>
+And for further confirmation, you can log the value returned by <i>runtime.GOMAXPROCS(0)</i>, which in this case will be equal to 2. The setup and benchmarking of this variable is beyond the scope of this article, so as last detail I will add that by default the go runtime uses the number of logical CPU cores as its value
+</p>
+
+<p>
+Now that we have the data, it is time to start fiddling with the code
+</p>
+
+<h2>First round - The logger</h2>
+
+<p>
+Logrus, effectively serializes its writes via a mutex, workflow which comes turned on by default. On a <a href="https://github.com/sirupsen/logrus#thread-safety" title="readme" class="https">readme</a> section, it can be noted that it can be disabled on some scenarios, so that was my next step, and, surprisingly, things got even worse than before:
+</p>
+
+<p>
+<img src="../../../../_assets/soft-gen/golang/gophers-attack/2/6.png">
+</p>
+
+<p>
+<img src="../../../../_assets/soft-gen/golang/gophers-attack/2/7.png">
+</p>
+
+<p>
+This time, the contention and GC times went way up 50~100x and 7x respectively)
+</p>
+
+<h3>Hey, what happened?</h3>
+
+<p>
+Going back to the trace profiles, I see that the writes keep serializing, but this time using a different kind of semaphore:
+</p>
+
+<p>
+<img src="../../../../_assets/soft-gen/golang/gophers-attack/2/8.png">
+</p>
+
+<h3>Cure via amputation</h3>
+
+<p>
+Upon seeing this, I realized the easiest way to confirm the logger as the (triggering) root cause was to remove it from all hot paths and voilà:
+</p>
+
+<p>
+<img src="../../../../_assets/soft-gen/golang/gophers-attack/2/9.png">
+</p>
+
+<p>
+Now <i>these</i> are the numbers we all wanna see on an in-memory API, don't we?
+</p>
+
+<p>
+But still, I kinda want a more satisfactory explanation for this issue and I'm already halfway the rabbit hole, so here I go...
+</p>
+
+<h2>Second round - Locks</h2>
+
+<p>
+As it turns out, locks are one of those things whose implementation may seem easy<i>(er)</i> on a CS course level but once we talk about runtimes and operative systems we get into the <i>'here be dragons'</i>  territory very quickly, always in a huge mix of trade-offs and complex use cases
+</p>
+
+<p>
+As we saw before, we dealt with two different mutex variants, so it's worth taking a look at the performance implications of each one
+</p>
+
+<p>
+The traditional <a href="https://golang.org/src/sync/mutex.go" title="sync.Mutex" class="https">sync.Mutex</a> does a whole lot of stuff, including the following:<br>
+<ul>
+<li>Using internal sync primitives to handle internal runtime semaphores</li>
+<li>Handling the necessary spin and CAS operations to contain goroutines competing to acquire the lock</li>
+<li>It has a mixed operation mode: by default the ownership passage is FIFO + incoming goroutines, and if the acquisition time exceeds 1 millisecond for any waiter the mutex goes into starvation mode. Under this mode, several heuristics ensure that all waiters get served and mitigates tail latency, but global wait times increase and performance can degrade if the mutex operates consistently under this mode</li>
+</ul>
+</p>
+
+<p>
+The last point was key contributor on the benchmarked issues
+</p>
+
+<p>
+On the other side, I found the internal <a href="https://github.com/golang/go/blob/master/src/internal/poll/fd_mutex.go" title="fdMutex" class="https">fdMutex</a>, which is a specialized mutex that serializes file descriptor accesses. If we cite the <a href="https://github.com/golang/go/blob/master/src/internal/poll/fd.go" title="code" class="https">code</a>:
+</p>
+
+<div class="zim-object">
+<pre><code class="golang">poll:
+// Package poll supports non-blocking I/O on file descriptors with polling.
+// This supports I/O operations that block only a goroutine, not a thread.
+// This is used by the net and os packages.
+// It uses a poller built into the runtime, with support from the
+// runtime scheduler.
+
+poll/fdMutex
+// fdMutex is a specialized synchronization primitive that manages
+// lifetime of an fd and serializes access to Read, Write and Close
+// methods on FD.
+</code></pre>
+</div>
+
+<p>
+It's beyond saying that the I/O cost in the context of a goroutine exceeds the penalty of the previous in-memory lock. The case of avoiding serializations in memory inadvertently causing to increment the amount of I/O syscalls can be worse than the original issue
+</p>
+
+<h2>Final round - The Garbage Collector</h2>
+
+<p>
+If you got to this point you had seen a lot of mentions to the GC in the traces and the article, and that's the hill this article dies on
+</p>
+
+<p>
+Golang's garbage collector is a <a href="https://golang.org/src/runtime/mgc.go" title="very complex" class="https">very complex</a> beast that takes a lot of work from us at cost of trade-offs that should be transparent to application developers, altough this doesn' always end that way.  I will paraphrase the <a href="https://github.com/dotnet/coreclr/blob/master/Documentation/botr/garbage-collection.md#goals-of-the-gc" title="CoreCLR" class="https">CoreCLR</a> preamble (which is also inspired on The Garbage Collection Handbook):<br>
+<ul>
+<li>GC cycles should occur with enough frequency so that the heap isn't overrun with unused objects (thrash) but at the same time occupying the least amount of CPU time</li>
+<li>GC cycles should be productive. If the GC reclaims a small amount of memory, both the GC cycle and the CPU time are wasted</li>
+<li>Each GC cycle must be fast. A lot of workloads have low latency requirements</li>
+<li>Managed code developers should not know much about the GC in order to reach a good memory usage from their code. The GC should adjust to satisfy different memory usage patterns</li>
+</ul>
+</p>
+
+<p>
+<i>Author's corollary: any sufficently bad algoritm will invalidate any of the previous points</i>
+</p>
+
+<p>
+The Go GC is (loosely) based on the following principles:<br>
+<ul>
+<li><b>Mark and Sweep:</b> Objects which are reachable by the program are marked as in-use. This demands traversing the object heap periodically</li>
+<li><b>Tri-color algorithm:</b> 3 rotary colors are used to determine the reachability state and marking the of objects: white, grey and black</li>
+<li><b>Concurrent execution:</b> With the exception of STW pauses on certain phases, the GC runs concurrently with the rest of the application</li>
+</ul>
+</p>
+
+<p>
+The GC life cycle is formed by the following steps:<br>
+<ol type="1" start="1">
+<li>Sweep termination (STW)</li>
+<li>Mark phase</li>
+<li>Mark termination (STW)</li>
+<li>Sweep phase</li>
+<li>once enough memory is alocated (GC trigger) <i>goto 1</i></li>
+</ol>
+</p>
+
+<p>
+The GC is CPU intensive, employing heuristics to maximize procs usage between different operations modes (dedicated, idle and fractional GC) as it can be seen on the trace:
+</p>
+
+<p>
+<img src="../../../../_assets/soft-gen/golang/gophers-attack/2/10.png">
+</p>
+
+<p>
+These heuristics force the CPU to work even under time frames that can worsen lock starvation, in the case of goroutines that end up giving running time to the scheduler.
+</p>
+
+<p>
+In the following case, operating normally and outside a GC cycle, the goroutines are started and finished in a single time frame:
+</p>
+
+<p>
+<img src="../../../../_assets/soft-gen/golang/gophers-attack/2/11.png">
+</p>
+
+<p>
+Under GC stress, the scheduler cannot grant enough time to the goroutine and the time frame partitioning can be seen for these goroutines, as it gives up running time and gets pre-empted multiple times by the scheduler until its finalization:
+</p>
+
+<p>
+<img src="../../../../_assets/soft-gen/golang/gophers-attack/2/12.png">
+</p>
+
+<p>
+Add enough goroutines to the mix and each one will take an arbitrarily long amount of time and time frames to finish (as we saw with the starting issue)
+</p>
+
+<h2>Conclusion</h2>
+
+<p>
+The neat part about this conclusion is that applies to pretty much every managed runtime: learn to profile your applications, and also learn to have a small and sane level of distrust of every third party line of code you run, because even something as innocuous as a log has side effects in regards of performance
+</p>
+
+<p>
+Oh, and log everything, but just not every single thing
+</p>
+
+
+        
+
+                
+            </td>
+        </tr>
+        
+        <tr>
+            <td id="credits" colspan="2">
+                <p><i><strong>Author:</strong> Luis Gabriel Gomez</i></p>
+                <p><i><strong>Disclaimer:</strong> I may not own the entirety of the site media (including logos, images), thus being used under a fair use policy. All credits go to their rightful owners.</i></p>
+                <p><i>This site was generated using <a href='https://zim-wiki.org'>Zim 0.73.4-da75848</a> and an author-made <a href='https://github.com/lggomez/zim-templates-gh'>theme</a> based on <a href="https://github.com/gandrille/zim-simple-web-template">Etienne Gandrille's.</a></i></p>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

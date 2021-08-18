@@ -1,0 +1,3 @@
+include: 
+ - _resources
+ - _assets
