@@ -38,62 +38,6 @@
       <pubDate>Sat, 26 Dec 2020 18:52:29 -0300</pubDate>
     </item>
     <item>
-      <title>Software Development</title>
-      <link>https://luisgg.me/Software_Development.html</link>
-      <description>Software development section</description>
-      <author>Luis Gabriel Gomez</author>
-      <pubDate>Thu, 31 Dec 2020 20:09:30 -0300</pubDate>
-    </item>
-    <item>
-      <title>1 - dotNET</title>
-      <link>https://luisgg.me/Software_Development/2_-_langs/1_-_dotNET.html</link>
-      <description>.NET development section</description>
-      <author>Luis Gabriel Gomez</author>
-      <pubDate>Thu, 31 Dec 2020 20:09:46 -0300</pubDate>
-    </item>
-    <item>
-      <title>2 - golang</title>
-      <link>https://luisgg.me/Software_Development/2_-_langs/2_-_golang.html</link>
-      <description>golang section</description>
-      <author>Luis Gabriel Gomez</author>
-      <pubDate>Thu, 31 Dec 2020 20:10:13 -0300</pubDate>
-    </item>
-    <item>
-      <title>Misc</title>
-      <link>https://luisgg.me/Misc.html</link>
-      <description>Miscellaneous section</description>
-      <author>Luis Gabriel Gomez</author>
-      <pubDate>Thu, 31 Dec 2020 20:11:03 -0300</pubDate>
-    </item>
-    <item>
-      <title>Test</title>
-      <link>https://luisgg.me/Misc/Test.html</link>
-      <description>Test entry for a zim PR demo</description>
-      <author>Luis Gabriel Gomez</author>
-      <pubDate>Thu, 31 Dec 2020 20:11:08 -0300</pubDate>
-    </item>
-    <item>
-      <title>Talks and Presentations</title>
-      <link>https://luisgg.me/Software_Development/1_-_Talks_and_Presentations.html</link>
-      <description>Talks and presentations I´ve prepared on various topics</description>
-      <author>Luis Gabriel Gomez</author>
-      <pubDate>Thu, 31 Dec 2020 20:13:27 -0300</pubDate>
-    </item>
-    <item>
-      <title>1 - Talks and Presentations</title>
-      <link>https://luisgg.me/Software_Development/2_-_langs/2_-_golang/1_-_Talks_and_Presentations.html</link>
-      <description>Talks and presentations - golang</description>
-      <author>Luis Gabriel Gomez</author>
-      <pubDate>Thu, 31 Dec 2020 20:13:35 -0300</pubDate>
-    </item>
-    <item>
-      <title>2 - When gophers attack</title>
-      <link>https://luisgg.me/Software_Development/2_-_langs/2_-_golang/2_-_When_gophers_attack.html</link>
-      <description>This section contains posts and notes about post-mortems and toubleshooting with golang</description>
-      <author>Luis Gabriel Gomez</author>
-      <pubDate>Sat, 02 Jan 2021 01:27:53 -0300</pubDate>
-    </item>
-    <item>
       <title>Forgetting that precious recover</title>
       <link>https://luisgg.me/Software_Development/2_-_langs/2_-_golang/2_-_When_gophers_attack/Forgetting_that_precious_recover.html</link>
       <description>What happens when you forget a recover on a spawned goroutine?</description>
@@ -106,34 +50,6 @@
       <description>Qué ocurre cuando se olvida agregar un recover a una goroutina creada?</description>
       <author>Luis Gabriel Gomez</author>
       <pubDate>Sat, 02 Jan 2021 02:50:55 -0300</pubDate>
-    </item>
-    <item>
-      <title>ES</title>
-      <link>https://luisgg.me/Software_Development/2_-_langs/2_-_golang/2_-_When_gophers_attack/Forgetting_that_precious_recover/ES.html</link>
-      <description>Sección en español/Spanish section</description>
-      <author>Luis Gabriel Gomez</author>
-      <pubDate>Sat, 02 Jan 2021 18:42:39 -0300</pubDate>
-    </item>
-    <item>
-      <title>2 - langs</title>
-      <link>https://luisgg.me/Software_Development/2_-_langs.html</link>
-      <description>Section covering specific programming languages</description>
-      <author>Luis Gabriel Gomez</author>
-      <pubDate>Sat, 02 Jan 2021 18:45:03 -0300</pubDate>
-    </item>
-    <item>
-      <title>3 - Articles</title>
-      <link>https://luisgg.me/Software_Development/3_-_Articles.html</link>
-      <description>Software development articles</description>
-      <author>Luis Gabriel Gomez</author>
-      <pubDate>Sat, 02 Jan 2021 18:45:42 -0300</pubDate>
-    </item>
-    <item>
-      <title>4 - Notes</title>
-      <link>https://luisgg.me/Software_Development/4_-_Notes.html</link>
-      <description>Notes (or anything smaller than an article, for that matter)</description>
-      <author>Luis Gabriel Gomez</author>
-      <pubDate>Sat, 02 Jan 2021 18:45:54 -0300</pubDate>
     </item>
     <item>
       <title>Log everything, just not every single thing</title>
@@ -169,7 +85,7 @@
       <description>How to generate RSS feeds for zim notebooks</description>
       <author>Luis Gabriel Gomez</author>
       <pubDate>Sat, 23 Jan 2021 15:10:22 -0300</pubDate>
-    </item>  
+    </item>
     <item>
       <title>The otherworldly landscape of enums in go</title>
       <link>https://luisgg.me/#index/Software_Development/2_-_langs/The_otherworldly_landscape_of_enums_in_go.html</link>
