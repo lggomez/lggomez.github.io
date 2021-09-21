@@ -1,0 +1,13 @@
+[en]
+  title = "Luis GG - Tales and notes"
+  languageName = "English"
+  weight = 1
+  languagedir = "ltr"
+  contentdir = "content/en"
+
+[es]
+  title = "Luis GG - Tales and notes"
+  languageName = "Spanish"
+  weight = 2
+  languagedir = "ltr"
+  contentdir = "content/es"
