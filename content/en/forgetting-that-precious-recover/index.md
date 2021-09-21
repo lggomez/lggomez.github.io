@@ -5,7 +5,7 @@
     "tags": ["Golang", "Post-mortem", "Intermediate"],
     "date": "2021-01-02T01:32:06-03:00",
     "categories": ["Programming", "Backend", "Bug"],
-    "type": "publication",
+    "type": "article",
     "weight": 0,
     "publishdate": null,
     "expirydate": null,

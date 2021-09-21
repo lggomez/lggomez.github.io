@@ -6,7 +6,7 @@
     "date": "2021-03-07T02:43:15-03:00",
     "lastmod": "2021-03-07T02:43:15-03:00",
     "categories": ["Programming", "Backend", "Intermediate"],
-    "type": "publication",
+    "type": "article",
     "weight": 0,
     "publishdate": null,
     "expirydate": null,

@@ -5,7 +5,7 @@
     "tags": ["C#", "Exceptions"],
     "date": "2020-12-26T18:36:45-03:00",
     "categories": ["Programming", ".NET", "Advanced", "Tutorial"],
-    "type": "publication",
+    "type": "article",
     "weight": 0,
     "publishdate": null,
     "expirydate": null,

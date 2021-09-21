@@ -6,7 +6,7 @@
     "date": "2020-12-23T23:09:11-03:00",
     "lastmod": "2020-12-23T23:09:11-03:00",
     "categories": ["Programming", "Backend", "Theory"],
-    "type": "publication",
+    "type": "article",
     "weight": 0,
     "publishdate": null,
     "expirydate": null,

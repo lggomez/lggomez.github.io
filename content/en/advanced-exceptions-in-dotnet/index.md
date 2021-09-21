@@ -5,7 +5,7 @@
     "tags": ["C#", "Generics"],
     "date": "2020-12-26T18:52:29-03:00",
     "categories": ["Programming", ".NET", "Advanced", "Tutorial"],
-    "type": "publication",
+    "type": "article",
     "weight": 0,
     "publishdate": null,
     "expirydate": null,

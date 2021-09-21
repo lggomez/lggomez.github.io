@@ -5,7 +5,7 @@
     "tags": ["Golang", "JWT"],
     "date": "2021-01-15T18:56:44-03:00",
     "categories": ["Programming", "Backend", "Tutorial", "Security", "Bug", "Open Source"],
-    "type": "publication",
+    "type": "article",
     "weight": 0,
     "publishdate": null,
     "expirydate": null,

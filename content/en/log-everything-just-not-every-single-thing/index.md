@@ -6,7 +6,7 @@
     "date": "2021-01-02T20:27:57-03:00",
     "lastmod": "2021-01-02T20:27:57-03:00",
     "categories": ["Programming", "Backend", "Bug"],
-    "type": "publication",
+    "type": "article",
     "weight": 0,
     "publishdate": null,
     "expirydate": null,

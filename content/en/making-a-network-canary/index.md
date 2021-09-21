@@ -6,7 +6,7 @@
     "date": "2021-03-11T00:27:03-03:00",
     "lastmod": "2021-03-11T00:27:03-03:00",
     "categories": ["Programming", "Electronics", "Arduino", "Tutorial"],
-    "type": "publication",
+    "type": "article",
     "weight": 0,
     "publishdate": null,
     "expirydate": null,

@@ -5,7 +5,7 @@
     "tags": ["RSS"],
     "date": "2021-09-07T22:34:13.748224207-03:00",
     "categories": ["Programming", "Web"],
-    "type": "publication",
+    "type": "article",
     "weight": 0,
     "publishdate": "2021-09-07T22:34:13.748224207-03:00",
     "expirydate": null,

@@ -4,7 +4,7 @@
     "tags": ["Arduino Nano", "C", "Accelerometer", "Display"],
     "date": "2021-04-08T00:45:06-03:00",
     "categories": ["Programming", "Electronics", "Arduino", "Tutorial", "Network"],
-    "type": "publication",
+    "type": "article",
     "weight": 0,
     "publishdate": null,
     "expirydate": null,
