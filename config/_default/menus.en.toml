@@ -10,6 +10,12 @@
   url = "archive"
   weight = 2
 
+[[main]]
+  identifier = "rss"
+  name = "rss"
+  url = "/rss.xml"
+  weight = 3
+
 # [[main]]
 #   identifier = "gallery"
 #   name = "gallery"
