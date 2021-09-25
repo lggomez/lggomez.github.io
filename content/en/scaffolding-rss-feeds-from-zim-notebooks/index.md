@@ -11,7 +11,7 @@
     "publishdate": null,
     "expirydate": null,
     "aliases": null,
-    "slug": "scaffolding-rss-feeds-from-zim-notebooks",
+    "slug": "scaffolding_rss_feeds_from_zim_notebooks",
     "url": ""
 }
 

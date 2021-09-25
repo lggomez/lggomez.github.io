@@ -13,7 +13,7 @@
 [[main]]
   identifier = "rss"
   name = "rss"
-  url = "/rss.xml"
+  url = "rss.xml"
   weight = 3
 
 # [[main]]

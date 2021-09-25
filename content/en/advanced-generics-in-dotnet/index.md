@@ -10,7 +10,7 @@
     "publishdate": null,
     "expirydate": null,
     "aliases": null,
-    "slug": "advanced-generics-in-dotnet",
+    "slug": "advanced_generics_in_dotnet",
     "url": ""
 }
 

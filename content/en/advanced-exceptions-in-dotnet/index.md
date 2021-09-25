@@ -10,7 +10,7 @@
     "publishdate": null,
     "expirydate": null,
     "aliases": null,
-    "slug": "advanced-exceptions-in-dotnet",
+    "slug": "advanced_exceptions_in_dotnet",
     "url": ""
 }
 

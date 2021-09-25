@@ -11,7 +11,7 @@
     "publishdate": null,
     "expirydate": null,
     "aliases": null,
-    "slug": "making-a-network-canary",
+    "slug": "making_a_network_canary",
     "url": ""
 }
 

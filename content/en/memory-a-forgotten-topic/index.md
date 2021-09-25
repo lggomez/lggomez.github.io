@@ -11,7 +11,7 @@
     "publishdate": null,
     "expirydate": null,
     "aliases": null,
-    "slug": "memory-a-forgotten-topic",
+    "slug": "memory_a_forgotten_topic",
     "url": ""
 }
 

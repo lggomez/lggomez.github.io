@@ -11,7 +11,7 @@
     "publishdate": null,
     "expirydate": null,
     "aliases": null,
-    "slug": "log-everything-just-not-every-single-thing",
+    "slug": "log_everything_just_not_every_single_thing",
     "url": ""
 }
 

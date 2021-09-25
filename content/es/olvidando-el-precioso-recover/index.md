@@ -11,7 +11,7 @@
     "publishdate": null,
     "expirydate": null,
     "aliases": null,
-    "slug": "olvidando-el-precioso-recover",
+    "slug": "olvidando_el_precioso_recover",
     "url": ""
 }
 

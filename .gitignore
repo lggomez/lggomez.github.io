@@ -3,7 +3,5 @@
 
 # Hugo
 resources/
-public/
 assets/jsconfig.json
-
 themes/zzo

@@ -10,7 +10,7 @@
     "publishdate": null,
     "expirydate": null,
     "aliases": null,
-    "slug": "fixing-jwt-go-without-forking",
+    "slug": "fixing_jwt_go_without_forking",
     "url": ""
 }
 

@@ -11,7 +11,7 @@
     "publishdate": null,
     "expirydate": null,
     "aliases": null,
-    "slug": "the-otherworldly-landscape-of-enums-in-go",
+    "slug": "the_otherworldly_landscape_of_enums_in_go",
     "url": ""
 }
 

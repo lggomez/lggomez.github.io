@@ -10,7 +10,7 @@
     "publishdate": null,
     "expirydate": null,
     "aliases": null,
-    "slug": "forgetting-that-precious-recover",
+    "slug": "forgetting_that_precious_recover",
     "url": ""
 }
 

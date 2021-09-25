@@ -11,7 +11,7 @@
     "publishdate": null,
     "expirydate": null,
     "aliases": null,
-    "slug": "that-one-with-the-go-runtime-bug",
+    "slug": "that_one_with_the_go_runtime_bug",
     "url": ""
 }
 
