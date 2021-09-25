@@ -6,6 +6,7 @@
     "date": "2021-01-07T00:48:29-03:00",
     "lastmod": "2021-01-07T00:48:29-03:00",
     "categories": ["Programming", "Backend", "Advanced", "Bug", "Open Source"],
+	"series": ["When gophers attack"],
     "type": "article",
     "weight": 0,
     "publishdate": null,

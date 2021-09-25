@@ -41,6 +41,7 @@ In my case, the theme I ended up choosing is [zzo](https://zzo-docs.vercel.app/z
 * Rewriting all zim entries as markdown hugo posts. Part of this was done with a modified version of the RSS scaffolder
 * Rewriting all resource URLs to match their new locations
 * Using a logo and reimplementing favicons
+* Further CSS template customization (**TODO**)
 
 ## Deploying the site
 
