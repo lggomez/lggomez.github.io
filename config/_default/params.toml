@@ -56,7 +56,7 @@ authorImage = "/images/whoami/avatar.png"
 bioImageUrl = "/images/whoami/avatar.png"
 useGravatar = false # we use this option highest priority
 location = "Buenos Aires, Argentina"
-organization = "PedidosYa"
+organization = "MuleSoft"
 link = "https://github.com/lggomez"
 
 # sidebar
