@@ -1,7 +1,7 @@
 logoText = "Luis GG - Tales and notes" # Logo text that appears in the site navigation bar.
 logoType = "short" # long, short -> short: squre shape includes logo text, long: rectangle shape not includes logo text
 logo = true # Logo that appears in the site navigation bar.
-description = "Personal site of Luis Gabriel Gómez" # for SEO
+description = "Personal site of Luis Gabriel Gomez" # for SEO
 custom_css = [] # custom_css = ["scss/custom.scss"] and then make file at root/assets/scss/custom.scss
 custom_js = [] # custom_js = ["js/custom.js"] and then make file at root/assets/js/custom.js
 useFaviconGenerator = true # https://www.favicon-generator.org/
@@ -15,7 +15,7 @@ notAllowedTypesInArchive = ["about", "talks", "showcase", "gallery"] # not allow
 notAllowedTypesInHomeFeed = ["about", "archive", "contact", "talks", "showcase", "publication", "presentation", "resume", "gallery"]
 enablePinnedPosts = true # show pinned posts first in the main view
 
-viewportSize = "normal" # wider, wider, wide, normal, narrow
+viewportSize = "wide" # wider, wider, wide, normal, narrow
 enableUiAnimation = true
 hideSingleContentsWhenJSDisabled = false
 minItemsToShowInTagCloud = 1 # Minimum items to show in tag cloud
@@ -51,7 +51,7 @@ talksGroupByDate = "2006" # "2006-01": group by month, "2006": group by year
 # whoami: usage - home page sidebar, single page bottom of post. all values can be empty
 myname = "Luis Gabriel Gómez"
 email = "hello.luisgg@protonmail.com"
-whoami = "Software Architect & Developer. My current interests are electronics, distributed systems and software development (in no particular order)"
+whoami = "Software Architect & Developer. My current interests are electronics, distributed systems and software development (in no particular order). Opinions are my own"
 authorImage = "/images/whoami/avatar.png"
 bioImageUrl = "/images/whoami/avatar.png"
 useGravatar = false # we use this option highest priority
@@ -93,7 +93,7 @@ busuanziSitePV = true # site total page view count
 busuanziPagePV = true # post view count
 
 # comment
-enableComment = true
+enableComment = false
 disqus_shortname = "" 
 commento = false
 
@@ -204,9 +204,6 @@ commento = false
   name = "telegram"
 
 
-[[footerLinks]]
-  name = ""
-  link = ""
 [[footerLinks]]
   name = ""
   link = ""
