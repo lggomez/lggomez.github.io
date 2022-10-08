@@ -121,5 +121,12 @@
       <author>Luis Gabriel Gomez</author>
       <pubDate>Mon, 29 Aug 2022 21:26:45 -0300</pubDate>
     </item>
+    <item>
+      <title>CUPS on Armbian for boredom and debt</title>
+      <link>https://luisgg.me/en/cups_on_armbian_for_boredom_and_debt</link>
+      <description>Setting up an Odroid XU4 as a local network print server</description>
+      <author>Luis Gabriel Gomez</author>
+      <pubDate>Sat, 08 Oct 2022 18:14:15 -0300</pubDate>
+    </item>
   </channel>
 </rss>
