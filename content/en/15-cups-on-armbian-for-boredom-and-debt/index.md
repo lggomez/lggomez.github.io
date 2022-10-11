@@ -58,7 +58,7 @@ Following step is to configure everything. With this basic configuration, we're 
 
 Using the example base configuration, make the following changes to `/etc/cups/cupsd.conf`:
 
-```config
+```
 Browsing On
 
 # Disable cups internal logging - use logrotate instead
@@ -147,7 +147,7 @@ To make the PDF printer fully functional there is a final step remaining which i
 
 Set up the samba configuration:
 
-```config
+```
 [sambashare]
     comment = Samba on Armbian
     path = /home/cupsadmin/sambashare/
@@ -163,7 +163,7 @@ sudo smbpasswd -a cupsadmin
 
 Now edit the CUPS-pdf config on /etc/cups/cups-pdf.conf and set the output directory to be the samba share:
 
-```config
+```
  Out /home/cupsadmin/sambashare/
 ```
 
