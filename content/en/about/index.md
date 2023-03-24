@@ -6,7 +6,7 @@ date = "2019-02-28"
 +++
 
 
-**For my work experience instead of this page you may want to check this instead: [resume](../../../files/cv.pdf) ([sha256sum checksum](../../../files/checksum))**
+**For my work experience instead of this page you may want to check this instead: [resume](../../../files/cv.pdf) ([sha512sum checksum](../../../files/checksum))**
 
 ![1.jpeg](1.jpeg)
 I'm a software developer, occasional software architect, and jack of some trades based in Buenos Aires, Argentina. I can say that my job and hobby are software development and technology in general. I've worked at small scale in software factories, at large scale in an e-commerce giant and currently I'm helping redefine the technology stack of the local chapter of a multinational bank. I am a student of electronics engineering (formerly software engineering, but after getting that career on board, I guess I want to study something more personally fulfilling and in my list of TODOs).
