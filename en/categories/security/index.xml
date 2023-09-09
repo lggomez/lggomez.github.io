@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Security on Luis GG - Tales and notes</title>
-    <link>http://localhost:1313/en/categories/security/</link>
+    <link>https://luisgg.blog/en/categories/security/</link>
     <description>Recent content in Security on Luis GG - Tales and notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,17 +16,17 @@
     <copyright>Luis Gabriel Gomez ©2023, All Rights Reserved</copyright>
     <lastBuildDate>Fri, 15 Jan 2021 18:56:44 -0300</lastBuildDate>
     
-        <atom:link href="http://localhost:1313/en/categories/security/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://luisgg.blog/en/categories/security/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>Fixing and extending jwt-go without forking</title>
-        <link>http://localhost:1313/en/fixing_jwt_go_without_forking/</link>
+        <link>https://luisgg.blog/en/fixing_jwt_go_without_forking/</link>
         <pubDate>Fri, 15 Jan 2021 18:56:44 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         <atom:modified>Fri, 15 Jan 2021 18:56:44 -0300</atom:modified>
-        <guid>http://localhost:1313/en/fixing_jwt_go_without_forking/</guid>
+        <guid>https://luisgg.blog/en/fixing_jwt_go_without_forking/</guid>
         <description>How to keep using jwt-go without forking or deprecating it in your project</description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>

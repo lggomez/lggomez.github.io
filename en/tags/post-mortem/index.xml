@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Post-mortem on Luis GG - Tales and notes</title>
-    <link>http://localhost:1313/en/tags/post-mortem/</link>
+    <link>https://luisgg.blog/en/tags/post-mortem/</link>
     <description>Recent content in Post-mortem on Luis GG - Tales and notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,17 +16,17 @@
     <copyright>Luis Gabriel Gomez ©2023, All Rights Reserved</copyright>
     <lastBuildDate>Sat, 23 Jan 2021 15:10:02 -0300</lastBuildDate>
     
-        <atom:link href="http://localhost:1313/en/tags/post-mortem/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://luisgg.blog/en/tags/post-mortem/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>Scaffolding RSS feeds from zim notebooks</title>
-        <link>http://localhost:1313/en/scaffolding_rss_feeds_from_zim_notebooks/</link>
+        <link>https://luisgg.blog/en/scaffolding_rss_feeds_from_zim_notebooks/</link>
         <pubDate>Sat, 23 Jan 2021 15:10:02 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         <atom:modified>Sat, 23 Jan 2021 15:10:02 -0300</atom:modified>
-        <guid>http://localhost:1313/en/scaffolding_rss_feeds_from_zim_notebooks/</guid>
+        <guid>https://luisgg.blog/en/scaffolding_rss_feeds_from_zim_notebooks/</guid>
         <description>How to generate RSS feeds for zim notebooks</description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -64,11 +64,11 @@
       
       <item>
         <title>That one with the go runtime bug</title>
-        <link>http://localhost:1313/en/that_one_with_the_go_runtime_bug/</link>
+        <link>https://luisgg.blog/en/that_one_with_the_go_runtime_bug/</link>
         <pubDate>Thu, 07 Jan 2021 00:48:29 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         <atom:modified>Thu, 07 Jan 2021 00:48:29 -0300</atom:modified>
-        <guid>http://localhost:1313/en/that_one_with_the_go_runtime_bug/</guid>
+        <guid>https://luisgg.blog/en/that_one_with_the_go_runtime_bug/</guid>
         <description>A matryoshka of bugs ends up in golang itself</description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -128,11 +128,11 @@
       
       <item>
         <title>Log everything, just not every single thing</title>
-        <link>http://localhost:1313/en/log_everything_just_not_every_single_thing/</link>
+        <link>https://luisgg.blog/en/log_everything_just_not_every_single_thing/</link>
         <pubDate>Sat, 02 Jan 2021 20:27:57 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         <atom:modified>Sat, 02 Jan 2021 20:27:57 -0300</atom:modified>
-        <guid>http://localhost:1313/en/log_everything_just_not_every_single_thing/</guid>
+        <guid>https://luisgg.blog/en/log_everything_just_not_every_single_thing/</guid>
         <description>A reminder that we should log, but maybe not just everything. And a performance rabbit hole</description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -176,11 +176,11 @@
       
       <item>
         <title>Forgetting that precious recover</title>
-        <link>http://localhost:1313/en/forgetting_that_precious_recover/</link>
+        <link>https://luisgg.blog/en/forgetting_that_precious_recover/</link>
         <pubDate>Sat, 02 Jan 2021 01:32:06 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         <atom:modified>Sat, 02 Jan 2021 01:32:06 -0300</atom:modified>
-        <guid>http://localhost:1313/en/forgetting_that_precious_recover/</guid>
+        <guid>https://luisgg.blog/en/forgetting_that_precious_recover/</guid>
         <description>What happens when you forget a recover on a spawned goroutine?</description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>

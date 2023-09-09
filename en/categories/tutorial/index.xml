@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Tutorial on Luis GG - Tales and notes</title>
-    <link>http://localhost:1313/en/categories/tutorial/</link>
+    <link>https://luisgg.blog/en/categories/tutorial/</link>
     <description>Recent content in Tutorial on Luis GG - Tales and notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,17 +16,17 @@
     <copyright>Luis Gabriel Gomez ©2023, All Rights Reserved</copyright>
     <lastBuildDate>Sat, 08 Oct 2022 18:14:15 -0300</lastBuildDate>
     
-        <atom:link href="http://localhost:1313/en/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://luisgg.blog/en/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>CUPS on Armbian for boredom and debt</title>
-        <link>http://localhost:1313/en/cups_on_armbian_for_boredom_and_debt/</link>
+        <link>https://luisgg.blog/en/cups_on_armbian_for_boredom_and_debt/</link>
         <pubDate>Sat, 08 Oct 2022 18:14:15 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         <atom:modified>Sat, 08 Oct 2022 18:14:15 -0300</atom:modified>
-        <guid>http://localhost:1313/en/cups_on_armbian_for_boredom_and_debt/</guid>
+        <guid>https://luisgg.blog/en/cups_on_armbian_for_boredom_and_debt/</guid>
         <description>After some very expensive shenangians with my old Raspberry Pi 3B+ and a screwdriver (more to come) I found myself in need of a new device for my print server
 This is easy to achieve I feel that I had to go through many guides and troubleshooting posts before making it work as expected so I&amp;rsquo;m making yet another guide in hopes to cover all aspects of it for your home server</description>
         
@@ -85,11 +85,11 @@ This is easy to achieve I feel that I had to go through many guides and troubles
       
       <item>
         <title>A DNS Keyboard</title>
-        <link>http://localhost:1313/en/a_dns_keyboard/</link>
+        <link>https://luisgg.blog/en/a_dns_keyboard/</link>
         <pubDate>Sun, 17 Jul 2022 18:30:15 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         <atom:modified>Sun, 17 Jul 2022 18:30:15 -0300</atom:modified>
-        <guid>http://localhost:1313/en/a_dns_keyboard/</guid>
+        <guid>https://luisgg.blog/en/a_dns_keyboard/</guid>
         <description>What does a keyboard and a DNS server have in common? at a first glance it may seem that not much, although the current state of privacy and semiconductor consumer market may have have inadvertently closed that gap.
 Raspberry Pi The Raspberry Pi Foundation arguably made a crucial change to the SoC market when they introduced the first Raspberry Pi series in 2012; An accessible, easy to use and extensible platform based on an ARM CPU with a robust set of features already included on the base board (also called SBCs instead of SoCs, as a matter of facilities amount).</description>
         
@@ -132,11 +132,11 @@ Raspberry Pi The Raspberry Pi Foundation arguably made a crucial change to the S
       
       <item>
         <title>Migrating the site to Hugo</title>
-        <link>http://localhost:1313/en/migrating_the_site_to_hugo/</link>
+        <link>https://luisgg.blog/en/migrating_the_site_to_hugo/</link>
         <pubDate>Fri, 24 Sep 2021 00:45:06 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         <atom:modified>Fri, 24 Sep 2021 00:45:06 -0300</atom:modified>
-        <guid>http://localhost:1313/en/migrating_the_site_to_hugo/</guid>
+        <guid>https://luisgg.blog/en/migrating_the_site_to_hugo/</guid>
         <description>If you&amp;rsquo;ve been following my earlier articles you probably know that the previous version of the site was scaffolded from zim notebooks (in this particular case, from a fork made by me including modifications on the code highlithging plugin, and then a manual RSS generator from parsed notebooks)
 Also, if you&amp;rsquo;re looking at this article you may have noticed I migrated from that modus operandi to a hugo static site.</description>
         
@@ -179,11 +179,11 @@ Also, if you&amp;rsquo;re looking at this article you may have noticed I migrate
       
       <item>
         <title>Emulating a magic 8 ball</title>
-        <link>http://localhost:1313/en/emulating_a_magic_8_ball/</link>
+        <link>https://luisgg.blog/en/emulating_a_magic_8_ball/</link>
         <pubDate>Thu, 08 Apr 2021 00:45:06 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         <atom:modified>Thu, 08 Apr 2021 00:45:06 -0300</atom:modified>
-        <guid>http://localhost:1313/en/emulating_a_magic_8_ball/</guid>
+        <guid>https://luisgg.blog/en/emulating_a_magic_8_ball/</guid>
         <description>The story I have to say, this is (and I just realized a couple of weeks ago) my longest lived project without being deprecated/abandoned. By the time of this publication, It&amp;rsquo;s been already 3 years in the making. Why? well, mostly because of 3 things
 It went though several reimplementations It is a part-time, hobby project which involves hardware and I burnt a display in the process. That alone sends it to the bottom of the hobby projects triage I did wrong some stuff and learned how to it right (or at least differently) during that time When I was younger I had a magic 8 ball and it was one of my favorite toys, the notion of having a pseudorandom assistance was quirky and the toy&amp;rsquo;s presentation itself has its mystique.</description>
         
@@ -238,11 +238,11 @@ It went though several reimplementations It is a part-time, hobby project which 
       
       <item>
         <title>Making a network canary</title>
-        <link>http://localhost:1313/en/making_a_network_canary/</link>
+        <link>https://luisgg.blog/en/making_a_network_canary/</link>
         <pubDate>Thu, 11 Mar 2021 00:27:03 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         <atom:modified>Thu, 11 Mar 2021 00:27:03 -0300</atom:modified>
-        <guid>http://localhost:1313/en/making_a_network_canary/</guid>
+        <guid>https://luisgg.blog/en/making_a_network_canary/</guid>
         <description>Creating a network canary device with an Arduino Nano</description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -292,11 +292,11 @@ It went though several reimplementations It is a part-time, hobby project which 
       
       <item>
         <title>Scaffolding RSS feeds from zim notebooks</title>
-        <link>http://localhost:1313/en/scaffolding_rss_feeds_from_zim_notebooks/</link>
+        <link>https://luisgg.blog/en/scaffolding_rss_feeds_from_zim_notebooks/</link>
         <pubDate>Sat, 23 Jan 2021 15:10:02 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         <atom:modified>Sat, 23 Jan 2021 15:10:02 -0300</atom:modified>
-        <guid>http://localhost:1313/en/scaffolding_rss_feeds_from_zim_notebooks/</guid>
+        <guid>https://luisgg.blog/en/scaffolding_rss_feeds_from_zim_notebooks/</guid>
         <description>How to generate RSS feeds for zim notebooks</description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -334,11 +334,11 @@ It went though several reimplementations It is a part-time, hobby project which 
       
       <item>
         <title>Fixing and extending jwt-go without forking</title>
-        <link>http://localhost:1313/en/fixing_jwt_go_without_forking/</link>
+        <link>https://luisgg.blog/en/fixing_jwt_go_without_forking/</link>
         <pubDate>Fri, 15 Jan 2021 18:56:44 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         <atom:modified>Fri, 15 Jan 2021 18:56:44 -0300</atom:modified>
-        <guid>http://localhost:1313/en/fixing_jwt_go_without_forking/</guid>
+        <guid>https://luisgg.blog/en/fixing_jwt_go_without_forking/</guid>
         <description>How to keep using jwt-go without forking or deprecating it in your project</description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -388,11 +388,11 @@ It went though several reimplementations It is a part-time, hobby project which 
       
       <item>
         <title>Advanced exceptions in .NET</title>
-        <link>http://localhost:1313/en/advanced_exceptions_in_dotnet/</link>
+        <link>https://luisgg.blog/en/advanced_exceptions_in_dotnet/</link>
         <pubDate>Sat, 26 Dec 2020 18:52:29 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         <atom:modified>Sat, 26 Dec 2020 18:52:29 -0300</atom:modified>
-        <guid>http://localhost:1313/en/advanced_exceptions_in_dotnet/</guid>
+        <guid>https://luisgg.blog/en/advanced_exceptions_in_dotnet/</guid>
         <description>A tour on advanced exceptions in .NET (circa 2016)</description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -434,11 +434,11 @@ It went though several reimplementations It is a part-time, hobby project which 
       
       <item>
         <title>Advanced Generics in .NET</title>
-        <link>http://localhost:1313/en/advanced_generics_in_dotnet/</link>
+        <link>https://luisgg.blog/en/advanced_generics_in_dotnet/</link>
         <pubDate>Sat, 26 Dec 2020 18:36:45 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         <atom:modified>Sat, 26 Dec 2020 18:36:45 -0300</atom:modified>
-        <guid>http://localhost:1313/en/advanced_generics_in_dotnet/</guid>
+        <guid>https://luisgg.blog/en/advanced_generics_in_dotnet/</guid>
         <description>A tour on advanced generics in .NET (circa 2017)</description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>

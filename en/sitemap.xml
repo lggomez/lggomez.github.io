@@ -2,305 +2,305 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/en/categories/armbian/</loc>
+    <loc>https://luisgg.blog/en/categories/armbian/</loc>
     <lastmod>2022-10-08T18:14:15-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/canon/</loc>
+    <loc>https://luisgg.blog/en/tags/canon/</loc>
     <lastmod>2022-10-08T18:14:15-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/categories/</loc>
-    <lastmod>2022-10-08T18:14:15-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/categories/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/en/tags/cups/</loc>
-    <lastmod>2022-10-08T18:14:15-03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/en/cups_on_armbian_for_boredom_and_debt/</loc>
-    <lastmod>2022-10-08T18:14:15-03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/en/</loc>
+    <loc>https://luisgg.blog/en/categories/</loc>
     <lastmod>2022-10-08T18:14:15-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/"
+                href="https://luisgg.blog/es/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/"
+                href="https://luisgg.blog/en/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/tags/networking/</loc>
+    <loc>https://luisgg.blog/en/tags/cups/</loc>
     <lastmod>2022-10-08T18:14:15-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/categories/networking/</loc>
+    <loc>https://luisgg.blog/en/cups_on_armbian_for_boredom_and_debt/</loc>
     <lastmod>2022-10-08T18:14:15-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/odroid/</loc>
-    <lastmod>2022-10-08T18:14:15-03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/en/categories/odroid/</loc>
-    <lastmod>2022-10-08T18:14:15-03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/en/tags/printer/</loc>
-    <lastmod>2022-10-08T18:14:15-03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/en/categories/printer/</loc>
-    <lastmod>2022-10-08T18:14:15-03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/en/tags/</loc>
+    <loc>https://luisgg.blog/en/</loc>
     <lastmod>2022-10-08T18:14:15-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/tags/"
+                href="https://luisgg.blog/es/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/"
+                href="https://luisgg.blog/en/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/categories/tutorial/</loc>
+    <loc>https://luisgg.blog/en/tags/networking/</loc>
     <lastmod>2022-10-08T18:14:15-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/a_dns_keyboard/</loc>
+    <loc>https://luisgg.blog/en/categories/networking/</loc>
+    <lastmod>2022-10-08T18:14:15-03:00</lastmod>
+  </url><url>
+    <loc>https://luisgg.blog/en/tags/odroid/</loc>
+    <lastmod>2022-10-08T18:14:15-03:00</lastmod>
+  </url><url>
+    <loc>https://luisgg.blog/en/categories/odroid/</loc>
+    <lastmod>2022-10-08T18:14:15-03:00</lastmod>
+  </url><url>
+    <loc>https://luisgg.blog/en/tags/printer/</loc>
+    <lastmod>2022-10-08T18:14:15-03:00</lastmod>
+  </url><url>
+    <loc>https://luisgg.blog/en/categories/printer/</loc>
+    <lastmod>2022-10-08T18:14:15-03:00</lastmod>
+  </url><url>
+    <loc>https://luisgg.blog/en/tags/</loc>
+    <lastmod>2022-10-08T18:14:15-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://luisgg.blog/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://luisgg.blog/en/tags/"
+                />
+  </url><url>
+    <loc>https://luisgg.blog/en/categories/tutorial/</loc>
+    <lastmod>2022-10-08T18:14:15-03:00</lastmod>
+  </url><url>
+    <loc>https://luisgg.blog/en/a_dns_keyboard/</loc>
     <lastmod>2022-07-17T18:30:15-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/dns/</loc>
+    <loc>https://luisgg.blog/en/tags/dns/</loc>
     <lastmod>2022-07-17T18:30:15-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/pihole/</loc>
+    <loc>https://luisgg.blog/en/tags/pihole/</loc>
     <lastmod>2022-07-17T18:30:15-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/categories/raspberry-pi/</loc>
+    <loc>https://luisgg.blog/en/categories/raspberry-pi/</loc>
     <lastmod>2022-07-17T18:30:15-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/golang/</loc>
+    <loc>https://luisgg.blog/en/tags/golang/</loc>
     <lastmod>2021-09-24T00:45:06-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/tags/golang/"
+                href="https://luisgg.blog/es/tags/golang/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/golang/"
+                href="https://luisgg.blog/en/tags/golang/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/tags/hugo/</loc>
+    <loc>https://luisgg.blog/en/tags/hugo/</loc>
     <lastmod>2021-09-24T00:45:06-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/migrating_the_site_to_hugo/</loc>
+    <loc>https://luisgg.blog/en/migrating_the_site_to_hugo/</loc>
     <lastmod>2021-09-24T00:45:06-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/migration/</loc>
+    <loc>https://luisgg.blog/en/tags/migration/</loc>
     <lastmod>2021-09-24T00:45:06-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/categories/programming/</loc>
+    <loc>https://luisgg.blog/en/categories/programming/</loc>
     <lastmod>2021-09-24T00:45:06-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/categories/programming/"
+                href="https://luisgg.blog/es/categories/programming/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/categories/programming/"
+                href="https://luisgg.blog/en/categories/programming/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/categories/web/</loc>
+    <loc>https://luisgg.blog/en/categories/web/</loc>
     <lastmod>2021-09-24T00:45:06-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/about_rss_feed/</loc>
+    <loc>https://luisgg.blog/en/about_rss_feed/</loc>
     <lastmod>2021-09-07T22:34:13-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/rss/</loc>
+    <loc>https://luisgg.blog/en/tags/rss/</loc>
     <lastmod>2021-09-07T22:34:13-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/accelerometer/</loc>
+    <loc>https://luisgg.blog/en/tags/accelerometer/</loc>
     <lastmod>2021-04-08T00:45:06-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/categories/arduino/</loc>
+    <loc>https://luisgg.blog/en/categories/arduino/</loc>
     <lastmod>2021-04-08T00:45:06-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/arduino-nano/</loc>
+    <loc>https://luisgg.blog/en/tags/arduino-nano/</loc>
     <lastmod>2021-04-08T00:45:06-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/c/</loc>
+    <loc>https://luisgg.blog/en/tags/c/</loc>
     <lastmod>2021-04-08T00:45:06-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/display/</loc>
+    <loc>https://luisgg.blog/en/tags/display/</loc>
     <lastmod>2021-04-08T00:45:06-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/categories/electronics/</loc>
+    <loc>https://luisgg.blog/en/categories/electronics/</loc>
     <lastmod>2021-04-08T00:45:06-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/emulating_a_magic_8_ball/</loc>
+    <loc>https://luisgg.blog/en/emulating_a_magic_8_ball/</loc>
     <lastmod>2021-04-08T00:45:06-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/categories/network/</loc>
+    <loc>https://luisgg.blog/en/categories/network/</loc>
     <lastmod>2021-04-08T00:45:06-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/ethernet/</loc>
+    <loc>https://luisgg.blog/en/tags/ethernet/</loc>
     <lastmod>2021-03-11T00:27:03-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/making_a_network_canary/</loc>
+    <loc>https://luisgg.blog/en/making_a_network_canary/</loc>
     <lastmod>2021-03-11T00:27:03-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/categories/backend/</loc>
+    <loc>https://luisgg.blog/en/categories/backend/</loc>
     <lastmod>2021-03-07T02:43:15-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/categories/backend/"
+                href="https://luisgg.blog/es/categories/backend/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/categories/backend/"
+                href="https://luisgg.blog/en/categories/backend/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/tags/enums/</loc>
+    <loc>https://luisgg.blog/en/tags/enums/</loc>
     <lastmod>2021-03-07T02:43:15-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/categories/intermediate/</loc>
+    <loc>https://luisgg.blog/en/categories/intermediate/</loc>
     <lastmod>2021-03-07T02:43:15-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/scaffolding/</loc>
+    <loc>https://luisgg.blog/en/tags/scaffolding/</loc>
     <lastmod>2021-03-07T02:43:15-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/the_otherworldly_landscape_of_enums_in_go/</loc>
+    <loc>https://luisgg.blog/en/the_otherworldly_landscape_of_enums_in_go/</loc>
     <lastmod>2021-03-07T02:43:15-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/post-mortem/</loc>
+    <loc>https://luisgg.blog/en/tags/post-mortem/</loc>
     <lastmod>2021-01-23T15:10:02-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/tags/post-mortem/"
+                href="https://luisgg.blog/es/tags/post-mortem/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/post-mortem/"
+                href="https://luisgg.blog/en/tags/post-mortem/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/scaffolding_rss_feeds_from_zim_notebooks/</loc>
+    <loc>https://luisgg.blog/en/scaffolding_rss_feeds_from_zim_notebooks/</loc>
     <lastmod>2021-01-23T15:10:02-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/categories/bug/</loc>
+    <loc>https://luisgg.blog/en/categories/bug/</loc>
     <lastmod>2021-01-15T18:56:44-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/categories/bug/"
+                href="https://luisgg.blog/es/categories/bug/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/categories/bug/"
+                href="https://luisgg.blog/en/categories/bug/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/fixing_jwt_go_without_forking/</loc>
+    <loc>https://luisgg.blog/en/fixing_jwt_go_without_forking/</loc>
     <lastmod>2021-01-15T18:56:44-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/jwt/</loc>
+    <loc>https://luisgg.blog/en/tags/jwt/</loc>
     <lastmod>2021-01-15T18:56:44-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/categories/open-source/</loc>
+    <loc>https://luisgg.blog/en/categories/open-source/</loc>
     <lastmod>2021-01-15T18:56:44-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/categories/security/</loc>
+    <loc>https://luisgg.blog/en/categories/security/</loc>
     <lastmod>2021-01-15T18:56:44-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/categories/advanced/</loc>
+    <loc>https://luisgg.blog/en/categories/advanced/</loc>
     <lastmod>2021-01-07T00:48:29-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/compilers/</loc>
+    <loc>https://luisgg.blog/en/tags/compilers/</loc>
     <lastmod>2021-01-07T00:48:29-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/runtime/</loc>
+    <loc>https://luisgg.blog/en/tags/runtime/</loc>
     <lastmod>2021-01-07T00:48:29-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/series/</loc>
+    <loc>https://luisgg.blog/en/series/</loc>
     <lastmod>2021-01-07T00:48:29-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/series/"
+                href="https://luisgg.blog/es/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/series/"
+                href="https://luisgg.blog/en/series/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/that_one_with_the_go_runtime_bug/</loc>
+    <loc>https://luisgg.blog/en/that_one_with_the_go_runtime_bug/</loc>
     <lastmod>2021-01-07T00:48:29-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/series/when-gophers-attack/</loc>
+    <loc>https://luisgg.blog/en/series/when-gophers-attack/</loc>
     <lastmod>2021-01-07T00:48:29-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/log_everything_just_not_every_single_thing/</loc>
+    <loc>https://luisgg.blog/en/log_everything_just_not_every_single_thing/</loc>
     <lastmod>2021-01-02T20:27:57-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/forgetting_that_precious_recover/</loc>
+    <loc>https://luisgg.blog/en/forgetting_that_precious_recover/</loc>
     <lastmod>2021-01-02T01:32:06-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/intermediate/</loc>
+    <loc>https://luisgg.blog/en/tags/intermediate/</loc>
     <lastmod>2021-01-02T01:32:06-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/categories/.net/</loc>
+    <loc>https://luisgg.blog/en/categories/.net/</loc>
     <lastmod>2020-12-26T18:52:29-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/advanced_exceptions_in_dotnet/</loc>
+    <loc>https://luisgg.blog/en/advanced_exceptions_in_dotnet/</loc>
     <lastmod>2020-12-26T18:52:29-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/c#/</loc>
+    <loc>https://luisgg.blog/en/tags/c#/</loc>
     <lastmod>2020-12-26T18:52:29-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/generics/</loc>
+    <loc>https://luisgg.blog/en/tags/generics/</loc>
     <lastmod>2020-12-26T18:52:29-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/advanced_generics_in_dotnet/</loc>
+    <loc>https://luisgg.blog/en/advanced_generics_in_dotnet/</loc>
     <lastmod>2020-12-26T18:36:45-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/exceptions/</loc>
+    <loc>https://luisgg.blog/en/tags/exceptions/</loc>
     <lastmod>2020-12-26T18:36:45-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/memory_a_forgotten_topic/</loc>
+    <loc>https://luisgg.blog/en/memory_a_forgotten_topic/</loc>
     <lastmod>2020-12-23T23:09:11-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/categories/theory/</loc>
+    <loc>https://luisgg.blog/en/categories/theory/</loc>
     <lastmod>2020-12-23T23:09:11-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/archive/</loc>
+    <loc>https://luisgg.blog/en/archive/</loc>
     <lastmod>2020-01-30T12:50:46+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/archive/"
+                href="https://luisgg.blog/es/archive/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/archive/"
+                href="https://luisgg.blog/en/archive/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/about/</loc>
+    <loc>https://luisgg.blog/en/about/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
   </url>
 </urlset>

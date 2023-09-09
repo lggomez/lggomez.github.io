@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Tags on Luis GG - Tales and notes</title>
-    <link>http://localhost:1313/en/tags/</link>
+    <link>https://luisgg.blog/en/tags/</link>
     <description>Recent content in Tags on Luis GG - Tales and notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,17 +16,17 @@
     <copyright>Luis Gabriel Gomez ©2023, All Rights Reserved</copyright>
     <lastBuildDate>Sat, 08 Oct 2022 18:14:15 -0300</lastBuildDate>
     
-        <atom:link href="http://localhost:1313/en/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://luisgg.blog/en/tags/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>canon</title>
-        <link>http://localhost:1313/en/tags/canon/</link>
+        <link>https://luisgg.blog/en/tags/canon/</link>
         <pubDate>Sat, 08 Oct 2022 18:14:15 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>http://localhost:1313/en/tags/canon/</guid>
+        <guid>https://luisgg.blog/en/tags/canon/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -40,11 +40,11 @@
       
       <item>
         <title>cups</title>
-        <link>http://localhost:1313/en/tags/cups/</link>
+        <link>https://luisgg.blog/en/tags/cups/</link>
         <pubDate>Sat, 08 Oct 2022 18:14:15 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>http://localhost:1313/en/tags/cups/</guid>
+        <guid>https://luisgg.blog/en/tags/cups/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -58,11 +58,11 @@
       
       <item>
         <title>networking</title>
-        <link>http://localhost:1313/en/tags/networking/</link>
+        <link>https://luisgg.blog/en/tags/networking/</link>
         <pubDate>Sat, 08 Oct 2022 18:14:15 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>http://localhost:1313/en/tags/networking/</guid>
+        <guid>https://luisgg.blog/en/tags/networking/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -76,11 +76,11 @@
       
       <item>
         <title>odroid</title>
-        <link>http://localhost:1313/en/tags/odroid/</link>
+        <link>https://luisgg.blog/en/tags/odroid/</link>
         <pubDate>Sat, 08 Oct 2022 18:14:15 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>http://localhost:1313/en/tags/odroid/</guid>
+        <guid>https://luisgg.blog/en/tags/odroid/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -94,11 +94,11 @@
       
       <item>
         <title>printer</title>
-        <link>http://localhost:1313/en/tags/printer/</link>
+        <link>https://luisgg.blog/en/tags/printer/</link>
         <pubDate>Sat, 08 Oct 2022 18:14:15 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>http://localhost:1313/en/tags/printer/</guid>
+        <guid>https://luisgg.blog/en/tags/printer/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -112,11 +112,11 @@
       
       <item>
         <title>dns</title>
-        <link>http://localhost:1313/en/tags/dns/</link>
+        <link>https://luisgg.blog/en/tags/dns/</link>
         <pubDate>Sun, 17 Jul 2022 18:30:15 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>http://localhost:1313/en/tags/dns/</guid>
+        <guid>https://luisgg.blog/en/tags/dns/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -130,11 +130,11 @@
       
       <item>
         <title>pihole</title>
-        <link>http://localhost:1313/en/tags/pihole/</link>
+        <link>https://luisgg.blog/en/tags/pihole/</link>
         <pubDate>Sun, 17 Jul 2022 18:30:15 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>http://localhost:1313/en/tags/pihole/</guid>
+        <guid>https://luisgg.blog/en/tags/pihole/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -148,11 +148,11 @@
       
       <item>
         <title>Golang</title>
-        <link>http://localhost:1313/en/tags/golang/</link>
+        <link>https://luisgg.blog/en/tags/golang/</link>
         <pubDate>Fri, 24 Sep 2021 00:45:06 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>http://localhost:1313/en/tags/golang/</guid>
+        <guid>https://luisgg.blog/en/tags/golang/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -166,11 +166,11 @@
       
       <item>
         <title>Hugo</title>
-        <link>http://localhost:1313/en/tags/hugo/</link>
+        <link>https://luisgg.blog/en/tags/hugo/</link>
         <pubDate>Fri, 24 Sep 2021 00:45:06 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>http://localhost:1313/en/tags/hugo/</guid>
+        <guid>https://luisgg.blog/en/tags/hugo/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -184,11 +184,11 @@
       
       <item>
         <title>Migration</title>
-        <link>http://localhost:1313/en/tags/migration/</link>
+        <link>https://luisgg.blog/en/tags/migration/</link>
         <pubDate>Fri, 24 Sep 2021 00:45:06 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>http://localhost:1313/en/tags/migration/</guid>
+        <guid>https://luisgg.blog/en/tags/migration/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -202,11 +202,11 @@
       
       <item>
         <title>RSS</title>
-        <link>http://localhost:1313/en/tags/rss/</link>
+        <link>https://luisgg.blog/en/tags/rss/</link>
         <pubDate>Tue, 07 Sep 2021 22:34:13 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>http://localhost:1313/en/tags/rss/</guid>
+        <guid>https://luisgg.blog/en/tags/rss/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -220,11 +220,11 @@
       
       <item>
         <title>Accelerometer</title>
-        <link>http://localhost:1313/en/tags/accelerometer/</link>
+        <link>https://luisgg.blog/en/tags/accelerometer/</link>
         <pubDate>Thu, 08 Apr 2021 00:45:06 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>http://localhost:1313/en/tags/accelerometer/</guid>
+        <guid>https://luisgg.blog/en/tags/accelerometer/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -238,11 +238,11 @@
       
       <item>
         <title>Arduino Nano</title>
-        <link>http://localhost:1313/en/tags/arduino-nano/</link>
+        <link>https://luisgg.blog/en/tags/arduino-nano/</link>
         <pubDate>Thu, 08 Apr 2021 00:45:06 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>http://localhost:1313/en/tags/arduino-nano/</guid>
+        <guid>https://luisgg.blog/en/tags/arduino-nano/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -256,11 +256,11 @@
       
       <item>
         <title>C</title>
-        <link>http://localhost:1313/en/tags/c/</link>
+        <link>https://luisgg.blog/en/tags/c/</link>
         <pubDate>Thu, 08 Apr 2021 00:45:06 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>http://localhost:1313/en/tags/c/</guid>
+        <guid>https://luisgg.blog/en/tags/c/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -274,11 +274,11 @@
       
       <item>
         <title>Display</title>
-        <link>http://localhost:1313/en/tags/display/</link>
+        <link>https://luisgg.blog/en/tags/display/</link>
         <pubDate>Thu, 08 Apr 2021 00:45:06 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>http://localhost:1313/en/tags/display/</guid>
+        <guid>https://luisgg.blog/en/tags/display/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -292,11 +292,11 @@
       
       <item>
         <title>Ethernet</title>
-        <link>http://localhost:1313/en/tags/ethernet/</link>
+        <link>https://luisgg.blog/en/tags/ethernet/</link>
         <pubDate>Thu, 11 Mar 2021 00:27:03 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>http://localhost:1313/en/tags/ethernet/</guid>
+        <guid>https://luisgg.blog/en/tags/ethernet/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -310,11 +310,11 @@
       
       <item>
         <title>Enums</title>
-        <link>http://localhost:1313/en/tags/enums/</link>
+        <link>https://luisgg.blog/en/tags/enums/</link>
         <pubDate>Sun, 07 Mar 2021 02:43:15 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>http://localhost:1313/en/tags/enums/</guid>
+        <guid>https://luisgg.blog/en/tags/enums/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -328,11 +328,11 @@
       
       <item>
         <title>Scaffolding</title>
-        <link>http://localhost:1313/en/tags/scaffolding/</link>
+        <link>https://luisgg.blog/en/tags/scaffolding/</link>
         <pubDate>Sun, 07 Mar 2021 02:43:15 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>http://localhost:1313/en/tags/scaffolding/</guid>
+        <guid>https://luisgg.blog/en/tags/scaffolding/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -346,11 +346,11 @@
       
       <item>
         <title>Post-mortem</title>
-        <link>http://localhost:1313/en/tags/post-mortem/</link>
+        <link>https://luisgg.blog/en/tags/post-mortem/</link>
         <pubDate>Sat, 23 Jan 2021 15:10:02 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>http://localhost:1313/en/tags/post-mortem/</guid>
+        <guid>https://luisgg.blog/en/tags/post-mortem/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -364,11 +364,11 @@
       
       <item>
         <title>JWT</title>
-        <link>http://localhost:1313/en/tags/jwt/</link>
+        <link>https://luisgg.blog/en/tags/jwt/</link>
         <pubDate>Fri, 15 Jan 2021 18:56:44 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>http://localhost:1313/en/tags/jwt/</guid>
+        <guid>https://luisgg.blog/en/tags/jwt/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -382,11 +382,11 @@
       
       <item>
         <title>Compilers</title>
-        <link>http://localhost:1313/en/tags/compilers/</link>
+        <link>https://luisgg.blog/en/tags/compilers/</link>
         <pubDate>Thu, 07 Jan 2021 00:48:29 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>http://localhost:1313/en/tags/compilers/</guid>
+        <guid>https://luisgg.blog/en/tags/compilers/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -400,11 +400,11 @@
       
       <item>
         <title>Runtime</title>
-        <link>http://localhost:1313/en/tags/runtime/</link>
+        <link>https://luisgg.blog/en/tags/runtime/</link>
         <pubDate>Thu, 07 Jan 2021 00:48:29 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>http://localhost:1313/en/tags/runtime/</guid>
+        <guid>https://luisgg.blog/en/tags/runtime/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -418,11 +418,11 @@
       
       <item>
         <title>Intermediate</title>
-        <link>http://localhost:1313/en/tags/intermediate/</link>
+        <link>https://luisgg.blog/en/tags/intermediate/</link>
         <pubDate>Sat, 02 Jan 2021 01:32:06 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>http://localhost:1313/en/tags/intermediate/</guid>
+        <guid>https://luisgg.blog/en/tags/intermediate/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -436,11 +436,11 @@
       
       <item>
         <title>C#</title>
-        <link>http://localhost:1313/en/tags/c#/</link>
+        <link>https://luisgg.blog/en/tags/c#/</link>
         <pubDate>Sat, 26 Dec 2020 18:52:29 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>http://localhost:1313/en/tags/c#/</guid>
+        <guid>https://luisgg.blog/en/tags/c#/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -454,11 +454,11 @@
       
       <item>
         <title>Generics</title>
-        <link>http://localhost:1313/en/tags/generics/</link>
+        <link>https://luisgg.blog/en/tags/generics/</link>
         <pubDate>Sat, 26 Dec 2020 18:52:29 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>http://localhost:1313/en/tags/generics/</guid>
+        <guid>https://luisgg.blog/en/tags/generics/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -472,11 +472,11 @@
       
       <item>
         <title>Exceptions</title>
-        <link>http://localhost:1313/en/tags/exceptions/</link>
+        <link>https://luisgg.blog/en/tags/exceptions/</link>
         <pubDate>Sat, 26 Dec 2020 18:36:45 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>http://localhost:1313/en/tags/exceptions/</guid>
+        <guid>https://luisgg.blog/en/tags/exceptions/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>

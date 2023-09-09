@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Hugo on Luis GG - Tales and notes</title>
-    <link>http://localhost:1313/en/tags/hugo/</link>
+    <link>https://luisgg.blog/en/tags/hugo/</link>
     <description>Recent content in Hugo on Luis GG - Tales and notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,17 +16,17 @@
     <copyright>Luis Gabriel Gomez ©2023, All Rights Reserved</copyright>
     <lastBuildDate>Fri, 24 Sep 2021 00:45:06 -0300</lastBuildDate>
     
-        <atom:link href="http://localhost:1313/en/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://luisgg.blog/en/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>Migrating the site to Hugo</title>
-        <link>http://localhost:1313/en/migrating_the_site_to_hugo/</link>
+        <link>https://luisgg.blog/en/migrating_the_site_to_hugo/</link>
         <pubDate>Fri, 24 Sep 2021 00:45:06 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         <atom:modified>Fri, 24 Sep 2021 00:45:06 -0300</atom:modified>
-        <guid>http://localhost:1313/en/migrating_the_site_to_hugo/</guid>
+        <guid>https://luisgg.blog/en/migrating_the_site_to_hugo/</guid>
         <description>If you&amp;rsquo;ve been following my earlier articles you probably know that the previous version of the site was scaffolded from zim notebooks (in this particular case, from a fork made by me including modifications on the code highlithging plugin, and then a manual RSS generator from parsed notebooks)
 Also, if you&amp;rsquo;re looking at this article you may have noticed I migrated from that modus operandi to a hugo static site.</description>
         

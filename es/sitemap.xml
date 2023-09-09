@@ -2,140 +2,140 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/es/categories/backend/</loc>
+    <loc>https://luisgg.blog/es/categories/backend/</loc>
     <lastmod>2021-01-02T02:50:55-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/categories/backend/"
+                href="https://luisgg.blog/en/categories/backend/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/categories/backend/"
+                href="https://luisgg.blog/es/categories/backend/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/categories/bug/</loc>
+    <loc>https://luisgg.blog/es/categories/bug/</loc>
     <lastmod>2021-01-02T02:50:55-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/categories/bug/"
+                href="https://luisgg.blog/en/categories/bug/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/categories/bug/"
+                href="https://luisgg.blog/es/categories/bug/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/categories/</loc>
+    <loc>https://luisgg.blog/es/categories/</loc>
     <lastmod>2021-01-02T02:50:55-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/categories/"
+                href="https://luisgg.blog/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/categories/"
+                href="https://luisgg.blog/es/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/series/cuando-los-gophers-atacan/</loc>
+    <loc>https://luisgg.blog/es/series/cuando-los-gophers-atacan/</loc>
     <lastmod>2021-01-02T02:50:55-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/es/tags/golang/</loc>
+    <loc>https://luisgg.blog/es/tags/golang/</loc>
     <lastmod>2021-01-02T02:50:55-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/golang/"
+                href="https://luisgg.blog/en/tags/golang/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/tags/golang/"
+                href="https://luisgg.blog/es/tags/golang/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/</loc>
+    <loc>https://luisgg.blog/es/</loc>
     <lastmod>2021-01-02T02:50:55-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/"
+                href="https://luisgg.blog/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/"
+                href="https://luisgg.blog/es/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/olvidando_el_precioso_recover/</loc>
+    <loc>https://luisgg.blog/es/olvidando_el_precioso_recover/</loc>
     <lastmod>2021-01-02T02:50:55-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/es/tags/post-mortem/</loc>
-    <lastmod>2021-01-02T02:50:55-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/tags/post-mortem/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/tags/post-mortem/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/categories/programming/</loc>
+    <loc>https://luisgg.blog/es/tags/post-mortem/</loc>
     <lastmod>2021-01-02T02:50:55-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/categories/programming/"
+                href="https://luisgg.blog/en/tags/post-mortem/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/categories/programming/"
+                href="https://luisgg.blog/es/tags/post-mortem/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/series/</loc>
+    <loc>https://luisgg.blog/es/categories/programming/</loc>
     <lastmod>2021-01-02T02:50:55-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/series/"
+                href="https://luisgg.blog/en/categories/programming/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/series/"
+                href="https://luisgg.blog/es/categories/programming/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/tags/</loc>
+    <loc>https://luisgg.blog/es/series/</loc>
     <lastmod>2021-01-02T02:50:55-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/"
+                href="https://luisgg.blog/en/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/tags/"
+                href="https://luisgg.blog/es/series/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/archive/</loc>
+    <loc>https://luisgg.blog/es/tags/</loc>
+    <lastmod>2021-01-02T02:50:55-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://luisgg.blog/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://luisgg.blog/es/tags/"
+                />
+  </url><url>
+    <loc>https://luisgg.blog/es/archive/</loc>
     <lastmod>2020-01-30T12:50:46+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/archive/"
+                href="https://luisgg.blog/en/archive/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/archive/"
+                href="https://luisgg.blog/es/archive/"
                 />
   </url>
 </urlset>
