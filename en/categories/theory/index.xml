@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Theory on Luis GG - Tales and notes</title>
-    <link>https://luisgg.blog/en/categories/theory/</link>
+    <link>https://luisgg.me/en/categories/theory/</link>
     <description>Recent content in Theory on Luis GG - Tales and notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,17 +16,17 @@
     <copyright>Luis Gabriel Gomez ©2023, All Rights Reserved</copyright>
     <lastBuildDate>Wed, 23 Dec 2020 23:09:11 -0300</lastBuildDate>
     
-        <atom:link href="https://luisgg.blog/en/categories/theory/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://luisgg.me/en/categories/theory/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>Memory: A Forgotten Topic</title>
-        <link>https://luisgg.blog/en/memory_a_forgotten_topic/</link>
+        <link>https://luisgg.me/en/memory_a_forgotten_topic/</link>
         <pubDate>Wed, 23 Dec 2020 23:09:11 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         <atom:modified>Wed, 23 Dec 2020 23:09:11 -0300</atom:modified>
-        <guid>https://luisgg.blog/en/memory_a_forgotten_topic/</guid>
+        <guid>https://luisgg.me/en/memory_a_forgotten_topic/</guid>
         <description>A post about one of the most overlooked topics by modern developers: memory</description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>

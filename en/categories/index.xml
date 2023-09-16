@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Categories on Luis GG - Tales and notes</title>
-    <link>https://luisgg.blog/en/categories/</link>
+    <link>https://luisgg.me/en/categories/</link>
     <description>Recent content in Categories on Luis GG - Tales and notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,17 +16,17 @@
     <copyright>Luis Gabriel Gomez ©2023, All Rights Reserved</copyright>
     <lastBuildDate>Sat, 08 Oct 2022 18:14:15 -0300</lastBuildDate>
     
-        <atom:link href="https://luisgg.blog/en/categories/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://luisgg.me/en/categories/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>Armbian</title>
-        <link>https://luisgg.blog/en/categories/armbian/</link>
+        <link>https://luisgg.me/en/categories/armbian/</link>
         <pubDate>Sat, 08 Oct 2022 18:14:15 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>https://luisgg.blog/en/categories/armbian/</guid>
+        <guid>https://luisgg.me/en/categories/armbian/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -40,11 +40,11 @@
       
       <item>
         <title>Networking</title>
-        <link>https://luisgg.blog/en/categories/networking/</link>
+        <link>https://luisgg.me/en/categories/networking/</link>
         <pubDate>Sat, 08 Oct 2022 18:14:15 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>https://luisgg.blog/en/categories/networking/</guid>
+        <guid>https://luisgg.me/en/categories/networking/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -58,11 +58,11 @@
       
       <item>
         <title>Odroid</title>
-        <link>https://luisgg.blog/en/categories/odroid/</link>
+        <link>https://luisgg.me/en/categories/odroid/</link>
         <pubDate>Sat, 08 Oct 2022 18:14:15 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>https://luisgg.blog/en/categories/odroid/</guid>
+        <guid>https://luisgg.me/en/categories/odroid/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -76,11 +76,11 @@
       
       <item>
         <title>Printer</title>
-        <link>https://luisgg.blog/en/categories/printer/</link>
+        <link>https://luisgg.me/en/categories/printer/</link>
         <pubDate>Sat, 08 Oct 2022 18:14:15 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>https://luisgg.blog/en/categories/printer/</guid>
+        <guid>https://luisgg.me/en/categories/printer/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -94,11 +94,11 @@
       
       <item>
         <title>Tutorial</title>
-        <link>https://luisgg.blog/en/categories/tutorial/</link>
+        <link>https://luisgg.me/en/categories/tutorial/</link>
         <pubDate>Sat, 08 Oct 2022 18:14:15 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>https://luisgg.blog/en/categories/tutorial/</guid>
+        <guid>https://luisgg.me/en/categories/tutorial/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -112,11 +112,11 @@
       
       <item>
         <title>Raspberry Pi</title>
-        <link>https://luisgg.blog/en/categories/raspberry-pi/</link>
+        <link>https://luisgg.me/en/categories/raspberry-pi/</link>
         <pubDate>Sun, 17 Jul 2022 18:30:15 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>https://luisgg.blog/en/categories/raspberry-pi/</guid>
+        <guid>https://luisgg.me/en/categories/raspberry-pi/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -130,11 +130,11 @@
       
       <item>
         <title>Programming</title>
-        <link>https://luisgg.blog/en/categories/programming/</link>
+        <link>https://luisgg.me/en/categories/programming/</link>
         <pubDate>Fri, 24 Sep 2021 00:45:06 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>https://luisgg.blog/en/categories/programming/</guid>
+        <guid>https://luisgg.me/en/categories/programming/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -148,11 +148,11 @@
       
       <item>
         <title>Web</title>
-        <link>https://luisgg.blog/en/categories/web/</link>
+        <link>https://luisgg.me/en/categories/web/</link>
         <pubDate>Fri, 24 Sep 2021 00:45:06 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>https://luisgg.blog/en/categories/web/</guid>
+        <guid>https://luisgg.me/en/categories/web/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -166,11 +166,11 @@
       
       <item>
         <title>Arduino</title>
-        <link>https://luisgg.blog/en/categories/arduino/</link>
+        <link>https://luisgg.me/en/categories/arduino/</link>
         <pubDate>Thu, 08 Apr 2021 00:45:06 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>https://luisgg.blog/en/categories/arduino/</guid>
+        <guid>https://luisgg.me/en/categories/arduino/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -184,11 +184,11 @@
       
       <item>
         <title>Electronics</title>
-        <link>https://luisgg.blog/en/categories/electronics/</link>
+        <link>https://luisgg.me/en/categories/electronics/</link>
         <pubDate>Thu, 08 Apr 2021 00:45:06 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>https://luisgg.blog/en/categories/electronics/</guid>
+        <guid>https://luisgg.me/en/categories/electronics/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -202,11 +202,11 @@
       
       <item>
         <title>Network</title>
-        <link>https://luisgg.blog/en/categories/network/</link>
+        <link>https://luisgg.me/en/categories/network/</link>
         <pubDate>Thu, 08 Apr 2021 00:45:06 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>https://luisgg.blog/en/categories/network/</guid>
+        <guid>https://luisgg.me/en/categories/network/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -220,11 +220,11 @@
       
       <item>
         <title>Backend</title>
-        <link>https://luisgg.blog/en/categories/backend/</link>
+        <link>https://luisgg.me/en/categories/backend/</link>
         <pubDate>Sun, 07 Mar 2021 02:43:15 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>https://luisgg.blog/en/categories/backend/</guid>
+        <guid>https://luisgg.me/en/categories/backend/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -238,11 +238,11 @@
       
       <item>
         <title>Intermediate</title>
-        <link>https://luisgg.blog/en/categories/intermediate/</link>
+        <link>https://luisgg.me/en/categories/intermediate/</link>
         <pubDate>Sun, 07 Mar 2021 02:43:15 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>https://luisgg.blog/en/categories/intermediate/</guid>
+        <guid>https://luisgg.me/en/categories/intermediate/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -256,11 +256,11 @@
       
       <item>
         <title>Bug</title>
-        <link>https://luisgg.blog/en/categories/bug/</link>
+        <link>https://luisgg.me/en/categories/bug/</link>
         <pubDate>Fri, 15 Jan 2021 18:56:44 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>https://luisgg.blog/en/categories/bug/</guid>
+        <guid>https://luisgg.me/en/categories/bug/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -274,11 +274,11 @@
       
       <item>
         <title>Open Source</title>
-        <link>https://luisgg.blog/en/categories/open-source/</link>
+        <link>https://luisgg.me/en/categories/open-source/</link>
         <pubDate>Fri, 15 Jan 2021 18:56:44 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>https://luisgg.blog/en/categories/open-source/</guid>
+        <guid>https://luisgg.me/en/categories/open-source/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -292,11 +292,11 @@
       
       <item>
         <title>Security</title>
-        <link>https://luisgg.blog/en/categories/security/</link>
+        <link>https://luisgg.me/en/categories/security/</link>
         <pubDate>Fri, 15 Jan 2021 18:56:44 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>https://luisgg.blog/en/categories/security/</guid>
+        <guid>https://luisgg.me/en/categories/security/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -310,11 +310,11 @@
       
       <item>
         <title>Advanced</title>
-        <link>https://luisgg.blog/en/categories/advanced/</link>
+        <link>https://luisgg.me/en/categories/advanced/</link>
         <pubDate>Thu, 07 Jan 2021 00:48:29 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>https://luisgg.blog/en/categories/advanced/</guid>
+        <guid>https://luisgg.me/en/categories/advanced/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -328,11 +328,11 @@
       
       <item>
         <title>.NET</title>
-        <link>https://luisgg.blog/en/categories/.net/</link>
+        <link>https://luisgg.me/en/categories/.net/</link>
         <pubDate>Sat, 26 Dec 2020 18:52:29 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>https://luisgg.blog/en/categories/.net/</guid>
+        <guid>https://luisgg.me/en/categories/.net/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -346,11 +346,11 @@
       
       <item>
         <title>Theory</title>
-        <link>https://luisgg.blog/en/categories/theory/</link>
+        <link>https://luisgg.me/en/categories/theory/</link>
         <pubDate>Wed, 23 Dec 2020 23:09:11 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>https://luisgg.blog/en/categories/theory/</guid>
+        <guid>https://luisgg.me/en/categories/theory/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>

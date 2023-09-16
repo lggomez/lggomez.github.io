@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Blog archive on Luis GG - Tales and notes</title>
-    <link>https://luisgg.blog/en/archive/</link>
+    <link>https://luisgg.me/en/archive/</link>
     <description>Recent content in Blog archive on Luis GG - Tales and notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,7 +16,7 @@
     <copyright>Luis Gabriel Gomez ©2023, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 30 Jan 2020 12:50:46 +0900</lastBuildDate>
     
-        <atom:link href="https://luisgg.blog/en/archive/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://luisgg.me/en/archive/index.xml" rel="self" type="application/rss+xml" />
     
 
       

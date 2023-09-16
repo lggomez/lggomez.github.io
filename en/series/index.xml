@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Series on Luis GG - Tales and notes</title>
-    <link>https://luisgg.blog/en/series/</link>
+    <link>https://luisgg.me/en/series/</link>
     <description>Recent content in Series on Luis GG - Tales and notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,17 +16,17 @@
     <copyright>Luis Gabriel Gomez ©2023, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 07 Jan 2021 00:48:29 -0300</lastBuildDate>
     
-        <atom:link href="https://luisgg.blog/en/series/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://luisgg.me/en/series/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>When gophers attack</title>
-        <link>https://luisgg.blog/en/series/when-gophers-attack/</link>
+        <link>https://luisgg.me/en/series/when-gophers-attack/</link>
         <pubDate>Thu, 07 Jan 2021 00:48:29 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>https://luisgg.blog/en/series/when-gophers-attack/</guid>
+        <guid>https://luisgg.me/en/series/when-gophers-attack/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>

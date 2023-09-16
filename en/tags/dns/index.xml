@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>dns on Luis GG - Tales and notes</title>
-    <link>https://luisgg.blog/en/tags/dns/</link>
+    <link>https://luisgg.me/en/tags/dns/</link>
     <description>Recent content in dns on Luis GG - Tales and notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,17 +16,17 @@
     <copyright>Luis Gabriel Gomez ©2023, All Rights Reserved</copyright>
     <lastBuildDate>Sun, 17 Jul 2022 18:30:15 -0300</lastBuildDate>
     
-        <atom:link href="https://luisgg.blog/en/tags/dns/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://luisgg.me/en/tags/dns/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>A DNS Keyboard</title>
-        <link>https://luisgg.blog/en/a_dns_keyboard/</link>
+        <link>https://luisgg.me/en/a_dns_keyboard/</link>
         <pubDate>Sun, 17 Jul 2022 18:30:15 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         <atom:modified>Sun, 17 Jul 2022 18:30:15 -0300</atom:modified>
-        <guid>https://luisgg.blog/en/a_dns_keyboard/</guid>
+        <guid>https://luisgg.me/en/a_dns_keyboard/</guid>
         <description>What does a keyboard and a DNS server have in common? at a first glance it may seem that not much, although the current state of privacy and semiconductor consumer market may have have inadvertently closed that gap.
 Raspberry Pi The Raspberry Pi Foundation arguably made a crucial change to the SoC market when they introduced the first Raspberry Pi series in 2012; An accessible, easy to use and extensible platform based on an ARM CPU with a robust set of features already included on the base board (also called SBCs instead of SoCs, as a matter of facilities amount).</description>
         

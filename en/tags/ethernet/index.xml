@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Ethernet on Luis GG - Tales and notes</title>
-    <link>https://luisgg.blog/en/tags/ethernet/</link>
+    <link>https://luisgg.me/en/tags/ethernet/</link>
     <description>Recent content in Ethernet on Luis GG - Tales and notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,17 +16,17 @@
     <copyright>Luis Gabriel Gomez ©2023, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 11 Mar 2021 00:27:03 -0300</lastBuildDate>
     
-        <atom:link href="https://luisgg.blog/en/tags/ethernet/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://luisgg.me/en/tags/ethernet/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>Making a network canary</title>
-        <link>https://luisgg.blog/en/making_a_network_canary/</link>
+        <link>https://luisgg.me/en/making_a_network_canary/</link>
         <pubDate>Thu, 11 Mar 2021 00:27:03 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         <atom:modified>Thu, 11 Mar 2021 00:27:03 -0300</atom:modified>
-        <guid>https://luisgg.blog/en/making_a_network_canary/</guid>
+        <guid>https://luisgg.me/en/making_a_network_canary/</guid>
         <description>Creating a network canary device with an Arduino Nano</description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>

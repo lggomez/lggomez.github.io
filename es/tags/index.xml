@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Tags on Luis GG - Tales and notes</title>
-    <link>https://luisgg.blog/es/tags/</link>
+    <link>https://luisgg.me/es/tags/</link>
     <description>Recent content in Tags on Luis GG - Tales and notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
@@ -16,17 +16,17 @@
     <copyright>Luis Gabriel Gomez ©2023, All Rights Reserved</copyright>
     <lastBuildDate>Sat, 02 Jan 2021 02:50:55 -0300</lastBuildDate>
     
-        <atom:link href="https://luisgg.blog/es/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://luisgg.me/es/tags/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>Golang</title>
-        <link>https://luisgg.blog/es/tags/golang/</link>
+        <link>https://luisgg.me/es/tags/golang/</link>
         <pubDate>Sat, 02 Jan 2021 02:50:55 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>https://luisgg.blog/es/tags/golang/</guid>
+        <guid>https://luisgg.me/es/tags/golang/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
@@ -40,11 +40,11 @@
       
       <item>
         <title>Post-mortem</title>
-        <link>https://luisgg.blog/es/tags/post-mortem/</link>
+        <link>https://luisgg.me/es/tags/post-mortem/</link>
         <pubDate>Sat, 02 Jan 2021 02:50:55 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         
-        <guid>https://luisgg.blog/es/tags/post-mortem/</guid>
+        <guid>https://luisgg.me/es/tags/post-mortem/</guid>
         <description></description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>

@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Exceptions on Luis GG - Tales and notes</title>
-    <link>https://luisgg.blog/en/tags/exceptions/</link>
+    <link>https://luisgg.me/en/tags/exceptions/</link>
     <description>Recent content in Exceptions on Luis GG - Tales and notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,17 +16,17 @@
     <copyright>Luis Gabriel Gomez ©2023, All Rights Reserved</copyright>
     <lastBuildDate>Sat, 26 Dec 2020 18:36:45 -0300</lastBuildDate>
     
-        <atom:link href="https://luisgg.blog/en/tags/exceptions/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://luisgg.me/en/tags/exceptions/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>Advanced Generics in .NET</title>
-        <link>https://luisgg.blog/en/advanced_generics_in_dotnet/</link>
+        <link>https://luisgg.me/en/advanced_generics_in_dotnet/</link>
         <pubDate>Sat, 26 Dec 2020 18:36:45 -0300</pubDate>
         <author>hello.luisgg@protonmail.com (Luis Gabriel Gómez)</author>
         <atom:modified>Sat, 26 Dec 2020 18:36:45 -0300</atom:modified>
-        <guid>https://luisgg.blog/en/advanced_generics_in_dotnet/</guid>
+        <guid>https://luisgg.me/en/advanced_generics_in_dotnet/</guid>
         <description>A tour on advanced generics in .NET (circa 2017)</description>
         
         <dc:creator>Luis Gabriel Gómez</dc:creator>
